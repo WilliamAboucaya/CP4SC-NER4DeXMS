@@ -1,0 +1,361 @@
+<?xml version="1.0" ?>
+<package>
+  <name>org.apache.http</name>
+  <desc>Core HTTP component APIs and primitives.</desc>
+  <class id="0">
+    <name>org.apache.http.Consts</name>
+    <description>Commons constants.</description>
+  </class>
+  <class id="1">
+    <name>org.apache.http.HttpHeaders</name>
+    <description>Constants enumerating the HTTP headers.</description>
+  </class>
+  <class id="2">
+    <name>org.apache.http.HttpHost</name>
+    <description>Holds all of the variables needed to describe an HTTP connection to a host.</description>
+  </class>
+  <class id="3">
+    <name>org.apache.http.HttpVersion</name>
+    <description>Represents an HTTP version.</description>
+  </class>
+  <class id="4">
+    <name>org.apache.http.ProtocolVersion</name>
+    <description>Represents a protocol version.</description>
+  </class>
+  <method id="0">
+    <name>clone</name>
+    <description/>
+    <return>Object</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="1">
+    <name>create</name>
+    <description>Creates HttpHost instance from string.</description>
+    <parameter id="0">
+      <name>s</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>HttpHost</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="2">
+    <name>equals</name>
+    <description/>
+    <parameter id="0">
+      <name>obj</name>
+      <type>java.lang.Object</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="3">
+    <name>getAddress</name>
+    <description>Returns the inet address if explicitly set by a constructor, null otherwise.</description>
+    <return>InetAddress</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="4">
+    <name>getHostName</name>
+    <description>Returns the host name.</description>
+    <return>String</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="5">
+    <name>getPort</name>
+    <description>Returns the port.</description>
+    <return>int</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="6">
+    <name>getSchemeName</name>
+    <description>Returns the scheme name.</description>
+    <return>String</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="7">
+    <name>hashCode</name>
+    <description/>
+    <return>int</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="8">
+    <name>toHostString</name>
+    <description>Obtains the host string, without scheme prefix.</description>
+    <return>String</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="9">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="10">
+    <name>toURI</name>
+    <description>Return the host URI, as a string.</description>
+    <return>String</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="11">
+    <name>org.apache.http.HttpHost</name>
+    <description>Copy constructor for HttpHost.</description>
+    <parameter id="0">
+      <name>httphost</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <return>org.apache.http.HttpHost</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="12">
+    <name>org.apache.http.HttpHost</name>
+    <description>Creates HttpHost instance with the default scheme and port and the given inet address.</description>
+    <parameter id="0">
+      <name>address</name>
+      <type>java.net.InetAddress</type>
+    </parameter>
+    <return>org.apache.http.HttpHost</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="13">
+    <name>org.apache.http.HttpHost</name>
+    <description>Creates HttpHost instance with the default scheme and the given inet address and port.</description>
+    <parameter id="0">
+      <name>address</name>
+      <type>java.net.InetAddress</type>
+    </parameter>
+    <parameter id="1">
+      <name>port</name>
+      <type>int</type>
+    </parameter>
+    <return>org.apache.http.HttpHost</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="14">
+    <name>org.apache.http.HttpHost</name>
+    <description>Creates HttpHost instance with the given scheme, inet address and port.</description>
+    <parameter id="0">
+      <name>address</name>
+      <type>java.net.InetAddress</type>
+    </parameter>
+    <parameter id="1">
+      <name>port</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="2">
+      <name>scheme</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.apache.http.HttpHost</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="15">
+    <name>org.apache.http.HttpHost</name>
+    <description>Creates a new HttpHost, specifying all values.</description>
+    <parameter id="0">
+      <name>address</name>
+      <type>java.net.InetAddress</type>
+    </parameter>
+    <parameter id="1">
+      <name>hostname</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>port</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="3">
+      <name>scheme</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.apache.http.HttpHost</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="16">
+    <name>org.apache.http.HttpHost</name>
+    <description>Creates HttpHost instance with the default scheme and port and the given hostname.</description>
+    <parameter id="0">
+      <name>hostname</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.apache.http.HttpHost</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="17">
+    <name>org.apache.http.HttpHost</name>
+    <description>Creates HttpHost instance with the default scheme and the given hostname and port.</description>
+    <parameter id="0">
+      <name>hostname</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>port</name>
+      <type>int</type>
+    </parameter>
+    <return>org.apache.http.HttpHost</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="18">
+    <name>org.apache.http.HttpHost</name>
+    <description>Creates HttpHost instance with the given scheme, hostname and port.</description>
+    <parameter id="0">
+      <name>hostname</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>port</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="2">
+      <name>scheme</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.apache.http.HttpHost</return>
+    <class>org.apache.http.HttpHost</class>
+  </method>
+  <method id="19">
+    <name>forVersion</name>
+    <description>Obtains a specific HTTP version.</description>
+    <parameter id="0">
+      <name>major</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>minor</name>
+      <type>int</type>
+    </parameter>
+    <return>ProtocolVersion</return>
+    <class>org.apache.http.HttpVersion</class>
+  </method>
+  <method id="20">
+    <name>org.apache.http.HttpVersion</name>
+    <description>Create an HTTP protocol version designator.</description>
+    <parameter id="0">
+      <name>major</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>minor</name>
+      <type>int</type>
+    </parameter>
+    <return>org.apache.http.HttpVersion</return>
+    <class>org.apache.http.HttpVersion</class>
+  </method>
+  <method id="21">
+    <name>clone</name>
+    <description/>
+    <return>Object</return>
+    <class>org.apache.http.ProtocolVersion</class>
+  </method>
+  <method id="22">
+    <name>compareToVersion</name>
+    <description>Compares this protocol version with another one.</description>
+    <parameter id="0">
+      <name>that</name>
+      <type>org.apache.http.ProtocolVersion</type>
+    </parameter>
+    <return>int</return>
+    <class>org.apache.http.ProtocolVersion</class>
+  </method>
+  <method id="23">
+    <name>equals</name>
+    <description>Checks equality of this protocol version with an object.</description>
+    <parameter id="0">
+      <name>obj</name>
+      <type>java.lang.Object</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.ProtocolVersion</class>
+  </method>
+  <method id="24">
+    <name>forVersion</name>
+    <description>Obtains a specific version of this protocol.</description>
+    <parameter id="0">
+      <name>major</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>minor</name>
+      <type>int</type>
+    </parameter>
+    <return>ProtocolVersion</return>
+    <class>org.apache.http.ProtocolVersion</class>
+  </method>
+  <method id="25">
+    <name>getMajor</name>
+    <description>Returns the major version number of the protocol.</description>
+    <return>int</return>
+    <class>org.apache.http.ProtocolVersion</class>
+  </method>
+  <method id="26">
+    <name>getMinor</name>
+    <description>Returns the minor version number of the HTTP protocol.</description>
+    <return>int</return>
+    <class>org.apache.http.ProtocolVersion</class>
+  </method>
+  <method id="27">
+    <name>getProtocol</name>
+    <description>Returns the name of the protocol.</description>
+    <return>String</return>
+    <class>org.apache.http.ProtocolVersion</class>
+  </method>
+  <method id="28">
+    <name>greaterEquals</name>
+    <description>Tests if this protocol version is greater or equal to the given one.</description>
+    <parameter id="0">
+      <name>version</name>
+      <type>org.apache.http.ProtocolVersion</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.ProtocolVersion</class>
+  </method>
+  <method id="29">
+    <name>hashCode</name>
+    <description>Obtains a hash code consistent with equals(java.lang.Object).</description>
+    <return>int</return>
+    <class>org.apache.http.ProtocolVersion</class>
+  </method>
+  <method id="30">
+    <name>isComparable</name>
+    <description>Checks whether this protocol can be compared to another one.</description>
+    <parameter id="0">
+      <name>that</name>
+      <type>org.apache.http.ProtocolVersion</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.ProtocolVersion</class>
+  </method>
+  <method id="31">
+    <name>lessEquals</name>
+    <description>Tests if this protocol version is less or equal to the given one.</description>
+    <parameter id="0">
+      <name>version</name>
+      <type>org.apache.http.ProtocolVersion</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.ProtocolVersion</class>
+  </method>
+  <method id="32">
+    <name>toString</name>
+    <description>Converts this protocol version to a string.</description>
+    <return>String</return>
+    <class>org.apache.http.ProtocolVersion</class>
+  </method>
+  <method id="33">
+    <name>org.apache.http.ProtocolVersion</name>
+    <description>Create a protocol version designator.</description>
+    <parameter id="0">
+      <name>protocol</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>major</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="2">
+      <name>minor</name>
+      <type>int</type>
+    </parameter>
+    <return>org.apache.http.ProtocolVersion</return>
+    <class>org.apache.http.ProtocolVersion</class>
+  </method>
+</package>

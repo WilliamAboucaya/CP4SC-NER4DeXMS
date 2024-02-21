@@ -1,0 +1,611 @@
+<?xml version="1.0" ?>
+<package>
+  <name>org.eclipse.californium</name>
+  <desc/>
+  <class id="0">
+    <name>org.eclipse.californium.BaseOptionDefinition</name>
+    <description>Basic option definition.</description>
+  </class>
+  <class id="1">
+    <name>org.eclipse.californium.EmptyOptionDefinition</name>
+    <description>Option definition for empty options.</description>
+  </class>
+  <class id="2">
+    <name>org.eclipse.californium.IntegerOptionDefinition</name>
+    <description>Option definition for integer options.</description>
+  </class>
+  <class id="3">
+    <name>org.eclipse.californium.IntegerRangeOptionDefinition</name>
+    <description>Option definition for integer options with specific value ranges.</description>
+  </class>
+  <class id="4">
+    <name>org.eclipse.californium.LegacyMapBasedOptionRegistry</name>
+    <description>only for backwards compatibility</description>
+  </class>
+  <class id="5">
+    <name>org.eclipse.californium.MapBasedOptionRegistry</name>
+    <description>Option registry.</description>
+  </class>
+  <class id="6">
+    <name>org.eclipse.californium.OpaqueOptionDefinition</name>
+    <description>Option definition for opaque options.</description>
+  </class>
+  <class id="7">
+    <name>org.eclipse.californium.StandardOptionRegistry</name>
+    <description>Option registry with supported standard options.</description>
+  </class>
+  <class id="8">
+    <name>org.eclipse.californium.StringOptionDefinition</name>
+    <description>Option definition for string options.</description>
+  </class>
+  <method id="0">
+    <name>assertValue</name>
+    <description>Assert, that the value matches the custom options's definition.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>byte[]</type>
+    </parameter>
+    <class>org.eclipse.californium.BaseOptionDefinition</class>
+  </method>
+  <method id="1">
+    <name>create</name>
+    <description>Create option from byte array.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>Option</return>
+    <class>org.eclipse.californium.BaseOptionDefinition</class>
+  </method>
+  <method id="2">
+    <name>create</name>
+    <description>Create option from long.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>long</type>
+    </parameter>
+    <return>Option</return>
+    <class>org.eclipse.californium.BaseOptionDefinition</class>
+  </method>
+  <method id="3">
+    <name>create</name>
+    <description>Create option from string.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>Option</return>
+    <class>org.eclipse.californium.BaseOptionDefinition</class>
+  </method>
+  <method id="4">
+    <name>getFormat</name>
+    <description>Get option format.</description>
+    <return>OptionNumberRegistry.OptionFormat</return>
+    <class>org.eclipse.californium.BaseOptionDefinition</class>
+  </method>
+  <method id="5">
+    <name>getName</name>
+    <description>Get name of option.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.BaseOptionDefinition</class>
+  </method>
+  <method id="6">
+    <name>getNumber</name>
+    <description>Returns the option number.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.BaseOptionDefinition</class>
+  </method>
+  <method id="7">
+    <name>getValueLengths</name>
+    <description>Get value length of custom option.</description>
+    <return>int[]</return>
+    <class>org.eclipse.californium.BaseOptionDefinition</class>
+  </method>
+  <method id="8">
+    <name>isSingleValue</name>
+    <description>Checks whether an option has a single value.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.BaseOptionDefinition</class>
+  </method>
+  <method id="9">
+    <name>toString</name>
+    <description>Returns a string representation of the custom option definition.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.BaseOptionDefinition</class>
+  </method>
+  <method id="10">
+    <name>create</name>
+    <description>Create option from byte array.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>Option</return>
+    <class>org.eclipse.californium.EmptyOptionDefinition</class>
+  </method>
+  <method id="11">
+    <name>org.eclipse.californium.EmptyOptionDefinition</name>
+    <description>Create option definition for an empty option.</description>
+    <parameter id="0">
+      <name>number</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.eclipse.californium.EmptyOptionDefinition</return>
+    <class>org.eclipse.californium.EmptyOptionDefinition</class>
+  </method>
+  <method id="12">
+    <name>create</name>
+    <description>Create option from long.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>long</type>
+    </parameter>
+    <return>Option</return>
+    <class>org.eclipse.californium.IntegerOptionDefinition</class>
+  </method>
+  <method id="13">
+    <name>getIntegerValue</name>
+    <description>Gets the option value as integer.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.IntegerOptionDefinition</class>
+  </method>
+  <method id="14">
+    <name>getLongValue</name>
+    <description>Gets the option value as long.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>long</return>
+    <class>org.eclipse.californium.IntegerOptionDefinition</class>
+  </method>
+  <method id="15">
+    <name>setIntegerValue</name>
+    <description>Sets the option value from an integer.</description>
+    <parameter id="0">
+      <name>val</name>
+      <type>int</type>
+    </parameter>
+    <return>byte[]</return>
+    <class>org.eclipse.californium.IntegerOptionDefinition</class>
+  </method>
+  <method id="16">
+    <name>setLongValue</name>
+    <description>Sets the option value from a long.</description>
+    <parameter id="0">
+      <name>val</name>
+      <type>long</type>
+    </parameter>
+    <return>byte[]</return>
+    <class>org.eclipse.californium.IntegerOptionDefinition</class>
+  </method>
+  <method id="17">
+    <name>org.eclipse.californium.IntegerOptionDefinition</name>
+    <description>Create option definition for an single value integer option.</description>
+    <parameter id="0">
+      <name>number</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.eclipse.californium.IntegerOptionDefinition</return>
+    <class>org.eclipse.californium.IntegerOptionDefinition</class>
+  </method>
+  <method id="18">
+    <name>org.eclipse.californium.IntegerOptionDefinition</name>
+    <description>Create option definition for an integer option.</description>
+    <parameter id="0">
+      <name>number</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>singleValue</name>
+      <type>boolean</type>
+    </parameter>
+    <return>org.eclipse.californium.IntegerOptionDefinition</return>
+    <class>org.eclipse.californium.IntegerOptionDefinition</class>
+  </method>
+  <method id="19">
+    <name>org.eclipse.californium.IntegerOptionDefinition</name>
+    <description>Create option definition for an integer option with provide length range.</description>
+    <parameter id="0">
+      <name>number</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>singleValue</name>
+      <type>boolean</type>
+    </parameter>
+    <parameter id="3">
+      <name>lengths</name>
+      <type>int...</type>
+    </parameter>
+    <return>org.eclipse.californium.IntegerOptionDefinition</return>
+    <class>org.eclipse.californium.IntegerOptionDefinition</class>
+  </method>
+  <method id="20">
+    <name>assertValue</name>
+    <description>Assert, that the value matches the custom options's definition.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>byte[]</type>
+    </parameter>
+    <class>org.eclipse.californium.IntegerRangeOptionDefinition</class>
+  </method>
+  <method id="21">
+    <name>org.eclipse.californium.IntegerRangeOptionDefinition</name>
+    <description>Create option definition for an integer option.</description>
+    <parameter id="0">
+      <name>number</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>singleValue</name>
+      <type>boolean</type>
+    </parameter>
+    <parameter id="3">
+      <name>min</name>
+      <type>long</type>
+    </parameter>
+    <parameter id="4">
+      <name>max</name>
+      <type>long</type>
+    </parameter>
+    <return>org.eclipse.californium.IntegerRangeOptionDefinition</return>
+    <class>org.eclipse.californium.IntegerRangeOptionDefinition</class>
+  </method>
+  <method id="22">
+    <name>org.eclipse.californium.IntegerRangeOptionDefinition</name>
+    <description>Create option definition for an single value integer option.</description>
+    <parameter id="0">
+      <name>number</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>min</name>
+      <type>long</type>
+    </parameter>
+    <parameter id="3">
+      <name>max</name>
+      <type>long</type>
+    </parameter>
+    <return>org.eclipse.californium.IntegerRangeOptionDefinition</return>
+    <class>org.eclipse.californium.IntegerRangeOptionDefinition</class>
+  </method>
+  <method id="23">
+    <name>add</name>
+    <description>Add option registry.</description>
+    <parameter id="0">
+      <name>registry</name>
+      <type>org.eclipse.californium.core.coap.option.OptionRegistry</type>
+    </parameter>
+    <class>org.eclipse.californium.MapBasedOptionRegistry</class>
+  </method>
+  <method id="24">
+    <name>contains</name>
+    <description>Checks, if an option definition is contained.</description>
+    <parameter id="0">
+      <name>definition</name>
+      <type>org.eclipse.californium.core.coap.option.OptionDefinition</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.MapBasedOptionRegistry</class>
+  </method>
+  <method id="25">
+    <name>getDefinitionByName</name>
+    <description>Returns the option definition based on the option name.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>OptionDefinition</return>
+    <class>org.eclipse.californium.MapBasedOptionRegistry</class>
+  </method>
+  <method id="26">
+    <name>getDefinitionByNumber</name>
+    <description>Returns the option definition based on the option number.</description>
+    <parameter id="0">
+      <name>optionNumber</name>
+      <type>int</type>
+    </parameter>
+    <return>OptionDefinition</return>
+    <class>org.eclipse.californium.MapBasedOptionRegistry</class>
+  </method>
+  <method id="27">
+    <name>getDefinitionByNumber</name>
+    <description>Returns the option definition based on the option number and message code.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>optionNumber</name>
+      <type>int</type>
+    </parameter>
+    <return>OptionDefinition</return>
+    <class>org.eclipse.californium.MapBasedOptionRegistry</class>
+  </method>
+  <method id="28">
+    <name>getExtendedNumber</name>
+    <description>Get extended message code specific option number.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>optionNumber</name>
+      <type>int</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.MapBasedOptionRegistry</class>
+  </method>
+  <method id="29">
+    <name>getInternal</name>
+    <description>Get option definition.</description>
+    <parameter id="0">
+      <name>key</name>
+      <type>int</type>
+    </parameter>
+    <return>OptionDefinition</return>
+    <class>org.eclipse.californium.MapBasedOptionRegistry</class>
+  </method>
+  <method id="30">
+    <name>iterator</name>
+    <description/>
+    <return>Iterator&lt;OptionRegistry.Entry&gt;</return>
+    <class>org.eclipse.californium.MapBasedOptionRegistry</class>
+  </method>
+  <method id="31">
+    <name>put</name>
+    <description>Add message code specific option definition.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>definition</name>
+      <type>org.eclipse.californium.core.coap.option.OptionDefinition</type>
+    </parameter>
+    <class>org.eclipse.californium.MapBasedOptionRegistry</class>
+  </method>
+  <method id="32">
+    <name>put</name>
+    <description>Add message code unspecific option definition.</description>
+    <parameter id="0">
+      <name>definition</name>
+      <type>org.eclipse.californium.core.coap.option.OptionDefinition</type>
+    </parameter>
+    <class>org.eclipse.californium.MapBasedOptionRegistry</class>
+  </method>
+  <method id="33">
+    <name>putInternal</name>
+    <description>Add message code specific option definition.</description>
+    <parameter id="0">
+      <name>key</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>definition</name>
+      <type>org.eclipse.californium.core.coap.option.OptionDefinition</type>
+    </parameter>
+    <class>org.eclipse.californium.MapBasedOptionRegistry</class>
+  </method>
+  <method id="34">
+    <name>org.eclipse.californium.MapBasedOptionRegistry</name>
+    <description>Create option definition map from option definitions.</description>
+    <parameter id="0">
+      <name>definitions</name>
+      <type>org.eclipse.californium.core.coap.option.OptionDefinition...</type>
+    </parameter>
+    <return>org.eclipse.californium.MapBasedOptionRegistry</return>
+    <class>org.eclipse.californium.MapBasedOptionRegistry</class>
+  </method>
+  <method id="35">
+    <name>org.eclipse.californium.MapBasedOptionRegistry</name>
+    <description>Create option definition map from option registry and option definitions.</description>
+    <parameter id="0">
+      <name>registry</name>
+      <type>org.eclipse.californium.core.coap.option.OptionRegistry</type>
+    </parameter>
+    <parameter id="1">
+      <name>definitions</name>
+      <type>org.eclipse.californium.core.coap.option.OptionDefinition...</type>
+    </parameter>
+    <return>org.eclipse.californium.MapBasedOptionRegistry</return>
+    <class>org.eclipse.californium.MapBasedOptionRegistry</class>
+  </method>
+  <method id="36">
+    <name>org.eclipse.californium.MapBasedOptionRegistry</name>
+    <description>Create option definition map from option registries.</description>
+    <parameter id="0">
+      <name>registry</name>
+      <type>org.eclipse.californium.core.coap.option.OptionRegistry</type>
+    </parameter>
+    <parameter id="1">
+      <name>registries</name>
+      <type>org.eclipse.californium.core.coap.option.OptionRegistry...</type>
+    </parameter>
+    <return>org.eclipse.californium.MapBasedOptionRegistry</return>
+    <class>org.eclipse.californium.MapBasedOptionRegistry</class>
+  </method>
+  <method id="37">
+    <name>org.eclipse.californium.OpaqueOptionDefinition</name>
+    <description>Create option definition for an single value opaque option.</description>
+    <parameter id="0">
+      <name>number</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.eclipse.californium.OpaqueOptionDefinition</return>
+    <class>org.eclipse.californium.OpaqueOptionDefinition</class>
+  </method>
+  <method id="38">
+    <name>org.eclipse.californium.OpaqueOptionDefinition</name>
+    <description>Create option definition for an opaque option.</description>
+    <parameter id="0">
+      <name>number</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>singleValue</name>
+      <type>boolean</type>
+    </parameter>
+    <return>org.eclipse.californium.OpaqueOptionDefinition</return>
+    <class>org.eclipse.californium.OpaqueOptionDefinition</class>
+  </method>
+  <method id="39">
+    <name>org.eclipse.californium.OpaqueOptionDefinition</name>
+    <description>Create option definition for an opaque option with provide length range.</description>
+    <parameter id="0">
+      <name>number</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>singleValue</name>
+      <type>boolean</type>
+    </parameter>
+    <parameter id="3">
+      <name>lengths</name>
+      <type>int...</type>
+    </parameter>
+    <return>org.eclipse.californium.OpaqueOptionDefinition</return>
+    <class>org.eclipse.californium.OpaqueOptionDefinition</class>
+  </method>
+  <method id="40">
+    <name>getDefaultOptionRegistry</name>
+    <description>Get default option registry.</description>
+    <return>OptionRegistry</return>
+    <class>org.eclipse.californium.StandardOptionRegistry</class>
+  </method>
+  <method id="41">
+    <name>setDefaultOptionRegistry</name>
+    <description>Set default option registry Note: it is not intended to use a mixture of custom OptionDefinitions and a OptionNumberRegistry.setCustomOptionNumberRegistry(CustomOptionNumberRegistry) simultaneously! Please migrate your custom option to OptionDefinitions.</description>
+    <parameter id="0">
+      <name>registry</name>
+      <type>org.eclipse.californium.core.coap.option.OptionRegistry</type>
+    </parameter>
+    <return>OptionRegistry</return>
+    <class>org.eclipse.californium.StandardOptionRegistry</class>
+  </method>
+  <method id="42">
+    <name>create</name>
+    <description>Create option from string.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>Option</return>
+    <class>org.eclipse.californium.StringOptionDefinition</class>
+  </method>
+  <method id="43">
+    <name>getStringValue</name>
+    <description>Gets the option value as string.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.StringOptionDefinition</class>
+  </method>
+  <method id="44">
+    <name>setStringValue</name>
+    <description>Sets the option value from a string.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>byte[]</return>
+    <class>org.eclipse.californium.StringOptionDefinition</class>
+  </method>
+  <method id="45">
+    <name>org.eclipse.californium.StringOptionDefinition</name>
+    <description>Create option definition for an single value string option.</description>
+    <parameter id="0">
+      <name>number</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.eclipse.californium.StringOptionDefinition</return>
+    <class>org.eclipse.californium.StringOptionDefinition</class>
+  </method>
+  <method id="46">
+    <name>org.eclipse.californium.StringOptionDefinition</name>
+    <description>Create option definition for an string option.</description>
+    <parameter id="0">
+      <name>number</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>singleValue</name>
+      <type>boolean</type>
+    </parameter>
+    <return>org.eclipse.californium.StringOptionDefinition</return>
+    <class>org.eclipse.californium.StringOptionDefinition</class>
+  </method>
+  <method id="47">
+    <name>org.eclipse.californium.StringOptionDefinition</name>
+    <description>Create option definition for an string option with provide length range.</description>
+    <parameter id="0">
+      <name>number</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>singleValue</name>
+      <type>boolean</type>
+    </parameter>
+    <parameter id="3">
+      <name>lengths</name>
+      <type>int...</type>
+    </parameter>
+    <return>org.eclipse.californium.StringOptionDefinition</return>
+    <class>org.eclipse.californium.StringOptionDefinition</class>
+  </method>
+</package>

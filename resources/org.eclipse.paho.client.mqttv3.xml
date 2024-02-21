@@ -1,0 +1,141 @@
+<?xml version="1.0" ?>
+<package>
+  <name>org.eclipse.paho.client.mqttv3</name>
+  <desc>Contains a programming interface enabling applications to communicate with an MQTT server.</desc>
+  <class id="0">
+    <name>org.eclipse.paho.client.mqttv3.BufferedMessage</name>
+    <description>A BufferedMessage contains an MqttWire Message and token it allows both message and token to be buffered when the client is in resting state</description>
+  </class>
+  <class id="1">
+    <name>org.eclipse.paho.client.mqttv3.DisconnectedBufferOptions</name>
+    <description>Holds the set of options that govern the behaviour of Offline (or Disconnected) buffering of messages</description>
+  </class>
+  <class id="2">
+    <name>org.eclipse.paho.client.mqttv3.MqttAsyncClient</name>
+    <description>Lightweight client for talking to an MQTT server using non-blocking methods that allow an operation to run in the background.</description>
+  </class>
+  <class id="3">
+    <name>org.eclipse.paho.client.mqttv3.MqttClient</name>
+    <description>Lightweight client for talking to an MQTT server using methods that block until an operation completes.</description>
+  </class>
+  <class id="4">
+    <name>org.eclipse.paho.client.mqttv3.MqttConnectOptions</name>
+    <description>Holds the set of options that control how the client connects to a server.</description>
+  </class>
+  <class id="5">
+    <name>org.eclipse.paho.client.mqttv3.MqttDeliveryToken</name>
+    <description>Provides a mechanism to track the delivery progress of a message.</description>
+  </class>
+  <class id="6">
+    <name>org.eclipse.paho.client.mqttv3.MqttMessage</name>
+    <description>An MQTT message holds the application payload and options specifying how the message is to be delivered The message includes a &quot;payload&quot; (the body of the message) represented as a byte[].</description>
+  </class>
+  <class id="7">
+    <name>org.eclipse.paho.client.mqttv3.MqttToken</name>
+    <description>Provides a mechanism for tracking the completion of an asynchronous action.</description>
+  </class>
+  <class id="8">
+    <name>org.eclipse.paho.client.mqttv3.MqttTopic</name>
+    <description>Represents a topic destination, used for publish/subscribe messaging.</description>
+  </class>
+  <class id="9">
+    <name>org.eclipse.paho.client.mqttv3.TimerPingSender</name>
+    <description>Default ping sender implementation</description>
+  </class>
+  <method id="0">
+    <name>org.eclipse.paho.client.mqttv3.BufferedMessage</name>
+    <description/>
+    <return>org.eclipse.paho.client.mqttv3.BufferedMessage</return>
+    <class>org.eclipse.paho.client.mqttv3.BufferedMessage</class>
+  </method>
+  <method id="1">
+    <name>org.eclipse.paho.client.mqttv3.DisconnectedBufferOptions</name>
+    <description>Constructs a new DisconnectedBufferOptions object using the default values.</description>
+    <return>org.eclipse.paho.client.mqttv3.DisconnectedBufferOptions</return>
+    <class>org.eclipse.paho.client.mqttv3.DisconnectedBufferOptions</class>
+  </method>
+  <method id="2">
+    <name>org.eclipse.paho.client.mqttv3.MqttAsyncClient</name>
+    <description>Create an MqttAsyncClient that is used to communicate with an MQTT server.</description>
+    <return>org.eclipse.paho.client.mqttv3.MqttAsyncClient</return>
+    <class>org.eclipse.paho.client.mqttv3.MqttAsyncClient</class>
+  </method>
+  <method id="3">
+    <name>org.eclipse.paho.client.mqttv3.MqttAsyncClient</name>
+    <description/>
+    <return>org.eclipse.paho.client.mqttv3.MqttAsyncClient</return>
+    <class>org.eclipse.paho.client.mqttv3.MqttAsyncClient</class>
+  </method>
+  <method id="4">
+    <name>org.eclipse.paho.client.mqttv3.MqttAsyncClient</name>
+    <description>Create an MqttAsyncClient that is used to communicate with an MQTT server.</description>
+    <return>org.eclipse.paho.client.mqttv3.MqttAsyncClient</return>
+    <class>org.eclipse.paho.client.mqttv3.MqttAsyncClient</class>
+  </method>
+  <method id="5">
+    <name>org.eclipse.paho.client.mqttv3.MqttClient</name>
+    <description>Create an MqttClient that can be used to communicate with an MQTT server.</description>
+    <return>org.eclipse.paho.client.mqttv3.MqttClient</return>
+    <class>org.eclipse.paho.client.mqttv3.MqttClient</class>
+  </method>
+  <method id="6">
+    <name>org.eclipse.paho.client.mqttv3.MqttClient</name>
+    <description>Create an MqttClient that can be used to communicate with an MQTT server.</description>
+    <return>org.eclipse.paho.client.mqttv3.MqttClient</return>
+    <class>org.eclipse.paho.client.mqttv3.MqttClient</class>
+  </method>
+  <method id="7">
+    <name>org.eclipse.paho.client.mqttv3.MqttConnectOptions</name>
+    <description>Constructs a new MqttConnectOptions object using the default values.</description>
+    <return>org.eclipse.paho.client.mqttv3.MqttConnectOptions</return>
+    <class>org.eclipse.paho.client.mqttv3.MqttConnectOptions</class>
+  </method>
+  <method id="8">
+    <name>org.eclipse.paho.client.mqttv3.MqttDeliveryToken</name>
+    <description/>
+    <return>org.eclipse.paho.client.mqttv3.MqttDeliveryToken</return>
+    <class>org.eclipse.paho.client.mqttv3.MqttDeliveryToken</class>
+  </method>
+  <method id="9">
+    <name>org.eclipse.paho.client.mqttv3.MqttDeliveryToken</name>
+    <description/>
+    <return>org.eclipse.paho.client.mqttv3.MqttDeliveryToken</return>
+    <class>org.eclipse.paho.client.mqttv3.MqttDeliveryToken</class>
+  </method>
+  <method id="10">
+    <name>org.eclipse.paho.client.mqttv3.MqttMessage</name>
+    <description>Constructs a message with an empty payload, and all other values set to defaults.</description>
+    <return>org.eclipse.paho.client.mqttv3.MqttMessage</return>
+    <class>org.eclipse.paho.client.mqttv3.MqttMessage</class>
+  </method>
+  <method id="11">
+    <name>org.eclipse.paho.client.mqttv3.MqttMessage</name>
+    <description>Constructs a message with the specified byte array as a payload, and all other values set to defaults.</description>
+    <return>org.eclipse.paho.client.mqttv3.MqttMessage</return>
+    <class>org.eclipse.paho.client.mqttv3.MqttMessage</class>
+  </method>
+  <method id="12">
+    <name>org.eclipse.paho.client.mqttv3.MqttToken</name>
+    <description/>
+    <return>org.eclipse.paho.client.mqttv3.MqttToken</return>
+    <class>org.eclipse.paho.client.mqttv3.MqttToken</class>
+  </method>
+  <method id="13">
+    <name>org.eclipse.paho.client.mqttv3.MqttToken</name>
+    <description/>
+    <return>org.eclipse.paho.client.mqttv3.MqttToken</return>
+    <class>org.eclipse.paho.client.mqttv3.MqttToken</class>
+  </method>
+  <method id="14">
+    <name>org.eclipse.paho.client.mqttv3.MqttTopic</name>
+    <description/>
+    <return>org.eclipse.paho.client.mqttv3.MqttTopic</return>
+    <class>org.eclipse.paho.client.mqttv3.MqttTopic</class>
+  </method>
+  <method id="15">
+    <name>org.eclipse.paho.client.mqttv3.TimerPingSender</name>
+    <description/>
+    <return>org.eclipse.paho.client.mqttv3.TimerPingSender</return>
+    <class>org.eclipse.paho.client.mqttv3.TimerPingSender</class>
+  </method>
+</package>

@@ -1,0 +1,1034 @@
+<?xml version="1.0" ?>
+<package>
+  <name>org.apache.http.client.methods</name>
+  <desc>Standard HTTP method implementations.</desc>
+  <class id="0">
+    <name>org.apache.http.client.methods.AbstractExecutionAwareRequest</name>
+    <description/>
+  </class>
+  <class id="1">
+    <name>org.apache.http.client.methods.HttpDelete</name>
+    <description>HTTP DELETE method</description>
+  </class>
+  <class id="2">
+    <name>org.apache.http.client.methods.HttpEntityEnclosingRequestBase</name>
+    <description>Basic implementation of an entity enclosing HTTP request that can be modified</description>
+  </class>
+  <class id="3">
+    <name>org.apache.http.client.methods.HttpGet</name>
+    <description>HTTP GET method.</description>
+  </class>
+  <class id="4">
+    <name>org.apache.http.client.methods.HttpHead</name>
+    <description>HTTP HEAD method.</description>
+  </class>
+  <class id="5">
+    <name>org.apache.http.client.methods.HttpOptions</name>
+    <description>HTTP OPTIONS method.</description>
+  </class>
+  <class id="6">
+    <name>org.apache.http.client.methods.HttpPatch</name>
+    <description>HTTP PATCH method.</description>
+  </class>
+  <class id="7">
+    <name>org.apache.http.client.methods.HttpPost</name>
+    <description>HTTP POST method.</description>
+  </class>
+  <class id="8">
+    <name>org.apache.http.client.methods.HttpPut</name>
+    <description>HTTP PUT method.</description>
+  </class>
+  <class id="9">
+    <name>org.apache.http.client.methods.HttpRequestBase</name>
+    <description>Base implementation of HttpUriRequest.</description>
+  </class>
+  <class id="10">
+    <name>org.apache.http.client.methods.HttpRequestWrapper</name>
+    <description>A wrapper class for HttpRequest that can be used to change properties of the current request without modifying the original object.</description>
+  </class>
+  <class id="11">
+    <name>org.apache.http.client.methods.HttpTrace</name>
+    <description>HTTP TRACE method.</description>
+  </class>
+  <class id="12">
+    <name>org.apache.http.client.methods.RequestBuilder</name>
+    <description>Builder for HttpUriRequest instances.</description>
+  </class>
+  <method id="0">
+    <name>abort</name>
+    <description>Aborts this http request.</description>
+    <class>org.apache.http.client.methods.AbstractExecutionAwareRequest</class>
+  </method>
+  <method id="1">
+    <name>clone</name>
+    <description/>
+    <return>Object</return>
+    <class>org.apache.http.client.methods.AbstractExecutionAwareRequest</class>
+  </method>
+  <method id="2">
+    <name>completed</name>
+    <description/>
+    <class>org.apache.http.client.methods.AbstractExecutionAwareRequest</class>
+  </method>
+  <method id="3">
+    <name>isAborted</name>
+    <description/>
+    <return>boolean</return>
+    <class>org.apache.http.client.methods.AbstractExecutionAwareRequest</class>
+  </method>
+  <method id="4">
+    <name>reset</name>
+    <description>Resets internal state of the request making it reusable.</description>
+    <class>org.apache.http.client.methods.AbstractExecutionAwareRequest</class>
+  </method>
+  <method id="5">
+    <name>setCancellable</name>
+    <description>Sets Cancellable for the ongoing operation.</description>
+    <parameter id="0">
+      <name>cancellable</name>
+      <type>org.apache.http.concurrent.Cancellable</type>
+    </parameter>
+    <class>org.apache.http.client.methods.AbstractExecutionAwareRequest</class>
+  </method>
+  <method id="6">
+    <name>getMethod</name>
+    <description>Returns the HTTP method this request uses, such as GET, PUT, POST, or other.</description>
+    <return>String</return>
+    <class>org.apache.http.client.methods.HttpDelete</class>
+  </method>
+  <method id="7">
+    <name>org.apache.http.client.methods.HttpDelete</name>
+    <description/>
+    <return>org.apache.http.client.methods.HttpDelete</return>
+    <class>org.apache.http.client.methods.HttpDelete</class>
+  </method>
+  <method id="8">
+    <name>org.apache.http.client.methods.HttpDelete</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpDelete</return>
+    <class>org.apache.http.client.methods.HttpDelete</class>
+  </method>
+  <method id="9">
+    <name>org.apache.http.client.methods.HttpDelete</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpDelete</return>
+    <class>org.apache.http.client.methods.HttpDelete</class>
+  </method>
+  <method id="10">
+    <name>clone</name>
+    <description/>
+    <return>Object</return>
+    <class>org.apache.http.client.methods.HttpEntityEnclosingRequestBase</class>
+  </method>
+  <method id="11">
+    <name>expectContinue</name>
+    <description/>
+    <return>boolean</return>
+    <class>org.apache.http.client.methods.HttpEntityEnclosingRequestBase</class>
+  </method>
+  <method id="12">
+    <name>getEntity</name>
+    <description/>
+    <return>HttpEntity</return>
+    <class>org.apache.http.client.methods.HttpEntityEnclosingRequestBase</class>
+  </method>
+  <method id="13">
+    <name>setEntity</name>
+    <description/>
+    <parameter id="0">
+      <name>entity</name>
+      <type>org.apache.http.HttpEntity</type>
+    </parameter>
+    <class>org.apache.http.client.methods.HttpEntityEnclosingRequestBase</class>
+  </method>
+  <method id="14">
+    <name>org.apache.http.client.methods.HttpEntityEnclosingRequestBase</name>
+    <description/>
+    <return>org.apache.http.client.methods.HttpEntityEnclosingRequestBase</return>
+    <class>org.apache.http.client.methods.HttpEntityEnclosingRequestBase</class>
+  </method>
+  <method id="15">
+    <name>getMethod</name>
+    <description>Returns the HTTP method this request uses, such as GET, PUT, POST, or other.</description>
+    <return>String</return>
+    <class>org.apache.http.client.methods.HttpGet</class>
+  </method>
+  <method id="16">
+    <name>org.apache.http.client.methods.HttpGet</name>
+    <description/>
+    <return>org.apache.http.client.methods.HttpGet</return>
+    <class>org.apache.http.client.methods.HttpGet</class>
+  </method>
+  <method id="17">
+    <name>org.apache.http.client.methods.HttpGet</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpGet</return>
+    <class>org.apache.http.client.methods.HttpGet</class>
+  </method>
+  <method id="18">
+    <name>org.apache.http.client.methods.HttpGet</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpGet</return>
+    <class>org.apache.http.client.methods.HttpGet</class>
+  </method>
+  <method id="19">
+    <name>getMethod</name>
+    <description>Returns the HTTP method this request uses, such as GET, PUT, POST, or other.</description>
+    <return>String</return>
+    <class>org.apache.http.client.methods.HttpHead</class>
+  </method>
+  <method id="20">
+    <name>org.apache.http.client.methods.HttpHead</name>
+    <description/>
+    <return>org.apache.http.client.methods.HttpHead</return>
+    <class>org.apache.http.client.methods.HttpHead</class>
+  </method>
+  <method id="21">
+    <name>org.apache.http.client.methods.HttpHead</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpHead</return>
+    <class>org.apache.http.client.methods.HttpHead</class>
+  </method>
+  <method id="22">
+    <name>org.apache.http.client.methods.HttpHead</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpHead</return>
+    <class>org.apache.http.client.methods.HttpHead</class>
+  </method>
+  <method id="23">
+    <name>getAllowedMethods</name>
+    <description/>
+    <parameter id="0">
+      <name>response</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <return>Set&lt;String&gt;</return>
+    <class>org.apache.http.client.methods.HttpOptions</class>
+  </method>
+  <method id="24">
+    <name>getMethod</name>
+    <description>Returns the HTTP method this request uses, such as GET, PUT, POST, or other.</description>
+    <return>String</return>
+    <class>org.apache.http.client.methods.HttpOptions</class>
+  </method>
+  <method id="25">
+    <name>org.apache.http.client.methods.HttpOptions</name>
+    <description/>
+    <return>org.apache.http.client.methods.HttpOptions</return>
+    <class>org.apache.http.client.methods.HttpOptions</class>
+  </method>
+  <method id="26">
+    <name>org.apache.http.client.methods.HttpOptions</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpOptions</return>
+    <class>org.apache.http.client.methods.HttpOptions</class>
+  </method>
+  <method id="27">
+    <name>org.apache.http.client.methods.HttpOptions</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpOptions</return>
+    <class>org.apache.http.client.methods.HttpOptions</class>
+  </method>
+  <method id="28">
+    <name>getMethod</name>
+    <description>Returns the HTTP method this request uses, such as GET, PUT, POST, or other.</description>
+    <return>String</return>
+    <class>org.apache.http.client.methods.HttpPatch</class>
+  </method>
+  <method id="29">
+    <name>org.apache.http.client.methods.HttpPatch</name>
+    <description/>
+    <return>org.apache.http.client.methods.HttpPatch</return>
+    <class>org.apache.http.client.methods.HttpPatch</class>
+  </method>
+  <method id="30">
+    <name>org.apache.http.client.methods.HttpPatch</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpPatch</return>
+    <class>org.apache.http.client.methods.HttpPatch</class>
+  </method>
+  <method id="31">
+    <name>org.apache.http.client.methods.HttpPatch</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpPatch</return>
+    <class>org.apache.http.client.methods.HttpPatch</class>
+  </method>
+  <method id="32">
+    <name>getMethod</name>
+    <description>Returns the HTTP method this request uses, such as GET, PUT, POST, or other.</description>
+    <return>String</return>
+    <class>org.apache.http.client.methods.HttpPost</class>
+  </method>
+  <method id="33">
+    <name>org.apache.http.client.methods.HttpPost</name>
+    <description/>
+    <return>org.apache.http.client.methods.HttpPost</return>
+    <class>org.apache.http.client.methods.HttpPost</class>
+  </method>
+  <method id="34">
+    <name>org.apache.http.client.methods.HttpPost</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpPost</return>
+    <class>org.apache.http.client.methods.HttpPost</class>
+  </method>
+  <method id="35">
+    <name>org.apache.http.client.methods.HttpPost</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpPost</return>
+    <class>org.apache.http.client.methods.HttpPost</class>
+  </method>
+  <method id="36">
+    <name>getMethod</name>
+    <description>Returns the HTTP method this request uses, such as GET, PUT, POST, or other.</description>
+    <return>String</return>
+    <class>org.apache.http.client.methods.HttpPut</class>
+  </method>
+  <method id="37">
+    <name>org.apache.http.client.methods.HttpPut</name>
+    <description/>
+    <return>org.apache.http.client.methods.HttpPut</return>
+    <class>org.apache.http.client.methods.HttpPut</class>
+  </method>
+  <method id="38">
+    <name>org.apache.http.client.methods.HttpPut</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpPut</return>
+    <class>org.apache.http.client.methods.HttpPut</class>
+  </method>
+  <method id="39">
+    <name>org.apache.http.client.methods.HttpPut</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpPut</return>
+    <class>org.apache.http.client.methods.HttpPut</class>
+  </method>
+  <method id="40">
+    <name>getConfig</name>
+    <description>Returns actual request configuration.</description>
+    <return>RequestConfig</return>
+    <class>org.apache.http.client.methods.HttpRequestBase</class>
+  </method>
+  <method id="41">
+    <name>getMethod</name>
+    <description>Returns the HTTP method this request uses, such as GET, PUT, POST, or other.</description>
+    <return>String</return>
+    <class>org.apache.http.client.methods.HttpRequestBase</class>
+  </method>
+  <method id="42">
+    <name>getProtocolVersion</name>
+    <description/>
+    <return>ProtocolVersion</return>
+    <class>org.apache.http.client.methods.HttpRequestBase</class>
+  </method>
+  <method id="43">
+    <name>getRequestLine</name>
+    <description/>
+    <return>RequestLine</return>
+    <class>org.apache.http.client.methods.HttpRequestBase</class>
+  </method>
+  <method id="44">
+    <name>getURI</name>
+    <description>Returns the original request URI.</description>
+    <return>URI</return>
+    <class>org.apache.http.client.methods.HttpRequestBase</class>
+  </method>
+  <method id="45">
+    <name>releaseConnection</name>
+    <description>A convenience method to simplify migration from HttpClient 3.1 API.</description>
+    <class>org.apache.http.client.methods.HttpRequestBase</class>
+  </method>
+  <method id="46">
+    <name>setConfig</name>
+    <description/>
+    <parameter id="0">
+      <name>config</name>
+      <type>org.apache.http.client.config.RequestConfig</type>
+    </parameter>
+    <class>org.apache.http.client.methods.HttpRequestBase</class>
+  </method>
+  <method id="47">
+    <name>setProtocolVersion</name>
+    <description/>
+    <parameter id="0">
+      <name>version</name>
+      <type>org.apache.http.ProtocolVersion</type>
+    </parameter>
+    <class>org.apache.http.client.methods.HttpRequestBase</class>
+  </method>
+  <method id="48">
+    <name>setURI</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <class>org.apache.http.client.methods.HttpRequestBase</class>
+  </method>
+  <method id="49">
+    <name>started</name>
+    <description/>
+    <class>org.apache.http.client.methods.HttpRequestBase</class>
+  </method>
+  <method id="50">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.apache.http.client.methods.HttpRequestBase</class>
+  </method>
+  <method id="51">
+    <name>org.apache.http.client.methods.HttpRequestBase</name>
+    <description/>
+    <return>org.apache.http.client.methods.HttpRequestBase</return>
+    <class>org.apache.http.client.methods.HttpRequestBase</class>
+  </method>
+  <method id="52">
+    <name>abort</name>
+    <description>Aborts execution of the request.</description>
+    <class>org.apache.http.client.methods.HttpRequestWrapper</class>
+  </method>
+  <method id="53">
+    <name>getMethod</name>
+    <description>Returns the HTTP method this request uses, such as GET, PUT, POST, or other.</description>
+    <return>String</return>
+    <class>org.apache.http.client.methods.HttpRequestWrapper</class>
+  </method>
+  <method id="54">
+    <name>getOriginal</name>
+    <description/>
+    <return>HttpRequest</return>
+    <class>org.apache.http.client.methods.HttpRequestWrapper</class>
+  </method>
+  <method id="55">
+    <name>getProtocolVersion</name>
+    <description/>
+    <return>ProtocolVersion</return>
+    <class>org.apache.http.client.methods.HttpRequestWrapper</class>
+  </method>
+  <method id="56">
+    <name>getRequestLine</name>
+    <description/>
+    <return>RequestLine</return>
+    <class>org.apache.http.client.methods.HttpRequestWrapper</class>
+  </method>
+  <method id="57">
+    <name>getTarget</name>
+    <description/>
+    <return>HttpHost</return>
+    <class>org.apache.http.client.methods.HttpRequestWrapper</class>
+  </method>
+  <method id="58">
+    <name>getURI</name>
+    <description>Returns the URI this request uses, such as http://example.org/path/to/file.</description>
+    <return>URI</return>
+    <class>org.apache.http.client.methods.HttpRequestWrapper</class>
+  </method>
+  <method id="59">
+    <name>isAborted</name>
+    <description>Tests if the request execution has been aborted.</description>
+    <return>boolean</return>
+    <class>org.apache.http.client.methods.HttpRequestWrapper</class>
+  </method>
+  <method id="60">
+    <name>setProtocolVersion</name>
+    <description/>
+    <parameter id="0">
+      <name>version</name>
+      <type>org.apache.http.ProtocolVersion</type>
+    </parameter>
+    <class>org.apache.http.client.methods.HttpRequestWrapper</class>
+  </method>
+  <method id="61">
+    <name>setURI</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <class>org.apache.http.client.methods.HttpRequestWrapper</class>
+  </method>
+  <method id="62">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.apache.http.client.methods.HttpRequestWrapper</class>
+  </method>
+  <method id="63">
+    <name>wrap</name>
+    <description>Creates a mutable wrapper of the original request.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.apache.http.HttpRequest</type>
+    </parameter>
+    <return>HttpRequestWrapper</return>
+    <class>org.apache.http.client.methods.HttpRequestWrapper</class>
+  </method>
+  <method id="64">
+    <name>wrap</name>
+    <description>Creates a mutable wrapper of the original request.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.apache.http.HttpRequest</type>
+    </parameter>
+    <parameter id="1">
+      <name>target</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <return>HttpRequestWrapper</return>
+    <class>org.apache.http.client.methods.HttpRequestWrapper</class>
+  </method>
+  <method id="65">
+    <name>getMethod</name>
+    <description>Returns the HTTP method this request uses, such as GET, PUT, POST, or other.</description>
+    <return>String</return>
+    <class>org.apache.http.client.methods.HttpTrace</class>
+  </method>
+  <method id="66">
+    <name>org.apache.http.client.methods.HttpTrace</name>
+    <description/>
+    <return>org.apache.http.client.methods.HttpTrace</return>
+    <class>org.apache.http.client.methods.HttpTrace</class>
+  </method>
+  <method id="67">
+    <name>org.apache.http.client.methods.HttpTrace</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpTrace</return>
+    <class>org.apache.http.client.methods.HttpTrace</class>
+  </method>
+  <method id="68">
+    <name>org.apache.http.client.methods.HttpTrace</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>org.apache.http.client.methods.HttpTrace</return>
+    <class>org.apache.http.client.methods.HttpTrace</class>
+  </method>
+  <method id="69">
+    <name>addHeader</name>
+    <description/>
+    <parameter id="0">
+      <name>header</name>
+      <type>org.apache.http.Header</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="70">
+    <name>addHeader</name>
+    <description/>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>value</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="71">
+    <name>addParameter</name>
+    <description/>
+    <parameter id="0">
+      <name>nvp</name>
+      <type>org.apache.http.NameValuePair</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="72">
+    <name>addParameter</name>
+    <description/>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>value</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="73">
+    <name>addParameters</name>
+    <description/>
+    <parameter id="0">
+      <name>nvps</name>
+      <type>org.apache.http.NameValuePair...</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="74">
+    <name>build</name>
+    <description/>
+    <return>HttpUriRequest</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="75">
+    <name>copy</name>
+    <description/>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.apache.http.HttpRequest</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="76">
+    <name>create</name>
+    <description/>
+    <parameter id="0">
+      <name>method</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="77">
+    <name>delete</name>
+    <description/>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="78">
+    <name>delete</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="79">
+    <name>delete</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="80">
+    <name>get</name>
+    <description/>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="81">
+    <name>get</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="82">
+    <name>get</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="83">
+    <name>getCharset</name>
+    <description/>
+    <return>Charset</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="84">
+    <name>getConfig</name>
+    <description/>
+    <return>RequestConfig</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="85">
+    <name>getEntity</name>
+    <description/>
+    <return>HttpEntity</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="86">
+    <name>getFirstHeader</name>
+    <description/>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>Header</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="87">
+    <name>getHeaders</name>
+    <description/>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>Header[]</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="88">
+    <name>getLastHeader</name>
+    <description/>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>Header</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="89">
+    <name>getMethod</name>
+    <description/>
+    <return>String</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="90">
+    <name>getParameters</name>
+    <description/>
+    <return>List&lt;NameValuePair&gt;</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="91">
+    <name>getUri</name>
+    <description/>
+    <return>URI</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="92">
+    <name>getVersion</name>
+    <description/>
+    <return>ProtocolVersion</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="93">
+    <name>head</name>
+    <description/>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="94">
+    <name>head</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="95">
+    <name>head</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="96">
+    <name>options</name>
+    <description/>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="97">
+    <name>options</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="98">
+    <name>options</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="99">
+    <name>patch</name>
+    <description/>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="100">
+    <name>patch</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="101">
+    <name>patch</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="102">
+    <name>post</name>
+    <description/>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="103">
+    <name>post</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="104">
+    <name>post</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="105">
+    <name>put</name>
+    <description/>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="106">
+    <name>put</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="107">
+    <name>put</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="108">
+    <name>removeHeader</name>
+    <description/>
+    <parameter id="0">
+      <name>header</name>
+      <type>org.apache.http.Header</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="109">
+    <name>removeHeaders</name>
+    <description/>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="110">
+    <name>setCharset</name>
+    <description/>
+    <parameter id="0">
+      <name>charset</name>
+      <type>java.nio.charset.Charset</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="111">
+    <name>setConfig</name>
+    <description/>
+    <parameter id="0">
+      <name>config</name>
+      <type>org.apache.http.client.config.RequestConfig</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="112">
+    <name>setEntity</name>
+    <description/>
+    <parameter id="0">
+      <name>entity</name>
+      <type>org.apache.http.HttpEntity</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="113">
+    <name>setHeader</name>
+    <description/>
+    <parameter id="0">
+      <name>header</name>
+      <type>org.apache.http.Header</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="114">
+    <name>setHeader</name>
+    <description/>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>value</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="115">
+    <name>setUri</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="116">
+    <name>setUri</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="117">
+    <name>setVersion</name>
+    <description/>
+    <parameter id="0">
+      <name>version</name>
+      <type>org.apache.http.ProtocolVersion</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="118">
+    <name>trace</name>
+    <description/>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="119">
+    <name>trace</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+  <method id="120">
+    <name>trace</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>RequestBuilder</return>
+    <class>org.apache.http.client.methods.RequestBuilder</class>
+  </method>
+</package>

@@ -1,0 +1,2263 @@
+<?xml version="1.0" ?>
+<package>
+  <name>org.apache.http.impl.client</name>
+  <desc>Default HTTP client implementation.</desc>
+  <class id="0">
+    <name>org.apache.http.impl.client.AbstractAuthenticationHandler</name>
+    <description>(4.2) use AuthenticationStrategy</description>
+  </class>
+  <class id="1">
+    <name>org.apache.http.impl.client.AbstractHttpClient</name>
+    <description>(4.3) use HttpClientBuilder.</description>
+  </class>
+  <class id="2">
+    <name>org.apache.http.impl.client.AbstractResponseHandler</name>
+    <description>A generic ResponseHandler that works with the response entity for successful (2xx) responses.</description>
+  </class>
+  <class id="3">
+    <name>org.apache.http.impl.client.AIMDBackoffManager</name>
+    <description>The AIMDBackoffManager applies an additive increase, multiplicative decrease (AIMD) to managing a dynamic limit to the number of connections allowed to a given host.</description>
+  </class>
+  <class id="4">
+    <name>org.apache.http.impl.client.AutoRetryHttpClient</name>
+    <description>(4.3) use HttpClientBuilder.</description>
+  </class>
+  <class id="5">
+    <name>org.apache.http.impl.client.BasicAuthCache</name>
+    <description>Default implementation of AuthCache.</description>
+  </class>
+  <class id="6">
+    <name>org.apache.http.impl.client.BasicCookieStore</name>
+    <description>Default implementation of CookieStore</description>
+  </class>
+  <class id="7">
+    <name>org.apache.http.impl.client.BasicCredentialsProvider</name>
+    <description>Default implementation of CredentialsProvider.</description>
+  </class>
+  <class id="8">
+    <name>org.apache.http.impl.client.BasicResponseHandler</name>
+    <description>A ResponseHandler that returns the response body as a String for successful (2xx) responses.</description>
+  </class>
+  <class id="9">
+    <name>org.apache.http.impl.client.ClientParamsStack</name>
+    <description>(4.3) use configuration classes provided 'org.apache.http.config' and 'org.apache.http.client.config'</description>
+  </class>
+  <class id="10">
+    <name>org.apache.http.impl.client.CloseableHttpClient</name>
+    <description>Base implementation of HttpClient that also implements Closeable.</description>
+  </class>
+  <class id="11">
+    <name>org.apache.http.impl.client.ContentEncodingHttpClient</name>
+    <description>(4.2) use HttpClientBuilder</description>
+  </class>
+  <class id="12">
+    <name>org.apache.http.impl.client.CookieSpecRegistries</name>
+    <description/>
+  </class>
+  <class id="13">
+    <name>org.apache.http.impl.client.DecompressingHttpClient</name>
+    <description>(4.3) use HttpClientBuilder</description>
+  </class>
+  <class id="14">
+    <name>org.apache.http.impl.client.DefaultBackoffStrategy</name>
+    <description>This ConnectionBackoffStrategy backs off either for a raw network socket or connection timeout or if the server explicitly sends a 503 (Service Unavailable) response.</description>
+  </class>
+  <class id="15">
+    <name>org.apache.http.impl.client.DefaultClientConnectionReuseStrategy</name>
+    <description/>
+  </class>
+  <class id="16">
+    <name>org.apache.http.impl.client.DefaultConnectionKeepAliveStrategy</name>
+    <description>Default implementation of a strategy deciding duration that a connection can remain idle.</description>
+  </class>
+  <class id="17">
+    <name>org.apache.http.impl.client.DefaultHttpClient</name>
+    <description>(4.3) use HttpClientBuilder see also CloseableHttpClient.</description>
+  </class>
+  <class id="18">
+    <name>org.apache.http.impl.client.DefaultHttpRequestRetryHandler</name>
+    <description>The default HttpRequestRetryHandler used by request executors.</description>
+  </class>
+  <class id="19">
+    <name>org.apache.http.impl.client.DefaultProxyAuthenticationHandler</name>
+    <description>(4.2) use ProxyAuthenticationStrategy</description>
+  </class>
+  <class id="20">
+    <name>org.apache.http.impl.client.DefaultRedirectHandler</name>
+    <description>(4.1) use DefaultRedirectStrategy.</description>
+  </class>
+  <class id="21">
+    <name>org.apache.http.impl.client.DefaultRedirectStrategy</name>
+    <description>Default implementation of RedirectStrategy.</description>
+  </class>
+  <class id="22">
+    <name>org.apache.http.impl.client.DefaultRequestDirector</name>
+    <description>(4.3)</description>
+  </class>
+  <class id="23">
+    <name>org.apache.http.impl.client.DefaultServiceUnavailableRetryStrategy</name>
+    <description>Default implementation of the ServiceUnavailableRetryStrategy interface.</description>
+  </class>
+  <class id="24">
+    <name>org.apache.http.impl.client.DefaultTargetAuthenticationHandler</name>
+    <description>(4.2) use TargetAuthenticationStrategy</description>
+  </class>
+  <class id="25">
+    <name>org.apache.http.impl.client.DefaultUserTokenHandler</name>
+    <description>Default implementation of UserTokenHandler.</description>
+  </class>
+  <class id="26">
+    <name>org.apache.http.impl.client.EntityEnclosingRequestWrapper</name>
+    <description>(4.3) do not use.</description>
+  </class>
+  <class id="27">
+    <name>org.apache.http.impl.client.FutureRequestExecutionMetrics</name>
+    <description>Collection of different counters used to gather metrics for FutureRequestExecutionService.</description>
+  </class>
+  <class id="28">
+    <name>org.apache.http.impl.client.FutureRequestExecutionService</name>
+    <description>HttpAsyncClientWithFuture wraps calls to execute with a HttpRequestFutureTask and schedules them using the provided executor service.</description>
+  </class>
+  <class id="29">
+    <name>org.apache.http.impl.client.HttpAuthenticator</name>
+    <description>(4.3) reserved for internal use.</description>
+  </class>
+  <class id="30">
+    <name>org.apache.http.impl.client.HttpClientBuilder</name>
+    <description>Builder for CloseableHttpClient instances.</description>
+  </class>
+  <class id="31">
+    <name>org.apache.http.impl.client.HttpClients</name>
+    <description>Factory methods for CloseableHttpClient instances.</description>
+  </class>
+  <class id="32">
+    <name>org.apache.http.impl.client.HttpRequestFutureTask</name>
+    <description>FutureTask implementation that wraps a HttpAsyncClientCallable and exposes various task specific metrics.</description>
+  </class>
+  <class id="33">
+    <name>org.apache.http.impl.client.IdleConnectionEvictor</name>
+    <description>This class maintains a background thread to enforce an eviction policy for expired / idle persistent connections kept alive in the connection pool.</description>
+  </class>
+  <class id="34">
+    <name>org.apache.http.impl.client.LaxRedirectStrategy</name>
+    <description>Lax RedirectStrategy implementation that automatically redirects all HEAD, GET, POST, and DELETE requests.</description>
+  </class>
+  <class id="35">
+    <name>org.apache.http.impl.client.NoopUserTokenHandler</name>
+    <description>Noop implementation of UserTokenHandler that always returns null.</description>
+  </class>
+  <class id="36">
+    <name>org.apache.http.impl.client.NullBackoffStrategy</name>
+    <description>This is a ConnectionBackoffStrategy that never backs off, for compatibility with existing behavior.</description>
+  </class>
+  <class id="37">
+    <name>org.apache.http.impl.client.ProxyAuthenticationStrategy</name>
+    <description>Default AuthenticationStrategy implementation for proxy host authentication.</description>
+  </class>
+  <class id="38">
+    <name>org.apache.http.impl.client.ProxyClient</name>
+    <description>ProxyClient can be used to establish a tunnel via an HTTP proxy.</description>
+  </class>
+  <class id="39">
+    <name>org.apache.http.impl.client.RedirectLocations</name>
+    <description>This class represents a collection of URIs used as redirect locations.</description>
+  </class>
+  <class id="40">
+    <name>org.apache.http.impl.client.RequestWrapper</name>
+    <description>(4.3) do not use.</description>
+  </class>
+  <class id="41">
+    <name>org.apache.http.impl.client.RoutedRequest</name>
+    <description>(4.3) do not use.</description>
+  </class>
+  <class id="42">
+    <name>org.apache.http.impl.client.StandardHttpRequestRetryHandler</name>
+    <description>HttpRequestRetryHandler which assumes that all requested HTTP methods which should be idempotent according to RFC-2616 are in fact idempotent and can be retried.</description>
+  </class>
+  <class id="43">
+    <name>org.apache.http.impl.client.SystemDefaultCredentialsProvider</name>
+    <description>Implementation of CredentialsProvider backed by standard JRE Authenticator.</description>
+  </class>
+  <class id="44">
+    <name>org.apache.http.impl.client.SystemDefaultHttpClient</name>
+    <description>(4.3) use HttpClientBuilder</description>
+  </class>
+  <class id="45">
+    <name>org.apache.http.impl.client.TargetAuthenticationStrategy</name>
+    <description>Default AuthenticationStrategy implementation for proxy host authentication.</description>
+  </class>
+  <method id="0">
+    <name>handleEntity</name>
+    <description>Handle the response entity and transform it into the actual response object.</description>
+    <parameter id="0">
+      <name>entity</name>
+      <type>org.apache.http.HttpEntity</type>
+    </parameter>
+    <return>T</return>
+    <class>org.apache.http.impl.client.AbstractResponseHandler</class>
+  </method>
+  <method id="1">
+    <name>handleResponse</name>
+    <description>Read the entity from the response body and pass it to the entity handler method if the response was successful (a 2xx status code).</description>
+    <parameter id="0">
+      <name>response</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <return>T</return>
+    <class>org.apache.http.impl.client.AbstractResponseHandler</class>
+  </method>
+  <method id="2">
+    <name>org.apache.http.impl.client.AbstractResponseHandler</name>
+    <description/>
+    <return>org.apache.http.impl.client.AbstractResponseHandler</return>
+    <class>org.apache.http.impl.client.AbstractResponseHandler</class>
+  </method>
+  <method id="3">
+    <name>backOff</name>
+    <description>Called when we have decided that the result of using a connection should be interpreted as a backoff signal.</description>
+    <parameter id="0">
+      <name>route</name>
+      <type>org.apache.http.conn.routing.HttpRoute</type>
+    </parameter>
+    <class>org.apache.http.impl.client.AIMDBackoffManager</class>
+  </method>
+  <method id="4">
+    <name>probe</name>
+    <description>Called when we have determined that the result of using a connection has succeeded and that we may probe for more connections.</description>
+    <parameter id="0">
+      <name>route</name>
+      <type>org.apache.http.conn.routing.HttpRoute</type>
+    </parameter>
+    <class>org.apache.http.impl.client.AIMDBackoffManager</class>
+  </method>
+  <method id="5">
+    <name>setBackoffFactor</name>
+    <description>Sets the factor to use when backing off; the new per-host limit will be roughly the current max times this factor.</description>
+    <parameter id="0">
+      <name>d</name>
+      <type>double</type>
+    </parameter>
+    <class>org.apache.http.impl.client.AIMDBackoffManager</class>
+  </method>
+  <method id="6">
+    <name>setCooldownMillis</name>
+    <description>Sets the amount of time, in milliseconds, to wait between adjustments in pool sizes for a given host, to allow enough time for the adjustments to take effect.</description>
+    <parameter id="0">
+      <name>l</name>
+      <type>long</type>
+    </parameter>
+    <class>org.apache.http.impl.client.AIMDBackoffManager</class>
+  </method>
+  <method id="7">
+    <name>setPerHostConnectionCap</name>
+    <description>Sets the absolute maximum per-host connection pool size to probe up to; defaults to 2 (the default per-host max).</description>
+    <parameter id="0">
+      <name>cap</name>
+      <type>int</type>
+    </parameter>
+    <class>org.apache.http.impl.client.AIMDBackoffManager</class>
+  </method>
+  <method id="8">
+    <name>org.apache.http.impl.client.AIMDBackoffManager</name>
+    <description>Creates an AIMDBackoffManager to manage per-host connection pool sizes represented by the given ConnPoolControl.</description>
+    <parameter id="0">
+      <name>connPerRoute</name>
+      <type>org.apache.http.pool.ConnPoolControl</type>
+    </parameter>
+    <return>org.apache.http.impl.client.AIMDBackoffManager</return>
+    <class>org.apache.http.impl.client.AIMDBackoffManager</class>
+  </method>
+  <method id="9">
+    <name>clear</name>
+    <description/>
+    <class>org.apache.http.impl.client.BasicAuthCache</class>
+  </method>
+  <method id="10">
+    <name>get</name>
+    <description/>
+    <parameter id="0">
+      <name>host</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <return>AuthScheme</return>
+    <class>org.apache.http.impl.client.BasicAuthCache</class>
+  </method>
+  <method id="11">
+    <name>getKey</name>
+    <description/>
+    <parameter id="0">
+      <name>host</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <return>HttpHost</return>
+    <class>org.apache.http.impl.client.BasicAuthCache</class>
+  </method>
+  <method id="12">
+    <name>put</name>
+    <description/>
+    <parameter id="0">
+      <name>host</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="1">
+      <name>authScheme</name>
+      <type>org.apache.http.auth.AuthScheme</type>
+    </parameter>
+    <class>org.apache.http.impl.client.BasicAuthCache</class>
+  </method>
+  <method id="13">
+    <name>remove</name>
+    <description/>
+    <parameter id="0">
+      <name>host</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <class>org.apache.http.impl.client.BasicAuthCache</class>
+  </method>
+  <method id="14">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.apache.http.impl.client.BasicAuthCache</class>
+  </method>
+  <method id="15">
+    <name>org.apache.http.impl.client.BasicAuthCache</name>
+    <description/>
+    <return>org.apache.http.impl.client.BasicAuthCache</return>
+    <class>org.apache.http.impl.client.BasicAuthCache</class>
+  </method>
+  <method id="16">
+    <name>org.apache.http.impl.client.BasicAuthCache</name>
+    <description>Default constructor.</description>
+    <parameter id="0">
+      <name>schemePortResolver</name>
+      <type>org.apache.http.conn.SchemePortResolver</type>
+    </parameter>
+    <return>org.apache.http.impl.client.BasicAuthCache</return>
+    <class>org.apache.http.impl.client.BasicAuthCache</class>
+  </method>
+  <method id="17">
+    <name>addCookie</name>
+    <description>Adds an HTTP cookie, replacing any existing equivalent cookies.</description>
+    <parameter id="0">
+      <name>cookie</name>
+      <type>org.apache.http.cookie.Cookie</type>
+    </parameter>
+    <class>org.apache.http.impl.client.BasicCookieStore</class>
+  </method>
+  <method id="18">
+    <name>addCookies</name>
+    <description>Adds an array of HTTP cookies.</description>
+    <parameter id="0">
+      <name>cookies</name>
+      <type>org.apache.http.cookie.Cookie[]</type>
+    </parameter>
+    <class>org.apache.http.impl.client.BasicCookieStore</class>
+  </method>
+  <method id="19">
+    <name>clear</name>
+    <description>Clears all cookies.</description>
+    <class>org.apache.http.impl.client.BasicCookieStore</class>
+  </method>
+  <method id="20">
+    <name>clearExpired</name>
+    <description>Removes all of cookies in this HTTP state that have expired by the specified date.</description>
+    <parameter id="0">
+      <name>date</name>
+      <type>java.util.Date</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.BasicCookieStore</class>
+  </method>
+  <method id="21">
+    <name>getCookies</name>
+    <description>Returns an immutable array of cookies that this HTTP state currently contains.</description>
+    <return>List&lt;Cookie&gt;</return>
+    <class>org.apache.http.impl.client.BasicCookieStore</class>
+  </method>
+  <method id="22">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.apache.http.impl.client.BasicCookieStore</class>
+  </method>
+  <method id="23">
+    <name>org.apache.http.impl.client.BasicCookieStore</name>
+    <description/>
+    <return>org.apache.http.impl.client.BasicCookieStore</return>
+    <class>org.apache.http.impl.client.BasicCookieStore</class>
+  </method>
+  <method id="24">
+    <name>clear</name>
+    <description>Clears all credentials.</description>
+    <class>org.apache.http.impl.client.BasicCredentialsProvider</class>
+  </method>
+  <method id="25">
+    <name>getCredentials</name>
+    <description>Get the credentials for the given authentication scope.</description>
+    <parameter id="0">
+      <name>authscope</name>
+      <type>org.apache.http.auth.AuthScope</type>
+    </parameter>
+    <return>Credentials</return>
+    <class>org.apache.http.impl.client.BasicCredentialsProvider</class>
+  </method>
+  <method id="26">
+    <name>setCredentials</name>
+    <description>Sets the credentials for the given authentication scope.</description>
+    <parameter id="0">
+      <name>authscope</name>
+      <type>org.apache.http.auth.AuthScope</type>
+    </parameter>
+    <parameter id="1">
+      <name>credentials</name>
+      <type>org.apache.http.auth.Credentials</type>
+    </parameter>
+    <class>org.apache.http.impl.client.BasicCredentialsProvider</class>
+  </method>
+  <method id="27">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.apache.http.impl.client.BasicCredentialsProvider</class>
+  </method>
+  <method id="28">
+    <name>org.apache.http.impl.client.BasicCredentialsProvider</name>
+    <description>Default constructor.</description>
+    <return>org.apache.http.impl.client.BasicCredentialsProvider</return>
+    <class>org.apache.http.impl.client.BasicCredentialsProvider</class>
+  </method>
+  <method id="29">
+    <name>handleEntity</name>
+    <description>Returns the entity as a body as a String.</description>
+    <parameter id="0">
+      <name>entity</name>
+      <type>org.apache.http.HttpEntity</type>
+    </parameter>
+    <return>String</return>
+    <class>org.apache.http.impl.client.BasicResponseHandler</class>
+  </method>
+  <method id="30">
+    <name>handleResponse</name>
+    <description>Read the entity from the response body and pass it to the entity handler method if the response was successful (a 2xx status code).</description>
+    <parameter id="0">
+      <name>response</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <return>String</return>
+    <class>org.apache.http.impl.client.BasicResponseHandler</class>
+  </method>
+  <method id="31">
+    <name>org.apache.http.impl.client.BasicResponseHandler</name>
+    <description/>
+    <return>org.apache.http.impl.client.BasicResponseHandler</return>
+    <class>org.apache.http.impl.client.BasicResponseHandler</class>
+  </method>
+  <method id="32">
+    <name>doExecute</name>
+    <description/>
+    <parameter id="0">
+      <name>target</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="1">
+      <name>request</name>
+      <type>org.apache.http.HttpRequest</type>
+    </parameter>
+    <parameter id="2">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>CloseableHttpResponse</return>
+    <class>org.apache.http.impl.client.CloseableHttpClient</class>
+  </method>
+  <method id="33">
+    <name>execute</name>
+    <description>Executes HTTP request using the default context.</description>
+    <parameter id="0">
+      <name>target</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="1">
+      <name>request</name>
+      <type>org.apache.http.HttpRequest</type>
+    </parameter>
+    <return>CloseableHttpResponse</return>
+    <class>org.apache.http.impl.client.CloseableHttpClient</class>
+  </method>
+  <method id="34">
+    <name>execute</name>
+    <description>Executes HTTP request using the given context.</description>
+    <parameter id="0">
+      <name>target</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="1">
+      <name>request</name>
+      <type>org.apache.http.HttpRequest</type>
+    </parameter>
+    <parameter id="2">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>CloseableHttpResponse</return>
+    <class>org.apache.http.impl.client.CloseableHttpClient</class>
+  </method>
+  <method id="35">
+    <name>execute</name>
+    <description>Executes a request using the default context and processes the response using the given response handler.</description>
+    <parameter id="0">
+      <name>target</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="1">
+      <name>request</name>
+      <type>org.apache.http.HttpRequest</type>
+    </parameter>
+    <parameter id="2">
+      <name>extends</name>
+      <type>org.apache.http.client.ResponseHandler</type>
+    </parameter>
+    <return>T</return>
+    <class>org.apache.http.impl.client.CloseableHttpClient</class>
+  </method>
+  <method id="36">
+    <name>execute</name>
+    <description>Executes a request using the default context and processes the response using the given response handler.</description>
+    <parameter id="0">
+      <name>target</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="1">
+      <name>request</name>
+      <type>org.apache.http.HttpRequest</type>
+    </parameter>
+    <parameter id="2">
+      <name>extends</name>
+      <type>org.apache.http.client.ResponseHandler</type>
+    </parameter>
+    <parameter id="3">
+      <name>responseHandler</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>T</return>
+    <class>org.apache.http.impl.client.CloseableHttpClient</class>
+  </method>
+  <method id="37">
+    <name>execute</name>
+    <description>Executes HTTP request using the default context.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.apache.http.client.methods.HttpUriRequest</type>
+    </parameter>
+    <return>CloseableHttpResponse</return>
+    <class>org.apache.http.impl.client.CloseableHttpClient</class>
+  </method>
+  <method id="38">
+    <name>execute</name>
+    <description>Executes HTTP request using the given context.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.apache.http.client.methods.HttpUriRequest</type>
+    </parameter>
+    <parameter id="1">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>CloseableHttpResponse</return>
+    <class>org.apache.http.impl.client.CloseableHttpClient</class>
+  </method>
+  <method id="39">
+    <name>execute</name>
+    <description>Executes a request using the default context and processes the response using the given response handler.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.apache.http.client.methods.HttpUriRequest</type>
+    </parameter>
+    <parameter id="1">
+      <name>extends</name>
+      <type>org.apache.http.client.ResponseHandler</type>
+    </parameter>
+    <return>T</return>
+    <class>org.apache.http.impl.client.CloseableHttpClient</class>
+  </method>
+  <method id="40">
+    <name>execute</name>
+    <description>Executes a request using the default context and processes the response using the given response handler.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.apache.http.client.methods.HttpUriRequest</type>
+    </parameter>
+    <parameter id="1">
+      <name>extends</name>
+      <type>org.apache.http.client.ResponseHandler</type>
+    </parameter>
+    <parameter id="2">
+      <name>responseHandler</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>T</return>
+    <class>org.apache.http.impl.client.CloseableHttpClient</class>
+  </method>
+  <method id="41">
+    <name>org.apache.http.impl.client.CloseableHttpClient</name>
+    <description/>
+    <return>org.apache.http.impl.client.CloseableHttpClient</return>
+    <class>org.apache.http.impl.client.CloseableHttpClient</class>
+  </method>
+  <method id="42">
+    <name>createDefault</name>
+    <description>Creates the default registry, using the default public suffix matcher.</description>
+    <return>Lookup&lt;CookieSpecProvider&gt;</return>
+    <class>org.apache.http.impl.client.CookieSpecRegistries</class>
+  </method>
+  <method id="43">
+    <name>createDefault</name>
+    <description>Creates the default registry with the provided public suffix matcher</description>
+    <parameter id="0">
+      <name>publicSuffixMatcher</name>
+      <type>org.apache.http.conn.util.PublicSuffixMatcher</type>
+    </parameter>
+    <return>Lookup&lt;CookieSpecProvider&gt;</return>
+    <class>org.apache.http.impl.client.CookieSpecRegistries</class>
+  </method>
+  <method id="44">
+    <name>createDefaultBuilder</name>
+    <description>Creates a builder containing the default registry entries with the default public suffix matcher.</description>
+    <return>RegistryBuilder&lt;CookieSpecProvider&gt;</return>
+    <class>org.apache.http.impl.client.CookieSpecRegistries</class>
+  </method>
+  <method id="45">
+    <name>createDefaultBuilder</name>
+    <description>Creates a builder containing the default registry entries, using the provided public suffix matcher.</description>
+    <parameter id="0">
+      <name>publicSuffixMatcher</name>
+      <type>org.apache.http.conn.util.PublicSuffixMatcher</type>
+    </parameter>
+    <return>RegistryBuilder&lt;CookieSpecProvider&gt;</return>
+    <class>org.apache.http.impl.client.CookieSpecRegistries</class>
+  </method>
+  <method id="46">
+    <name>shouldBackoff</name>
+    <description>Determines whether receiving the given HttpResponse as a result of request execution should result in a backoff signal.</description>
+    <parameter id="0">
+      <name>resp</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.DefaultBackoffStrategy</class>
+  </method>
+  <method id="47">
+    <name>shouldBackoff</name>
+    <description>Determines whether seeing the given Throwable as a result of request execution should result in a backoff signal.</description>
+    <parameter id="0">
+      <name>t</name>
+      <type>java.lang.Throwable</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.DefaultBackoffStrategy</class>
+  </method>
+  <method id="48">
+    <name>org.apache.http.impl.client.DefaultBackoffStrategy</name>
+    <description/>
+    <return>org.apache.http.impl.client.DefaultBackoffStrategy</return>
+    <class>org.apache.http.impl.client.DefaultBackoffStrategy</class>
+  </method>
+  <method id="49">
+    <name>keepAlive</name>
+    <description/>
+    <parameter id="0">
+      <name>response</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <parameter id="1">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.DefaultClientConnectionReuseStrategy</class>
+  </method>
+  <method id="50">
+    <name>org.apache.http.impl.client.DefaultClientConnectionReuseStrategy</name>
+    <description/>
+    <return>org.apache.http.impl.client.DefaultClientConnectionReuseStrategy</return>
+    <class>org.apache.http.impl.client.DefaultClientConnectionReuseStrategy</class>
+  </method>
+  <method id="51">
+    <name>getKeepAliveDuration</name>
+    <description>Returns the duration of time which this connection can be safely kept idle.</description>
+    <parameter id="0">
+      <name>response</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <parameter id="1">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>long</return>
+    <class>org.apache.http.impl.client.DefaultConnectionKeepAliveStrategy</class>
+  </method>
+  <method id="52">
+    <name>org.apache.http.impl.client.DefaultConnectionKeepAliveStrategy</name>
+    <description/>
+    <return>org.apache.http.impl.client.DefaultConnectionKeepAliveStrategy</return>
+    <class>org.apache.http.impl.client.DefaultConnectionKeepAliveStrategy</class>
+  </method>
+  <method id="53">
+    <name>getRetryCount</name>
+    <description/>
+    <return>int</return>
+    <class>org.apache.http.impl.client.DefaultHttpRequestRetryHandler</class>
+  </method>
+  <method id="54">
+    <name>handleAsIdempotent</name>
+    <description/>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.apache.http.HttpRequest</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.DefaultHttpRequestRetryHandler</class>
+  </method>
+  <method id="55">
+    <name>isRequestSentRetryEnabled</name>
+    <description/>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.DefaultHttpRequestRetryHandler</class>
+  </method>
+  <method id="56">
+    <name>retryRequest</name>
+    <description>Used retryCount and requestSentRetryEnabled to determine if the given method should be retried.</description>
+    <parameter id="0">
+      <name>exception</name>
+      <type>java.io.IOException</type>
+    </parameter>
+    <parameter id="1">
+      <name>executionCount</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="2">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.DefaultHttpRequestRetryHandler</class>
+  </method>
+  <method id="57">
+    <name>org.apache.http.impl.client.DefaultHttpRequestRetryHandler</name>
+    <description>Create the request retry handler with a retry count of 3, requestSentRetryEnabled false and using the following list of non-retriable IOException classes: InterruptedIOException UnknownHostException ConnectException SSLException</description>
+    <return>org.apache.http.impl.client.DefaultHttpRequestRetryHandler</return>
+    <class>org.apache.http.impl.client.DefaultHttpRequestRetryHandler</class>
+  </method>
+  <method id="58">
+    <name>org.apache.http.impl.client.DefaultHttpRequestRetryHandler</name>
+    <description>Create the request retry handler using the following list of non-retriable IOException classes: InterruptedIOException UnknownHostException ConnectException SSLException</description>
+    <parameter id="0">
+      <name>retryCount</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>requestSentRetryEnabled</name>
+      <type>boolean</type>
+    </parameter>
+    <return>org.apache.http.impl.client.DefaultHttpRequestRetryHandler</return>
+    <class>org.apache.http.impl.client.DefaultHttpRequestRetryHandler</class>
+  </method>
+  <method id="59">
+    <name>createLocationURI</name>
+    <description/>
+    <parameter id="0">
+      <name>location</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>URI</return>
+    <class>org.apache.http.impl.client.DefaultRedirectStrategy</class>
+  </method>
+  <method id="60">
+    <name>getLocationURI</name>
+    <description/>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.apache.http.HttpRequest</type>
+    </parameter>
+    <parameter id="1">
+      <name>response</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <parameter id="2">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>URI</return>
+    <class>org.apache.http.impl.client.DefaultRedirectStrategy</class>
+  </method>
+  <method id="61">
+    <name>getRedirect</name>
+    <description>Determines the redirect location given the response from the target server and the current request execution context and generates a new request to be sent to the location.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.apache.http.HttpRequest</type>
+    </parameter>
+    <parameter id="1">
+      <name>response</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <parameter id="2">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>HttpUriRequest</return>
+    <class>org.apache.http.impl.client.DefaultRedirectStrategy</class>
+  </method>
+  <method id="62">
+    <name>isRedirectable</name>
+    <description/>
+    <parameter id="0">
+      <name>method</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.DefaultRedirectStrategy</class>
+  </method>
+  <method id="63">
+    <name>isRedirected</name>
+    <description>Determines if a request should be redirected to a new location given the response from the target server.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.apache.http.HttpRequest</type>
+    </parameter>
+    <parameter id="1">
+      <name>response</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <parameter id="2">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.DefaultRedirectStrategy</class>
+  </method>
+  <method id="64">
+    <name>org.apache.http.impl.client.DefaultRedirectStrategy</name>
+    <description/>
+    <return>org.apache.http.impl.client.DefaultRedirectStrategy</return>
+    <class>org.apache.http.impl.client.DefaultRedirectStrategy</class>
+  </method>
+  <method id="65">
+    <name>getRetryInterval</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.DefaultServiceUnavailableRetryStrategy</class>
+  </method>
+  <method id="66">
+    <name>retryRequest</name>
+    <description>Determines if a method should be retried given the response from the target server.</description>
+    <parameter id="0">
+      <name>response</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <parameter id="1">
+      <name>executionCount</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="2">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.DefaultServiceUnavailableRetryStrategy</class>
+  </method>
+  <method id="67">
+    <name>org.apache.http.impl.client.DefaultServiceUnavailableRetryStrategy</name>
+    <description/>
+    <return>org.apache.http.impl.client.DefaultServiceUnavailableRetryStrategy</return>
+    <class>org.apache.http.impl.client.DefaultServiceUnavailableRetryStrategy</class>
+  </method>
+  <method id="68">
+    <name>org.apache.http.impl.client.DefaultServiceUnavailableRetryStrategy</name>
+    <description/>
+    <parameter id="0">
+      <name>maxRetries</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>retryInterval</name>
+      <type>int</type>
+    </parameter>
+    <return>org.apache.http.impl.client.DefaultServiceUnavailableRetryStrategy</return>
+    <class>org.apache.http.impl.client.DefaultServiceUnavailableRetryStrategy</class>
+  </method>
+  <method id="69">
+    <name>getUserToken</name>
+    <description>The token object returned by this method is expected to uniquely identify the current user if the context is user specific or to be null if it is not.</description>
+    <parameter id="0">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>Object</return>
+    <class>org.apache.http.impl.client.DefaultUserTokenHandler</class>
+  </method>
+  <method id="70">
+    <name>org.apache.http.impl.client.DefaultUserTokenHandler</name>
+    <description/>
+    <return>org.apache.http.impl.client.DefaultUserTokenHandler</return>
+    <class>org.apache.http.impl.client.DefaultUserTokenHandler</class>
+  </method>
+  <method id="71">
+    <name>getActiveConnectionCount</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.FutureRequestExecutionMetrics</class>
+  </method>
+  <method id="72">
+    <name>getFailedConnectionAverageDuration</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.FutureRequestExecutionMetrics</class>
+  </method>
+  <method id="73">
+    <name>getFailedConnectionCount</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.FutureRequestExecutionMetrics</class>
+  </method>
+  <method id="74">
+    <name>getRequestAverageDuration</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.FutureRequestExecutionMetrics</class>
+  </method>
+  <method id="75">
+    <name>getRequestCount</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.FutureRequestExecutionMetrics</class>
+  </method>
+  <method id="76">
+    <name>getScheduledConnectionCount</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.FutureRequestExecutionMetrics</class>
+  </method>
+  <method id="77">
+    <name>getSuccessfulConnectionAverageDuration</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.FutureRequestExecutionMetrics</class>
+  </method>
+  <method id="78">
+    <name>getSuccessfulConnectionCount</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.FutureRequestExecutionMetrics</class>
+  </method>
+  <method id="79">
+    <name>getTaskAverageDuration</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.FutureRequestExecutionMetrics</class>
+  </method>
+  <method id="80">
+    <name>getTaskCount</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.FutureRequestExecutionMetrics</class>
+  </method>
+  <method id="81">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.apache.http.impl.client.FutureRequestExecutionMetrics</class>
+  </method>
+  <method id="82">
+    <name>close</name>
+    <description/>
+    <class>org.apache.http.impl.client.FutureRequestExecutionService</class>
+  </method>
+  <method id="83">
+    <name>execute</name>
+    <description>Schedule a request for execution.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.apache.http.client.methods.HttpUriRequest</type>
+    </parameter>
+    <parameter id="1">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <parameter id="2">
+      <name>responseHandler</name>
+      <type>org.apache.http.client.ResponseHandler</type>
+    </parameter>
+    <return>HttpRequestFutureTask&lt;T&gt;</return>
+    <class>org.apache.http.impl.client.FutureRequestExecutionService</class>
+  </method>
+  <method id="84">
+    <name>execute</name>
+    <description>Schedule a request for execution.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.apache.http.client.methods.HttpUriRequest</type>
+    </parameter>
+    <parameter id="1">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <parameter id="2">
+      <name>responseHandler</name>
+      <type>org.apache.http.client.ResponseHandler</type>
+    </parameter>
+    <parameter id="3">
+      <name>callback</name>
+      <type>org.apache.http.concurrent.FutureCallback</type>
+    </parameter>
+    <return>HttpRequestFutureTask&lt;T&gt;</return>
+    <class>org.apache.http.impl.client.FutureRequestExecutionService</class>
+  </method>
+  <method id="85">
+    <name>metrics</name>
+    <description/>
+    <return>FutureRequestExecutionMetrics</return>
+    <class>org.apache.http.impl.client.FutureRequestExecutionService</class>
+  </method>
+  <method id="86">
+    <name>org.apache.http.impl.client.FutureRequestExecutionService</name>
+    <description>Create a new FutureRequestExecutionService.</description>
+    <parameter id="0">
+      <name>httpclient</name>
+      <type>org.apache.http.client.HttpClient</type>
+    </parameter>
+    <parameter id="1">
+      <name>executorService</name>
+      <type>java.util.concurrent.ExecutorService</type>
+    </parameter>
+    <return>org.apache.http.impl.client.FutureRequestExecutionService</return>
+    <class>org.apache.http.impl.client.FutureRequestExecutionService</class>
+  </method>
+  <method id="87">
+    <name>addCloseable</name>
+    <description>For internal use.</description>
+    <parameter id="0">
+      <name>closeable</name>
+      <type>java.io.Closeable</type>
+    </parameter>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="88">
+    <name>addInterceptorFirst</name>
+    <description>Adds this protocol interceptor to the head of the protocol processing list.</description>
+    <parameter id="0">
+      <name>itcp</name>
+      <type>org.apache.http.HttpRequestInterceptor</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="89">
+    <name>addInterceptorFirst</name>
+    <description>Adds this protocol interceptor to the head of the protocol processing list.</description>
+    <parameter id="0">
+      <name>itcp</name>
+      <type>org.apache.http.HttpResponseInterceptor</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="90">
+    <name>addInterceptorLast</name>
+    <description>Adds this protocol interceptor to the tail of the protocol processing list.</description>
+    <parameter id="0">
+      <name>itcp</name>
+      <type>org.apache.http.HttpRequestInterceptor</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="91">
+    <name>addInterceptorLast</name>
+    <description>Adds this protocol interceptor to the tail of the protocol processing list.</description>
+    <parameter id="0">
+      <name>itcp</name>
+      <type>org.apache.http.HttpResponseInterceptor</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="92">
+    <name>build</name>
+    <description/>
+    <return>CloseableHttpClient</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="93">
+    <name>create</name>
+    <description/>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="94">
+    <name>createMainExec</name>
+    <description>Produces an instance of ClientExecChain to be used as a main exec.</description>
+    <parameter id="0">
+      <name>requestExec</name>
+      <type>org.apache.http.protocol.HttpRequestExecutor</type>
+    </parameter>
+    <parameter id="1">
+      <name>connManager</name>
+      <type>org.apache.http.conn.HttpClientConnectionManager</type>
+    </parameter>
+    <parameter id="2">
+      <name>reuseStrategy</name>
+      <type>org.apache.http.ConnectionReuseStrategy</type>
+    </parameter>
+    <parameter id="3">
+      <name>keepAliveStrategy</name>
+      <type>org.apache.http.conn.ConnectionKeepAliveStrategy</type>
+    </parameter>
+    <parameter id="4">
+      <name>proxyHttpProcessor</name>
+      <type>org.apache.http.protocol.HttpProcessor</type>
+    </parameter>
+    <parameter id="5">
+      <name>targetAuthStrategy</name>
+      <type>org.apache.http.client.AuthenticationStrategy</type>
+    </parameter>
+    <parameter id="6">
+      <name>proxyAuthStrategy</name>
+      <type>org.apache.http.client.AuthenticationStrategy</type>
+    </parameter>
+    <parameter id="7">
+      <name>userTokenHandler</name>
+      <type>org.apache.http.client.UserTokenHandler</type>
+    </parameter>
+    <return>ClientExecChain</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="95">
+    <name>decorateMainExec</name>
+    <description>For internal use.</description>
+    <parameter id="0">
+      <name>mainExec</name>
+      <type>org.apache.http.impl.execchain.ClientExecChain</type>
+    </parameter>
+    <return>ClientExecChain</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="96">
+    <name>decorateProtocolExec</name>
+    <description>For internal use.</description>
+    <parameter id="0">
+      <name>protocolExec</name>
+      <type>org.apache.http.impl.execchain.ClientExecChain</type>
+    </parameter>
+    <return>ClientExecChain</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="97">
+    <name>disableAuthCaching</name>
+    <description>Disables authentication scheme caching.</description>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="98">
+    <name>disableAutomaticRetries</name>
+    <description>Disables automatic request recovery and re-execution.</description>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="99">
+    <name>disableConnectionState</name>
+    <description>Disables connection state tracking.</description>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="100">
+    <name>disableContentCompression</name>
+    <description>Disables automatic content decompression.</description>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="101">
+    <name>disableCookieManagement</name>
+    <description>Disables state (cookie) management.</description>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="102">
+    <name>disableRedirectHandling</name>
+    <description>Disables automatic redirect handling.</description>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="103">
+    <name>evictExpiredConnections</name>
+    <description>Makes this instance of HttpClient proactively evict expired connections from the connection pool using a background thread.</description>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="104">
+    <name>evictIdleConnections</name>
+    <description>Makes this instance of HttpClient proactively evict idle connections from the connection pool using a background thread.</description>
+    <parameter id="0">
+      <name>maxIdleTime</name>
+      <type>long</type>
+    </parameter>
+    <parameter id="1">
+      <name>maxIdleTimeUnit</name>
+      <type>java.util.concurrent.TimeUnit</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="105">
+    <name>setBackoffManager</name>
+    <description>Assigns BackoffManager instance.</description>
+    <parameter id="0">
+      <name>backoffManager</name>
+      <type>org.apache.http.client.BackoffManager</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="106">
+    <name>setConnectionBackoffStrategy</name>
+    <description>Assigns ConnectionBackoffStrategy instance.</description>
+    <parameter id="0">
+      <name>connectionBackoffStrategy</name>
+      <type>org.apache.http.client.ConnectionBackoffStrategy</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="107">
+    <name>setConnectionManager</name>
+    <description>Assigns HttpClientConnectionManager instance.</description>
+    <parameter id="0">
+      <name>connManager</name>
+      <type>org.apache.http.conn.HttpClientConnectionManager</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="108">
+    <name>setConnectionManagerShared</name>
+    <description>Defines the connection manager is to be shared by multiple client instances.</description>
+    <parameter id="0">
+      <name>shared</name>
+      <type>boolean</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="109">
+    <name>setConnectionReuseStrategy</name>
+    <description>Assigns ConnectionReuseStrategy instance.</description>
+    <parameter id="0">
+      <name>reuseStrategy</name>
+      <type>org.apache.http.ConnectionReuseStrategy</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="110">
+    <name>setConnectionTimeToLive</name>
+    <description>Sets maximum time to live for persistent connections</description>
+    <parameter id="0">
+      <name>connTimeToLive</name>
+      <type>long</type>
+    </parameter>
+    <parameter id="1">
+      <name>connTimeToLiveTimeUnit</name>
+      <type>java.util.concurrent.TimeUnit</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="111">
+    <name>setContentDecoderRegistry</name>
+    <description>Assigns a map of InputStreamFactorys to be used for automatic content decompression.</description>
+    <parameter id="0">
+      <name>contentDecoderMap</name>
+      <type>java.util.Map</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="112">
+    <name>setDefaultAuthSchemeRegistry</name>
+    <description>Assigns default AuthScheme registry which will be used for request execution if not explicitly set in the client execution context.</description>
+    <parameter id="0">
+      <name>authSchemeRegistry</name>
+      <type>org.apache.http.config.Lookup</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="113">
+    <name>setDefaultConnectionConfig</name>
+    <description>Assigns default ConnectionConfig.</description>
+    <parameter id="0">
+      <name>config</name>
+      <type>org.apache.http.config.ConnectionConfig</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="114">
+    <name>setDefaultCookieSpecRegistry</name>
+    <description>Assigns default CookieSpec registry which will be used for request execution if not explicitly set in the client execution context.</description>
+    <parameter id="0">
+      <name>cookieSpecRegistry</name>
+      <type>org.apache.http.config.Lookup</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="115">
+    <name>setDefaultCookieStore</name>
+    <description>Assigns default CookieStore instance which will be used for request execution if not explicitly set in the client execution context.</description>
+    <parameter id="0">
+      <name>cookieStore</name>
+      <type>org.apache.http.client.CookieStore</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="116">
+    <name>setDefaultCredentialsProvider</name>
+    <description>Assigns default CredentialsProvider instance which will be used for request execution if not explicitly set in the client execution context.</description>
+    <parameter id="0">
+      <name>credentialsProvider</name>
+      <type>org.apache.http.client.CredentialsProvider</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="117">
+    <name>setDefaultHeaders</name>
+    <description>Assigns default request header values.</description>
+    <parameter id="0">
+      <name>extends</name>
+      <type>java.util.Collection</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="118">
+    <name>setDefaultRequestConfig</name>
+    <description>Assigns default RequestConfig instance which will be used for request execution if not explicitly set in the client execution context.</description>
+    <parameter id="0">
+      <name>config</name>
+      <type>org.apache.http.client.config.RequestConfig</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="119">
+    <name>setDefaultSocketConfig</name>
+    <description>Assigns default SocketConfig.</description>
+    <parameter id="0">
+      <name>config</name>
+      <type>org.apache.http.config.SocketConfig</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="120">
+    <name>setDnsResolver</name>
+    <description>Assigns DnsResolver instance.</description>
+    <parameter id="0">
+      <name>dnsResolver</name>
+      <type>org.apache.http.conn.DnsResolver</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="121">
+    <name>setHttpProcessor</name>
+    <description>Assigns HttpProcessor instance.</description>
+    <parameter id="0">
+      <name>httpprocessor</name>
+      <type>org.apache.http.protocol.HttpProcessor</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="122">
+    <name>setKeepAliveStrategy</name>
+    <description>Assigns ConnectionKeepAliveStrategy instance.</description>
+    <parameter id="0">
+      <name>keepAliveStrategy</name>
+      <type>org.apache.http.conn.ConnectionKeepAliveStrategy</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="123">
+    <name>setMaxConnPerRoute</name>
+    <description>Assigns maximum connection per route value.</description>
+    <parameter id="0">
+      <name>maxConnPerRoute</name>
+      <type>int</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="124">
+    <name>setMaxConnTotal</name>
+    <description>Assigns maximum total connection value.</description>
+    <parameter id="0">
+      <name>maxConnTotal</name>
+      <type>int</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="125">
+    <name>setProxy</name>
+    <description>Assigns default proxy value.</description>
+    <parameter id="0">
+      <name>proxy</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="126">
+    <name>setProxyAuthenticationStrategy</name>
+    <description>Assigns AuthenticationStrategy instance for proxy authentication.</description>
+    <parameter id="0">
+      <name>proxyAuthStrategy</name>
+      <type>org.apache.http.client.AuthenticationStrategy</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="127">
+    <name>setPublicSuffixMatcher</name>
+    <description>Assigns file containing public suffix matcher.</description>
+    <parameter id="0">
+      <name>publicSuffixMatcher</name>
+      <type>org.apache.http.conn.util.PublicSuffixMatcher</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="128">
+    <name>setRedirectStrategy</name>
+    <description>Assigns RedirectStrategy instance.</description>
+    <parameter id="0">
+      <name>redirectStrategy</name>
+      <type>org.apache.http.client.RedirectStrategy</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="129">
+    <name>setRequestExecutor</name>
+    <description>Assigns HttpRequestExecutor instance.</description>
+    <parameter id="0">
+      <name>requestExec</name>
+      <type>org.apache.http.protocol.HttpRequestExecutor</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="130">
+    <name>setRetryHandler</name>
+    <description>Assigns HttpRequestRetryHandler instance.</description>
+    <parameter id="0">
+      <name>retryHandler</name>
+      <type>org.apache.http.client.HttpRequestRetryHandler</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="131">
+    <name>setRoutePlanner</name>
+    <description>Assigns HttpRoutePlanner instance.</description>
+    <parameter id="0">
+      <name>routePlanner</name>
+      <type>org.apache.http.conn.routing.HttpRoutePlanner</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="132">
+    <name>setSchemePortResolver</name>
+    <description>Assigns SchemePortResolver instance.</description>
+    <parameter id="0">
+      <name>schemePortResolver</name>
+      <type>org.apache.http.conn.SchemePortResolver</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="133">
+    <name>setServiceUnavailableRetryStrategy</name>
+    <description>Assigns ServiceUnavailableRetryStrategy instance.</description>
+    <parameter id="0">
+      <name>serviceUnavailStrategy</name>
+      <type>org.apache.http.client.ServiceUnavailableRetryStrategy</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="134">
+    <name>setSSLContext</name>
+    <description>Assigns SSLContext instance.</description>
+    <parameter id="0">
+      <name>sslContext</name>
+      <type>javax.net.ssl.SSLContext</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="135">
+    <name>setSSLHostnameVerifier</name>
+    <description>Assigns HostnameVerifier instance.</description>
+    <parameter id="0">
+      <name>hostnameVerifier</name>
+      <type>javax.net.ssl.HostnameVerifier</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="136">
+    <name>setSSLSocketFactory</name>
+    <description>Assigns LayeredConnectionSocketFactory instance.</description>
+    <parameter id="0">
+      <name>sslSocketFactory</name>
+      <type>org.apache.http.conn.socket.LayeredConnectionSocketFactory</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="137">
+    <name>setTargetAuthenticationStrategy</name>
+    <description>Assigns AuthenticationStrategy instance for target host authentication.</description>
+    <parameter id="0">
+      <name>targetAuthStrategy</name>
+      <type>org.apache.http.client.AuthenticationStrategy</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="138">
+    <name>setUserAgent</name>
+    <description>Assigns User-Agent value.</description>
+    <parameter id="0">
+      <name>userAgent</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="139">
+    <name>setUserTokenHandler</name>
+    <description>Assigns UserTokenHandler instance.</description>
+    <parameter id="0">
+      <name>userTokenHandler</name>
+      <type>org.apache.http.client.UserTokenHandler</type>
+    </parameter>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="140">
+    <name>useSystemProperties</name>
+    <description>Use system properties when creating and configuring default implementations.</description>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClientBuilder</class>
+  </method>
+  <method id="141">
+    <name>createDefault</name>
+    <description>Creates CloseableHttpClient instance with default configuration.</description>
+    <return>CloseableHttpClient</return>
+    <class>org.apache.http.impl.client.HttpClients</class>
+  </method>
+  <method id="142">
+    <name>createMinimal</name>
+    <description>Creates CloseableHttpClient instance that implements the most basic HTTP protocol support.</description>
+    <return>CloseableHttpClient</return>
+    <class>org.apache.http.impl.client.HttpClients</class>
+  </method>
+  <method id="143">
+    <name>createMinimal</name>
+    <description>Creates CloseableHttpClient instance that implements the most basic HTTP protocol support.</description>
+    <parameter id="0">
+      <name>connManager</name>
+      <type>org.apache.http.conn.HttpClientConnectionManager</type>
+    </parameter>
+    <return>CloseableHttpClient</return>
+    <class>org.apache.http.impl.client.HttpClients</class>
+  </method>
+  <method id="144">
+    <name>createSystem</name>
+    <description>Creates CloseableHttpClient instance with default configuration based on ssytem properties.</description>
+    <return>CloseableHttpClient</return>
+    <class>org.apache.http.impl.client.HttpClients</class>
+  </method>
+  <method id="145">
+    <name>custom</name>
+    <description>Creates builder object for construction of custom CloseableHttpClient instances.</description>
+    <return>HttpClientBuilder</return>
+    <class>org.apache.http.impl.client.HttpClients</class>
+  </method>
+  <method id="146">
+    <name>cancel</name>
+    <description/>
+    <parameter id="0">
+      <name>mayInterruptIfRunning</name>
+      <type>boolean</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.HttpRequestFutureTask</class>
+  </method>
+  <method id="147">
+    <name>endedTime</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.HttpRequestFutureTask</class>
+  </method>
+  <method id="148">
+    <name>requestDuration</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.HttpRequestFutureTask</class>
+  </method>
+  <method id="149">
+    <name>scheduledTime</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.HttpRequestFutureTask</class>
+  </method>
+  <method id="150">
+    <name>startedTime</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.HttpRequestFutureTask</class>
+  </method>
+  <method id="151">
+    <name>taskDuration</name>
+    <description/>
+    <return>long</return>
+    <class>org.apache.http.impl.client.HttpRequestFutureTask</class>
+  </method>
+  <method id="152">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.apache.http.impl.client.HttpRequestFutureTask</class>
+  </method>
+  <method id="153">
+    <name>org.apache.http.impl.client.HttpRequestFutureTask</name>
+    <description/>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.apache.http.client.methods.HttpUriRequest</type>
+    </parameter>
+    <parameter id="1">
+      <name>httpCallable</name>
+      <type>org.apache.http.impl.client.HttpRequestTaskCallable</type>
+    </parameter>
+    <return>org.apache.http.impl.client.HttpRequestFutureTask</return>
+    <class>org.apache.http.impl.client.HttpRequestFutureTask</class>
+  </method>
+  <method id="154">
+    <name>awaitTermination</name>
+    <description/>
+    <parameter id="0">
+      <name>time</name>
+      <type>long</type>
+    </parameter>
+    <parameter id="1">
+      <name>tunit</name>
+      <type>java.util.concurrent.TimeUnit</type>
+    </parameter>
+    <class>org.apache.http.impl.client.IdleConnectionEvictor</class>
+  </method>
+  <method id="155">
+    <name>isRunning</name>
+    <description/>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.IdleConnectionEvictor</class>
+  </method>
+  <method id="156">
+    <name>shutdown</name>
+    <description/>
+    <class>org.apache.http.impl.client.IdleConnectionEvictor</class>
+  </method>
+  <method id="157">
+    <name>start</name>
+    <description/>
+    <class>org.apache.http.impl.client.IdleConnectionEvictor</class>
+  </method>
+  <method id="158">
+    <name>org.apache.http.impl.client.IdleConnectionEvictor</name>
+    <description/>
+    <parameter id="0">
+      <name>connectionManager</name>
+      <type>org.apache.http.conn.HttpClientConnectionManager</type>
+    </parameter>
+    <parameter id="1">
+      <name>maxIdleTime</name>
+      <type>long</type>
+    </parameter>
+    <parameter id="2">
+      <name>maxIdleTimeUnit</name>
+      <type>java.util.concurrent.TimeUnit</type>
+    </parameter>
+    <return>org.apache.http.impl.client.IdleConnectionEvictor</return>
+    <class>org.apache.http.impl.client.IdleConnectionEvictor</class>
+  </method>
+  <method id="159">
+    <name>org.apache.http.impl.client.IdleConnectionEvictor</name>
+    <description/>
+    <parameter id="0">
+      <name>connectionManager</name>
+      <type>org.apache.http.conn.HttpClientConnectionManager</type>
+    </parameter>
+    <parameter id="1">
+      <name>sleepTime</name>
+      <type>long</type>
+    </parameter>
+    <parameter id="2">
+      <name>sleepTimeUnit</name>
+      <type>java.util.concurrent.TimeUnit</type>
+    </parameter>
+    <parameter id="3">
+      <name>maxIdleTime</name>
+      <type>long</type>
+    </parameter>
+    <parameter id="4">
+      <name>maxIdleTimeUnit</name>
+      <type>java.util.concurrent.TimeUnit</type>
+    </parameter>
+    <return>org.apache.http.impl.client.IdleConnectionEvictor</return>
+    <class>org.apache.http.impl.client.IdleConnectionEvictor</class>
+  </method>
+  <method id="160">
+    <name>org.apache.http.impl.client.IdleConnectionEvictor</name>
+    <description/>
+    <parameter id="0">
+      <name>connectionManager</name>
+      <type>org.apache.http.conn.HttpClientConnectionManager</type>
+    </parameter>
+    <parameter id="1">
+      <name>threadFactory</name>
+      <type>java.util.concurrent.ThreadFactory</type>
+    </parameter>
+    <parameter id="2">
+      <name>sleepTime</name>
+      <type>long</type>
+    </parameter>
+    <parameter id="3">
+      <name>sleepTimeUnit</name>
+      <type>java.util.concurrent.TimeUnit</type>
+    </parameter>
+    <parameter id="4">
+      <name>maxIdleTime</name>
+      <type>long</type>
+    </parameter>
+    <parameter id="5">
+      <name>maxIdleTimeUnit</name>
+      <type>java.util.concurrent.TimeUnit</type>
+    </parameter>
+    <return>org.apache.http.impl.client.IdleConnectionEvictor</return>
+    <class>org.apache.http.impl.client.IdleConnectionEvictor</class>
+  </method>
+  <method id="161">
+    <name>isRedirectable</name>
+    <description/>
+    <parameter id="0">
+      <name>method</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.LaxRedirectStrategy</class>
+  </method>
+  <method id="162">
+    <name>org.apache.http.impl.client.LaxRedirectStrategy</name>
+    <description/>
+    <return>org.apache.http.impl.client.LaxRedirectStrategy</return>
+    <class>org.apache.http.impl.client.LaxRedirectStrategy</class>
+  </method>
+  <method id="163">
+    <name>getUserToken</name>
+    <description>The token object returned by this method is expected to uniquely identify the current user if the context is user specific or to be null if it is not.</description>
+    <parameter id="0">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>Object</return>
+    <class>org.apache.http.impl.client.NoopUserTokenHandler</class>
+  </method>
+  <method id="164">
+    <name>org.apache.http.impl.client.NoopUserTokenHandler</name>
+    <description/>
+    <return>org.apache.http.impl.client.NoopUserTokenHandler</return>
+    <class>org.apache.http.impl.client.NoopUserTokenHandler</class>
+  </method>
+  <method id="165">
+    <name>shouldBackoff</name>
+    <description>Determines whether receiving the given HttpResponse as a result of request execution should result in a backoff signal.</description>
+    <parameter id="0">
+      <name>resp</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.NullBackoffStrategy</class>
+  </method>
+  <method id="166">
+    <name>shouldBackoff</name>
+    <description>Determines whether seeing the given Throwable as a result of request execution should result in a backoff signal.</description>
+    <parameter id="0">
+      <name>t</name>
+      <type>java.lang.Throwable</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.NullBackoffStrategy</class>
+  </method>
+  <method id="167">
+    <name>org.apache.http.impl.client.NullBackoffStrategy</name>
+    <description/>
+    <return>org.apache.http.impl.client.NullBackoffStrategy</return>
+    <class>org.apache.http.impl.client.NullBackoffStrategy</class>
+  </method>
+  <method id="168">
+    <name>authFailed</name>
+    <description>Callback invoked in case of unsuccessful authentication.</description>
+    <parameter id="0">
+      <name>authhost</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="1">
+      <name>authScheme</name>
+      <type>org.apache.http.auth.AuthScheme</type>
+    </parameter>
+    <parameter id="2">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <class>org.apache.http.impl.client.ProxyAuthenticationStrategy</class>
+  </method>
+  <method id="169">
+    <name>authSucceeded</name>
+    <description>Callback invoked in case of successful authentication.</description>
+    <parameter id="0">
+      <name>authhost</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="1">
+      <name>authScheme</name>
+      <type>org.apache.http.auth.AuthScheme</type>
+    </parameter>
+    <parameter id="2">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <class>org.apache.http.impl.client.ProxyAuthenticationStrategy</class>
+  </method>
+  <method id="170">
+    <name>getChallenges</name>
+    <description>Generates a map of challenge auth-scheme =&gt; Header entries.</description>
+    <parameter id="0">
+      <name>authhost</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="1">
+      <name>response</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <parameter id="2">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>Map&lt;String,Header&gt;</return>
+    <class>org.apache.http.impl.client.ProxyAuthenticationStrategy</class>
+  </method>
+  <method id="171">
+    <name>isAuthenticationRequested</name>
+    <description>Determines if the given HTTP response response represents an authentication challenge that was sent back as a result of authentication failure.</description>
+    <parameter id="0">
+      <name>authhost</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="1">
+      <name>response</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <parameter id="2">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.ProxyAuthenticationStrategy</class>
+  </method>
+  <method id="172">
+    <name>isCachable</name>
+    <description/>
+    <parameter id="0">
+      <name>authScheme</name>
+      <type>org.apache.http.auth.AuthScheme</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.ProxyAuthenticationStrategy</class>
+  </method>
+  <method id="173">
+    <name>select</name>
+    <description>Selects one authentication challenge out of all available and creates and generates AuthOption instance capable of processing that challenge.</description>
+    <parameter id="0">
+      <name>challenges</name>
+      <type>java.util.Map</type>
+    </parameter>
+    <parameter id="1">
+      <name>authhost</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="2">
+      <name>response</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <parameter id="3">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>Queue&lt;AuthOption&gt;</return>
+    <class>org.apache.http.impl.client.ProxyAuthenticationStrategy</class>
+  </method>
+  <method id="174">
+    <name>org.apache.http.impl.client.ProxyAuthenticationStrategy</name>
+    <description/>
+    <return>org.apache.http.impl.client.ProxyAuthenticationStrategy</return>
+    <class>org.apache.http.impl.client.ProxyAuthenticationStrategy</class>
+  </method>
+  <method id="175">
+    <name>tunnel</name>
+    <description/>
+    <parameter id="0">
+      <name>proxy</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="1">
+      <name>target</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="2">
+      <name>credentials</name>
+      <type>org.apache.http.auth.Credentials</type>
+    </parameter>
+    <return>Socket</return>
+    <class>org.apache.http.impl.client.ProxyClient</class>
+  </method>
+  <method id="176">
+    <name>org.apache.http.impl.client.ProxyClient</name>
+    <description/>
+    <return>org.apache.http.impl.client.ProxyClient</return>
+    <class>org.apache.http.impl.client.ProxyClient</class>
+  </method>
+  <method id="177">
+    <name>org.apache.http.impl.client.ProxyClient</name>
+    <description/>
+    <parameter id="0">
+      <name>connFactory</name>
+      <type>org.apache.http.conn.HttpConnectionFactory</type>
+    </parameter>
+    <parameter id="1">
+      <name>connectionConfig</name>
+      <type>org.apache.http.config.ConnectionConfig</type>
+    </parameter>
+    <parameter id="2">
+      <name>requestConfig</name>
+      <type>org.apache.http.client.config.RequestConfig</type>
+    </parameter>
+    <return>org.apache.http.impl.client.ProxyClient</return>
+    <class>org.apache.http.impl.client.ProxyClient</class>
+  </method>
+  <method id="178">
+    <name>org.apache.http.impl.client.ProxyClient</name>
+    <description/>
+    <parameter id="0">
+      <name>requestConfig</name>
+      <type>org.apache.http.client.config.RequestConfig</type>
+    </parameter>
+    <return>org.apache.http.impl.client.ProxyClient</return>
+    <class>org.apache.http.impl.client.ProxyClient</class>
+  </method>
+  <method id="179">
+    <name>add</name>
+    <description>Inserts the specified element at the specified position in this list (must be a URI).</description>
+    <parameter id="0">
+      <name>index</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>element</name>
+      <type>java.lang.Object</type>
+    </parameter>
+    <class>org.apache.http.impl.client.RedirectLocations</class>
+  </method>
+  <method id="180">
+    <name>add</name>
+    <description>Adds a new URI to the collection.</description>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <class>org.apache.http.impl.client.RedirectLocations</class>
+  </method>
+  <method id="181">
+    <name>contains</name>
+    <description>Returns true if this collection contains the specified element.</description>
+    <parameter id="0">
+      <name>o</name>
+      <type>java.lang.Object</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.RedirectLocations</class>
+  </method>
+  <method id="182">
+    <name>contains</name>
+    <description>Test if the URI is present in the collection.</description>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.RedirectLocations</class>
+  </method>
+  <method id="183">
+    <name>get</name>
+    <description>Returns the URI at the specified position in this list.</description>
+    <parameter id="0">
+      <name>index</name>
+      <type>int</type>
+    </parameter>
+    <return>URI</return>
+    <class>org.apache.http.impl.client.RedirectLocations</class>
+  </method>
+  <method id="184">
+    <name>getAll</name>
+    <description>Returns all redirect URIs in the order they were added to the collection.</description>
+    <return>List&lt;URI&gt;</return>
+    <class>org.apache.http.impl.client.RedirectLocations</class>
+  </method>
+  <method id="185">
+    <name>remove</name>
+    <description>Removes the URI at the specified position in this list.</description>
+    <parameter id="0">
+      <name>index</name>
+      <type>int</type>
+    </parameter>
+    <return>URI</return>
+    <class>org.apache.http.impl.client.RedirectLocations</class>
+  </method>
+  <method id="186">
+    <name>remove</name>
+    <description>Removes a URI from the collection.</description>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.RedirectLocations</class>
+  </method>
+  <method id="187">
+    <name>set</name>
+    <description>Replaces the URI at the specified position in this list with the specified element (must be a URI).</description>
+    <parameter id="0">
+      <name>index</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>element</name>
+      <type>java.lang.Object</type>
+    </parameter>
+    <return>Object</return>
+    <class>org.apache.http.impl.client.RedirectLocations</class>
+  </method>
+  <method id="188">
+    <name>size</name>
+    <description>Returns the number of elements in this list.</description>
+    <return>int</return>
+    <class>org.apache.http.impl.client.RedirectLocations</class>
+  </method>
+  <method id="189">
+    <name>org.apache.http.impl.client.RedirectLocations</name>
+    <description/>
+    <return>org.apache.http.impl.client.RedirectLocations</return>
+    <class>org.apache.http.impl.client.RedirectLocations</class>
+  </method>
+  <method id="190">
+    <name>handleAsIdempotent</name>
+    <description/>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.apache.http.HttpRequest</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.StandardHttpRequestRetryHandler</class>
+  </method>
+  <method id="191">
+    <name>org.apache.http.impl.client.StandardHttpRequestRetryHandler</name>
+    <description>Default constructor</description>
+    <return>org.apache.http.impl.client.StandardHttpRequestRetryHandler</return>
+    <class>org.apache.http.impl.client.StandardHttpRequestRetryHandler</class>
+  </method>
+  <method id="192">
+    <name>org.apache.http.impl.client.StandardHttpRequestRetryHandler</name>
+    <description>Default constructor</description>
+    <parameter id="0">
+      <name>retryCount</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>requestSentRetryEnabled</name>
+      <type>boolean</type>
+    </parameter>
+    <return>org.apache.http.impl.client.StandardHttpRequestRetryHandler</return>
+    <class>org.apache.http.impl.client.StandardHttpRequestRetryHandler</class>
+  </method>
+  <method id="193">
+    <name>clear</name>
+    <description>Clears all credentials.</description>
+    <class>org.apache.http.impl.client.SystemDefaultCredentialsProvider</class>
+  </method>
+  <method id="194">
+    <name>getCredentials</name>
+    <description>Get the credentials for the given authentication scope.</description>
+    <parameter id="0">
+      <name>authscope</name>
+      <type>org.apache.http.auth.AuthScope</type>
+    </parameter>
+    <return>Credentials</return>
+    <class>org.apache.http.impl.client.SystemDefaultCredentialsProvider</class>
+  </method>
+  <method id="195">
+    <name>setCredentials</name>
+    <description>Sets the credentials for the given authentication scope.</description>
+    <parameter id="0">
+      <name>authscope</name>
+      <type>org.apache.http.auth.AuthScope</type>
+    </parameter>
+    <parameter id="1">
+      <name>credentials</name>
+      <type>org.apache.http.auth.Credentials</type>
+    </parameter>
+    <class>org.apache.http.impl.client.SystemDefaultCredentialsProvider</class>
+  </method>
+  <method id="196">
+    <name>org.apache.http.impl.client.SystemDefaultCredentialsProvider</name>
+    <description>Default constructor.</description>
+    <return>org.apache.http.impl.client.SystemDefaultCredentialsProvider</return>
+    <class>org.apache.http.impl.client.SystemDefaultCredentialsProvider</class>
+  </method>
+  <method id="197">
+    <name>authFailed</name>
+    <description>Callback invoked in case of unsuccessful authentication.</description>
+    <parameter id="0">
+      <name>authhost</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="1">
+      <name>authScheme</name>
+      <type>org.apache.http.auth.AuthScheme</type>
+    </parameter>
+    <parameter id="2">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <class>org.apache.http.impl.client.TargetAuthenticationStrategy</class>
+  </method>
+  <method id="198">
+    <name>authSucceeded</name>
+    <description>Callback invoked in case of successful authentication.</description>
+    <parameter id="0">
+      <name>authhost</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="1">
+      <name>authScheme</name>
+      <type>org.apache.http.auth.AuthScheme</type>
+    </parameter>
+    <parameter id="2">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <class>org.apache.http.impl.client.TargetAuthenticationStrategy</class>
+  </method>
+  <method id="199">
+    <name>getChallenges</name>
+    <description>Generates a map of challenge auth-scheme =&gt; Header entries.</description>
+    <parameter id="0">
+      <name>authhost</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="1">
+      <name>response</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <parameter id="2">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>Map&lt;String,Header&gt;</return>
+    <class>org.apache.http.impl.client.TargetAuthenticationStrategy</class>
+  </method>
+  <method id="200">
+    <name>isAuthenticationRequested</name>
+    <description>Determines if the given HTTP response response represents an authentication challenge that was sent back as a result of authentication failure.</description>
+    <parameter id="0">
+      <name>authhost</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="1">
+      <name>response</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <parameter id="2">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.TargetAuthenticationStrategy</class>
+  </method>
+  <method id="201">
+    <name>isCachable</name>
+    <description/>
+    <parameter id="0">
+      <name>authScheme</name>
+      <type>org.apache.http.auth.AuthScheme</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.apache.http.impl.client.TargetAuthenticationStrategy</class>
+  </method>
+  <method id="202">
+    <name>select</name>
+    <description>Selects one authentication challenge out of all available and creates and generates AuthOption instance capable of processing that challenge.</description>
+    <parameter id="0">
+      <name>challenges</name>
+      <type>java.util.Map</type>
+    </parameter>
+    <parameter id="1">
+      <name>authhost</name>
+      <type>org.apache.http.HttpHost</type>
+    </parameter>
+    <parameter id="2">
+      <name>response</name>
+      <type>org.apache.http.HttpResponse</type>
+    </parameter>
+    <parameter id="3">
+      <name>context</name>
+      <type>org.apache.http.protocol.HttpContext</type>
+    </parameter>
+    <return>Queue&lt;AuthOption&gt;</return>
+    <class>org.apache.http.impl.client.TargetAuthenticationStrategy</class>
+  </method>
+  <method id="203">
+    <name>org.apache.http.impl.client.TargetAuthenticationStrategy</name>
+    <description/>
+    <return>org.apache.http.impl.client.TargetAuthenticationStrategy</return>
+    <class>org.apache.http.impl.client.TargetAuthenticationStrategy</class>
+  </method>
+</package>

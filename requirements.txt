@@ -1,0 +1,7 @@
+transformers~=4.36.2
+evaluate~=0.4.1
+datasets~=2.16.1
+torch~=2.1.2
+beautifulsoup4~=4.12.3
+lxml~=5.1.0
+requests~=2.31.0
