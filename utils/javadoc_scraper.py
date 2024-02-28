@@ -353,14 +353,14 @@ def write_xml(package_info):
     rough_string = ET.tostring(root, 'utf-8')
     reparsed = minidom.parseString(rough_string)
 
-    xml_path = os.path.join('../resources', package_info['name'] + '.xml')
+    xml_path = os.path.join('../resources/javadoc', package_info['name'] + '.xml')
     with open(xml_path, 'w') as xml_file:
         xml_file.write(reparsed.toprettyxml(indent='  '))
 
 
 if __name__ == "__main__":
     packages = {
-        "org.eclipse.californium": "https://javadoc.io/static/org.eclipse.californium/californium-core/3.10.0/org/eclipse/californium/core/coap/option/package-summary.html",
+        "org.eclipse.californium.core": "https://javadoc.io/static/org.eclipse.californium/californium-core/3.10.0/org/eclipse/californium/core/package-summary.html",
         "org.eclipse.paho.client.mqttv3": "https://eclipse.dev/paho/files/javadoc/org/eclipse/paho/client/mqttv3/package-summary.html",
         "org.apache.http": "https://hc.apache.org/httpcomponents-core-4.4.x/current/httpcore/apidocs/org/apache/http/package-summary.html",
         "org.apache.http.client.methods": "https://javadoc.io/static/org.apache.httpcomponents/httpclient/4.5.3/org/apache/http/client/methods/package-summary.html",

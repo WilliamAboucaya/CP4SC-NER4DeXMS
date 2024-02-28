@@ -1,0 +1,155 @@
+{
+  "_comment": "The order of display of elements for each tag is the following: COAP, COAPS, DPWS, HTTPS, MQTT, MQTTS, REST, SOAP, WebSocket",
+  "client": [
+    {
+      "identifier": "org.eclipse.californium.core.CoapClient",
+      "description": "The Class CoapClient."
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "org.eclipse.paho.client.mqttv3.MqttClient",
+      "description": "Lightweight client for talking to an MQTT server using methods that block until an operation completes."
+    },
+    {
+      "identifier": "org.eclipse.paho.client.mqttv3.MqttClient",
+      "description": "Lightweight client for talking to an MQTT server using methods that block until an operation completes."
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    }
+  ],
+  "server": [
+    {
+      "identifier": "org.eclipse.californium.core.CoapServer",
+      "description": "An execution environment for CoAP Resources."
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    }
+  ],
+  "get": [
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    }
+  ],
+  "post": [
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    },
+    {
+      "identifier": "",
+      "description": ""
+    }
+  ]
+}

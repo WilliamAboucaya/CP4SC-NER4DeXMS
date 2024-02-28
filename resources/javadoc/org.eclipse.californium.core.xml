@@ -1,0 +1,1943 @@
+<?xml version="1.0" ?>
+<package>
+  <name>org.eclipse.californium.core</name>
+  <desc/>
+  <class id="0">
+    <name>org.eclipse.californium.core.CoapClient</name>
+    <description>The Class CoapClient.</description>
+  </class>
+  <class id="1">
+    <name>org.eclipse.californium.core.CoapClient.Builder</name>
+    <description>The Builder can be used to build a CoapClient if the URI's pieces are available in separate strings.</description>
+  </class>
+  <class id="2">
+    <name>org.eclipse.californium.core.CoapObserveRelation</name>
+    <description>A CoapObserveRelation is a client-side control handle.</description>
+  </class>
+  <class id="3">
+    <name>org.eclipse.californium.core.CoapResource</name>
+    <description>CoapResource is a basic implementation of a resource.</description>
+  </class>
+  <class id="4">
+    <name>org.eclipse.californium.core.CoapResponse</name>
+    <description>CoapResponse provides a simple API for CoAP responses.</description>
+  </class>
+  <class id="5">
+    <name>org.eclipse.californium.core.CoapServer</name>
+    <description>An execution environment for CoAP Resources.</description>
+  </class>
+  <class id="6">
+    <name>org.eclipse.californium.core.CoapServer.ConnectorIdentifier</name>
+    <description>Connector identifier.</description>
+  </class>
+  <class id="7">
+    <name>org.eclipse.californium.core.Utils</name>
+    <description>Auxiliary helper methods for Californium.</description>
+  </class>
+  <class id="8">
+    <name>org.eclipse.californium.core.WebLink</name>
+    <description>The WebLink class can be used to programmatically browse a remote CoAP endoint.</description>
+  </class>
+  <method id="0">
+    <name>advanced</name>
+    <description>Sends an advanced asynchronous request that has to be configured by the developer.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>request</name>
+      <type>org.eclipse.californium.core.coap.Request</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="1">
+    <name>advanced</name>
+    <description>Sends an advanced synchronous request that has to be configured by the developer.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.eclipse.californium.core.coap.Request</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="2">
+    <name>delete</name>
+    <description>Sends a DELETE request and waits for the response.</description>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="3">
+    <name>delete</name>
+    <description>Sends a DELETE request and invokes the specified handler when a response arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="4">
+    <name>discover</name>
+    <description/>
+    <return>Set&lt;WebLink&gt;</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="5">
+    <name>discover</name>
+    <description/>
+    <parameter id="0">
+      <name>query</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>Set&lt;WebLink&gt;</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="6">
+    <name>enableProxy</name>
+    <description>Enable this client to use a proxy.</description>
+    <parameter id="0">
+      <name>enable</name>
+      <type>boolean</type>
+    </parameter>
+    <return>CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="7">
+    <name>execute</name>
+    <description/>
+    <parameter id="0">
+      <name>job</name>
+      <type>java.lang.Runnable</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="8">
+    <name>get</name>
+    <description>Sends a GET request and blocks until the response is available.</description>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="9">
+    <name>get</name>
+    <description>Sends a GET request and invokes the specified handler when a response arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="10">
+    <name>get</name>
+    <description>Sends aGET request with the specified Accept option and invokes the handler when a response arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>accept</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="11">
+    <name>get</name>
+    <description>Sends a GET request with the specified Accept option and blocks until the response is available.</description>
+    <parameter id="0">
+      <name>accept</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="12">
+    <name>getDestinationContext</name>
+    <description>Get destination endpoint context.</description>
+    <return>org.eclipse.californium.elements.EndpointContext</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="13">
+    <name>getEffectiveEndpoint</name>
+    <description>Returns the effective endpoint that the specified request is supposed to be sent over.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.eclipse.californium.core.coap.Request</type>
+    </parameter>
+    <return>Endpoint</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="14">
+    <name>getEndpoint</name>
+    <description>Gets the endpoint this client uses.</description>
+    <return>Endpoint</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="15">
+    <name>getProxyScheme</name>
+    <description>Gets the proxy-scheme of this client.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="16">
+    <name>getTimeout</name>
+    <description>Gets the maximum amount of time that synchronous method calls will block and wait.</description>
+    <return>Long</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="17">
+    <name>getURI</name>
+    <description>Gets the destination URI of this client.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="18">
+    <name>observe</name>
+    <description>Sends an observe request and invokes the specified handler each time a notification arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <return>CoapObserveRelation</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="19">
+    <name>observe</name>
+    <description>Sends an observe request with the specified Accept option and invokes the specified handler each time a notification arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>accept</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapObserveRelation</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="20">
+    <name>observe</name>
+    <description>Sends the specified observe request and invokes the specified handler each time a notification arrives.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.eclipse.californium.core.coap.Request</type>
+    </parameter>
+    <parameter id="1">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <return>CoapObserveRelation</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="21">
+    <name>observeAndWait</name>
+    <description>Sends an observe request and waits until it has been established whereupon the specified handler is invoked when a notification arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <return>CoapObserveRelation</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="22">
+    <name>observeAndWait</name>
+    <description>Sends an observe request with the specified Accept option and waits until it has been established whereupon the specified handler is invoked when a notification arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>accept</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapObserveRelation</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="23">
+    <name>observeAndWait</name>
+    <description>Sends the specified observe request and waits for the response whereupon the specified handler is invoked when a notification arrives.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.eclipse.californium.core.coap.Request</type>
+    </parameter>
+    <parameter id="1">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <return>CoapObserveRelation</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="24">
+    <name>patch</name>
+    <description>Sends a PATCH request with the specified payload and the specified content format option and blocks until the response is available.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <parameter id="1">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="25">
+    <name>patch</name>
+    <description>Sends a PATCH request with the specified payload, the specified content format and the specified Accept option and blocks until the response is available.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <parameter id="1">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="2">
+      <name>accept</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="26">
+    <name>patch</name>
+    <description>Sends a PATCH request with the specified payload and the specified content format and invokes the specified handler when a response arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <parameter id="2">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="27">
+    <name>patch</name>
+    <description>Sends a PATCH request with the specified payload, the specified content format and accept and invokes the specified handler when a response arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <parameter id="2">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="3">
+      <name>accept</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="28">
+    <name>patch</name>
+    <description>Sends a PATCH request with the specified payload and the specified content format and invokes the specified handler when a response arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="29">
+    <name>patch</name>
+    <description>Sends a PATCH request with the specified payload, the specified content format and accept and invokes the specified handler when a response arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="3">
+      <name>accept</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="30">
+    <name>patch</name>
+    <description>Sends a PATCH request with the specified payload and the specified content format option and blocks until the response is available.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="31">
+    <name>patch</name>
+    <description>Sends a PATCH request with the specified payload, the specified content format and the specified Accept option and blocks until the response is available.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="2">
+      <name>accept</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="32">
+    <name>ping</name>
+    <description>Performs a CoAP ping using the default timeout for requests.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="33">
+    <name>ping</name>
+    <description>Performs a CoAP ping and gives up after the given number of milliseconds.</description>
+    <parameter id="0">
+      <name>timeout</name>
+      <type>long</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="34">
+    <name>post</name>
+    <description>Sends a POST request with the specified payload and the specified content format option and blocks until the response is available.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <parameter id="1">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="35">
+    <name>post</name>
+    <description>Sends a POST request with the specified payload, the specified content format and the specified Accept option and blocks until the response is available.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <parameter id="1">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="2">
+      <name>accept</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="36">
+    <name>post</name>
+    <description>Sends a POST request with the specified payload and the specified content format and invokes the specified handler when a response arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <parameter id="2">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="37">
+    <name>post</name>
+    <description>Sends a POST request with the specified payload, the specified content format and accept and invokes the specified handler when a response arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <parameter id="2">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="3">
+      <name>accept</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="38">
+    <name>post</name>
+    <description>Sends a POST request with the specified payload and the specified content format and invokes the specified handler when a response arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="39">
+    <name>post</name>
+    <description>Sends a POST request with the specified payload, the specified content format and accept and invokes the specified handler when a response arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="3">
+      <name>accept</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="40">
+    <name>post</name>
+    <description>Sends a POST request with the specified payload and the specified content format option and blocks until the response is available.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="41">
+    <name>post</name>
+    <description>Sends a POST request with the specified payload, the specified content format and the specified Accept option and blocks until the response is available.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="2">
+      <name>accept</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="42">
+    <name>put</name>
+    <description>Sends a PUT request with payload and required Content-Format and blocks until the response is available.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <parameter id="1">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="43">
+    <name>put</name>
+    <description>Sends a PUT request with the specified payload and the specified content format and invokes the specified handler when a response arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <parameter id="2">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="44">
+    <name>put</name>
+    <description>Sends a PUT request with the specified payload and the specified content format and invokes the specified handler when a response arrives.</description>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="45">
+    <name>put</name>
+    <description>Sends a PUT request with payload and required Content-Format and blocks until the response is available.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="46">
+    <name>putIfMatch</name>
+    <description>Sends a PUT request with with the specified ETags in the If-Match option and blocks until the response is available.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <parameter id="1">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="2">
+      <name>etags</name>
+      <type>byte[]...</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="47">
+    <name>putIfMatch</name>
+    <description/>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <parameter id="2">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="3">
+      <name>etags</name>
+      <type>byte[]...</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="48">
+    <name>putIfMatch</name>
+    <description/>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="3">
+      <name>etags</name>
+      <type>byte[]...</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="49">
+    <name>putIfMatch</name>
+    <description>Sends a PUT request with with the specified ETags in the If-Match option and blocks until the response is available.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="2">
+      <name>etags</name>
+      <type>byte[]...</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="50">
+    <name>putIfNoneMatch</name>
+    <description>Sends a PUT request with the If-None-Match option set and blocks until the response is available.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <parameter id="1">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="51">
+    <name>putIfNoneMatch</name>
+    <description/>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <parameter id="2">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="52">
+    <name>putIfNoneMatch</name>
+    <description/>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="53">
+    <name>putIfNoneMatch</name>
+    <description>Sends a PUT request with the If-None-Match option set and blocks until the response is available.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="54">
+    <name>send</name>
+    <description>Sends the specified request over the endpoint of the client if one is defined or over the default endpoint otherwise.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.eclipse.californium.core.coap.Request</type>
+    </parameter>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="55">
+    <name>send</name>
+    <description>Sends the specified request over the specified endpoint.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.eclipse.californium.core.coap.Request</type>
+    </parameter>
+    <parameter id="1">
+      <name>outEndpoint</name>
+      <type>org.eclipse.californium.core.network.Endpoint</type>
+    </parameter>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="56">
+    <name>setDestinationContext</name>
+    <description>Set destination endpoint context.</description>
+    <parameter id="0">
+      <name>peerContext</name>
+      <type>org.eclipse.californium.elements.EndpointContext</type>
+    </parameter>
+    <return>CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="57">
+    <name>setEndpoint</name>
+    <description>Sets the endpoint this client is supposed to use.</description>
+    <parameter id="0">
+      <name>endpoint</name>
+      <type>org.eclipse.californium.core.network.Endpoint</type>
+    </parameter>
+    <return>CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="58">
+    <name>setExecutors</name>
+    <description>Sets the executor services for this client.</description>
+    <parameter id="0">
+      <name>executor</name>
+      <type>java.util.concurrent.ExecutorService</type>
+    </parameter>
+    <parameter id="1">
+      <name>secondaryExecutor</name>
+      <type>java.util.concurrent.ScheduledThreadPoolExecutor</type>
+    </parameter>
+    <parameter id="2">
+      <name>detach</name>
+      <type>boolean</type>
+    </parameter>
+    <return>CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="59">
+    <name>setProxyScheme</name>
+    <description>Sets the proxy-scheme of this client.</description>
+    <parameter id="0">
+      <name>proxyScheme</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="60">
+    <name>setTimeout</name>
+    <description>Sets the maximum amount of time that synchronous method calls will block and wait.</description>
+    <parameter id="0">
+      <name>timeout</name>
+      <type>java.lang.Long</type>
+    </parameter>
+    <return>CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="61">
+    <name>setURI</name>
+    <description>Sets the destination URI of this client.</description>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="62">
+    <name>shutdown</name>
+    <description>Shutdown the client-specific executor service, when not detached.</description>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="63">
+    <name>useCONs</name>
+    <description>Let the client use Confirmable requests.</description>
+    <return>CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="64">
+    <name>useEarlyNegotiation</name>
+    <description>Let the client use early negotiation for the blocksize (16, 32, 64, 128, 256, 512, or 1024).</description>
+    <parameter id="0">
+      <name>32</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="65">
+    <name>useExecutor</name>
+    <description>Sets a single-threaded executor to this client.</description>
+    <return>CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="66">
+    <name>useLateNegotiation</name>
+    <description>Let the client use late negotiation for the block size (default).</description>
+    <return>CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="67">
+    <name>useNONs</name>
+    <description>Let the client use Non-Confirmable requests.</description>
+    <return>CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="68">
+    <name>useProxy</name>
+    <description>Checks, if a proxy is used by this client.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="69">
+    <name>validate</name>
+    <description/>
+    <parameter id="0">
+      <name>etags</name>
+      <type>byte[]...</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="70">
+    <name>validate</name>
+    <description/>
+    <parameter id="0">
+      <name>handler</name>
+      <type>org.eclipse.californium.core.CoapHandler</type>
+    </parameter>
+    <parameter id="1">
+      <name>etags</name>
+      <type>byte[]...</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="71">
+    <name>org.eclipse.californium.core.CoapClient</name>
+    <description>Constructs a new CoapClient that has no destination URI yet.</description>
+    <return>org.eclipse.californium.core.CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="72">
+    <name>org.eclipse.californium.core.CoapClient</name>
+    <description>Constructs a new CoapClient that sends requests to the specified URI.</description>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.eclipse.californium.core.CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="73">
+    <name>org.eclipse.californium.core.CoapClient</name>
+    <description>Constructs a new CoapClient with the specified scheme, host, port and path as URI.</description>
+    <parameter id="0">
+      <name>scheme</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>host</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>port</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="3">
+      <name>path</name>
+      <type>java.lang.String...</type>
+    </parameter>
+    <return>org.eclipse.californium.core.CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="74">
+    <name>org.eclipse.californium.core.CoapClient</name>
+    <description>Constructs a new CoapClient that sends request to the specified URI.</description>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>org.eclipse.californium.core.CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient</class>
+  </method>
+  <method id="75">
+    <name>create</name>
+    <description>Creates the CoapClient</description>
+    <return>CoapClient</return>
+    <class>org.eclipse.californium.core.CoapClient.Builder</class>
+  </method>
+  <method id="76">
+    <name>host</name>
+    <description>Sets the specified host.</description>
+    <parameter id="0">
+      <name>host</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>CoapClient.Builder</return>
+    <class>org.eclipse.californium.core.CoapClient.Builder</class>
+  </method>
+  <method id="77">
+    <name>path</name>
+    <description>Sets the specified resource path.</description>
+    <parameter id="0">
+      <name>path</name>
+      <type>java.lang.String...</type>
+    </parameter>
+    <return>CoapClient.Builder</return>
+    <class>org.eclipse.californium.core.CoapClient.Builder</class>
+  </method>
+  <method id="78">
+    <name>port</name>
+    <description>Sets the specified port.</description>
+    <parameter id="0">
+      <name>port</name>
+      <type>int</type>
+    </parameter>
+    <return>CoapClient.Builder</return>
+    <class>org.eclipse.californium.core.CoapClient.Builder</class>
+  </method>
+  <method id="79">
+    <name>port</name>
+    <description>Sets the specified port.</description>
+    <parameter id="0">
+      <name>port</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>CoapClient.Builder</return>
+    <class>org.eclipse.californium.core.CoapClient.Builder</class>
+  </method>
+  <method id="80">
+    <name>query</name>
+    <description>Sets the specified query.</description>
+    <parameter id="0">
+      <name>query</name>
+      <type>java.lang.String...</type>
+    </parameter>
+    <return>CoapClient.Builder</return>
+    <class>org.eclipse.californium.core.CoapClient.Builder</class>
+  </method>
+  <method id="81">
+    <name>scheme</name>
+    <description>Sets the specified scheme.</description>
+    <parameter id="0">
+      <name>scheme</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>CoapClient.Builder</return>
+    <class>org.eclipse.californium.core.CoapClient.Builder</class>
+  </method>
+  <method id="82">
+    <name>org.eclipse.californium.core.CoapClient.Builder</name>
+    <description>Instantiates a new builder.</description>
+    <parameter id="0">
+      <name>host</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>port</name>
+      <type>int</type>
+    </parameter>
+    <return>org.eclipse.californium.core.CoapClient.Builder</return>
+    <class>org.eclipse.californium.core.CoapClient.Builder</class>
+  </method>
+  <method id="83">
+    <name>getCurrent</name>
+    <description>Gets the current notification.</description>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapObserveRelation</class>
+  </method>
+  <method id="84">
+    <name>onResponse</name>
+    <description>Sets the current response or notification.</description>
+    <parameter id="0">
+      <name>response</name>
+      <type>org.eclipse.californium.core.CoapResponse</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.CoapObserveRelation</class>
+  </method>
+  <method id="85">
+    <name>onResponse</name>
+    <description>Sets the current response or notification.</description>
+    <parameter id="0">
+      <name>response</name>
+      <type>org.eclipse.californium.core.coap.Response</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.CoapObserveRelation</class>
+  </method>
+  <method id="86">
+    <name>setCanceled</name>
+    <description>Marks this relation as canceled.</description>
+    <parameter id="0">
+      <name>canceled</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapObserveRelation</class>
+  </method>
+  <method id="87">
+    <name>setNotificationListener</name>
+    <description/>
+    <parameter id="0">
+      <name>listener</name>
+      <type>org.eclipse.californium.core.observe.NotificationListener</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapObserveRelation</class>
+  </method>
+  <method id="88">
+    <name>waitForResponse</name>
+    <description>Wait for first response.</description>
+    <parameter id="0">
+      <name>timeoutMillis</name>
+      <type>long</type>
+    </parameter>
+    <return>CoapResponse</return>
+    <class>org.eclipse.californium.core.CoapObserveRelation</class>
+  </method>
+  <method id="89">
+    <name>add</name>
+    <description>Adds the specified resource as child.</description>
+    <parameter id="0">
+      <name>children</name>
+      <type>org.eclipse.californium.core.CoapResource...</type>
+    </parameter>
+    <return>CoapResource</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="90">
+    <name>add</name>
+    <description>Adds the specified resource as child.</description>
+    <parameter id="0">
+      <name>child</name>
+      <type>org.eclipse.californium.core.CoapResource</type>
+    </parameter>
+    <return>CoapResource</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="91">
+    <name>add</name>
+    <description>Adds the specified resource as child.</description>
+    <parameter id="0">
+      <name>child</name>
+      <type>org.eclipse.californium.core.server.resources.Resource</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="92">
+    <name>addObserver</name>
+    <description>Adds the specified ResourceObserver.</description>
+    <parameter id="0">
+      <name>observer</name>
+      <type>org.eclipse.californium.core.server.resources.ResourceObserver</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="93">
+    <name>addObserveRelation</name>
+    <description>Adds the specified CoAP observe relation.</description>
+    <parameter id="0">
+      <name>relation</name>
+      <type>org.eclipse.californium.core.observe.ObserveRelation</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="94">
+    <name>changed</name>
+    <description>Notifies all CoAP clients that have established an observe relation with this resource that the state has changed by reprocessing their original request that has established the relation.</description>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="95">
+    <name>changed</name>
+    <description>Notifies a filtered set of CoAP clients that have established an observe relation with this resource that the state has changed by reprocessing their original request that has established the relation.</description>
+    <parameter id="0">
+      <name>filter</name>
+      <type>org.eclipse.californium.core.observe.ObserveRelationFilter</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="96">
+    <name>clearAndNotifyObserveRelations</name>
+    <description>Remove all observe relations to CoAP clients and notify them that the observe relation has been canceled.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>org.eclipse.californium.core.coap.CoAP.ResponseCode</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="97">
+    <name>clearAndNotifyObserveRelations</name>
+    <description>Remove all observe relations to CoAP clients and notify them that the observe relation has been canceled.</description>
+    <parameter id="0">
+      <name>filter</name>
+      <type>org.eclipse.californium.core.observe.ObserveRelationFilter</type>
+    </parameter>
+    <parameter id="1">
+      <name>code</name>
+      <type>org.eclipse.californium.core.coap.CoAP.ResponseCode</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="98">
+    <name>clearObserveRelations</name>
+    <description>Cancel all observe relations to CoAP clients.</description>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="99">
+    <name>delete</name>
+    <description>Delete this resource from its parents and notify all observing CoAP clients that this resource is no longer accessible.</description>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="100">
+    <name>delete</name>
+    <description>Removes the the specified child.</description>
+    <parameter id="0">
+      <name>child</name>
+      <type>org.eclipse.californium.core.server.resources.Resource</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="101">
+    <name>execute</name>
+    <description>Execute an arbitrary task on the executor of this resource or the first parent that defines its own executor.</description>
+    <parameter id="0">
+      <name>task</name>
+      <type>java.lang.Runnable</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="102">
+    <name>executeAndWait</name>
+    <description>Execute an arbitrary task on the executor of this resource or the first parent that defines its own executor and wait until it the task is completed.</description>
+    <parameter id="0">
+      <name>task</name>
+      <type>java.lang.Runnable</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="103">
+    <name>getAttributes</name>
+    <description>Gets the attributes of this resource.</description>
+    <return>ResourceAttributes</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="104">
+    <name>getChild</name>
+    <description>Gets the child with the specified name.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>Resource</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="105">
+    <name>getChildren</name>
+    <description>Gets all child resources.</description>
+    <return>Collection&lt;Resource&gt;</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="106">
+    <name>getExecutor</name>
+    <description>Gets the executor of this resource.</description>
+    <return>Executor</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="107">
+    <name>getName</name>
+    <description>Gets the name of the resource.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="108">
+    <name>getNotificationSequenceNumber</name>
+    <description>Returns the current notification number.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="109">
+    <name>getObserverCount</name>
+    <description>Returns the number of observe relations that this resource has to CoAP clients.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="110">
+    <name>getObserveType</name>
+    <description>Get the type of the notifications that will be sent.</description>
+    <return>CoAP.Type</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="111">
+    <name>getParent</name>
+    <description>Gets the parent of this resource.</description>
+    <return>Resource</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="112">
+    <name>getPath</name>
+    <description>Gets the path to the resource which is equal to the URI of its parent plus a slash.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="113">
+    <name>getURI</name>
+    <description>Gets the URI of the resource.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="114">
+    <name>handleDELETE</name>
+    <description>Handles the DELETE request in the given CoAPExchange.</description>
+    <parameter id="0">
+      <name>exchange</name>
+      <type>org.eclipse.californium.core.server.resources.CoapExchange</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="115">
+    <name>handleFETCH</name>
+    <description>Handles the FETCH request in the given CoAPExchange.</description>
+    <parameter id="0">
+      <name>exchange</name>
+      <type>org.eclipse.californium.core.server.resources.CoapExchange</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="116">
+    <name>handleGET</name>
+    <description>Handles the GET request in the given CoAPExchange.</description>
+    <parameter id="0">
+      <name>exchange</name>
+      <type>org.eclipse.californium.core.server.resources.CoapExchange</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="117">
+    <name>handleIPATCH</name>
+    <description>Handles the IPATCH request in the given CoAPExchange (idempotent).</description>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="118">
+    <name>handlePATCH</name>
+    <description>Handles the PATCH request in the given CoAPExchange (not idempotent).</description>
+    <parameter id="0">
+      <name>idempotent</name>
+      <type>org.eclipse.californium.core.server.resources.CoapExchange</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="119">
+    <name>handlePOST</name>
+    <description>Handles the POST request in the given CoAPExchange.</description>
+    <parameter id="0">
+      <name>exchange</name>
+      <type>org.eclipse.californium.core.server.resources.CoapExchange</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="120">
+    <name>handlePUT</name>
+    <description>Handles the PUT request in the given CoAPExchange.</description>
+    <parameter id="0">
+      <name>exchange</name>
+      <type>org.eclipse.californium.core.server.resources.CoapExchange</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="121">
+    <name>handleRequest</name>
+    <description>Handles any request in the given exchange.</description>
+    <parameter id="0">
+      <name>exchange</name>
+      <type>org.eclipse.californium.core.network.Exchange</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="122">
+    <name>isCachable</name>
+    <description>Checks if is the URI of the resource can be cached.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="123">
+    <name>isObservable</name>
+    <description>Checks if this resource is observable by remote CoAP clients.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="124">
+    <name>isVisible</name>
+    <description>Checks if the resource is visible to remote CoAP clients.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="125">
+    <name>notifyObserverRelations</name>
+    <description>Notifies all CoAP clients that have established an observe relation with this resource that the state has changed by reprocessing their original request that has established the relation.</description>
+    <parameter id="0">
+      <name>filter</name>
+      <type>org.eclipse.californium.core.observe.ObserveRelationFilter</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="126">
+    <name>removeObserver</name>
+    <description>Removes the the specified observer.</description>
+    <parameter id="0">
+      <name>observer</name>
+      <type>org.eclipse.californium.core.server.resources.ResourceObserver</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="127">
+    <name>removeObserveRelation</name>
+    <description>Removes the specified CoAP observe relation.</description>
+    <parameter id="0">
+      <name>relation</name>
+      <type>org.eclipse.californium.core.observe.ObserveRelation</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="128">
+    <name>setAttributes</name>
+    <description>Set resource attributes.</description>
+    <parameter id="0">
+      <name>attributes</name>
+      <type>org.eclipse.californium.core.server.resources.ResourceAttributes</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="129">
+    <name>setName</name>
+    <description>Sets the name of the resource.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="130">
+    <name>setObservable</name>
+    <description>Marks this resource as observable by CoAP clients.</description>
+    <parameter id="0">
+      <name>observable</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="131">
+    <name>setObserveType</name>
+    <description>Sets the type of the notifications that will be sent.</description>
+    <parameter id="0">
+      <name>type</name>
+      <type>org.eclipse.californium.core.coap.CoAP.Type</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="132">
+    <name>setParent</name>
+    <description>Sets the parent of this resource.</description>
+    <parameter id="0">
+      <name>parent</name>
+      <type>org.eclipse.californium.core.server.resources.Resource</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="133">
+    <name>setPath</name>
+    <description>Sets the path of the resource.</description>
+    <parameter id="0">
+      <name>path</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="134">
+    <name>setVisible</name>
+    <description>Marks this resource as visible to CoAP clients.</description>
+    <parameter id="0">
+      <name>visible</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="135">
+    <name>org.eclipse.californium.core.CoapResource</name>
+    <description>Constructs a new resource with the specified name.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.eclipse.californium.core.CoapResource</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="136">
+    <name>org.eclipse.californium.core.CoapResource</name>
+    <description>Constructs a new resource with the specified name and makes it visible to clients if the flag is true.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>visible</name>
+      <type>boolean</type>
+    </parameter>
+    <return>org.eclipse.californium.core.CoapResource</return>
+    <class>org.eclipse.californium.core.CoapResource</class>
+  </method>
+  <method id="137">
+    <name>advanced</name>
+    <description>Gets the internal representation of the response for advanced API calls.</description>
+    <return>Response</return>
+    <class>org.eclipse.californium.core.CoapResponse</class>
+  </method>
+  <method id="138">
+    <name>getCode</name>
+    <description>Gets the response code code.</description>
+    <return>CoAP.ResponseCode</return>
+    <class>org.eclipse.californium.core.CoapResponse</class>
+  </method>
+  <method id="139">
+    <name>getOptions</name>
+    <description>Gets the set of options of this response.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.CoapResponse</class>
+  </method>
+  <method id="140">
+    <name>getPayload</name>
+    <description>Gets the payload of this response as byte array.</description>
+    <return>byte[]</return>
+    <class>org.eclipse.californium.core.CoapResponse</class>
+  </method>
+  <method id="141">
+    <name>getPayloadSize</name>
+    <description>Gets the size (amount of bytes) of the payload.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.CoapResponse</class>
+  </method>
+  <method id="142">
+    <name>getResponseText</name>
+    <description>Gets the payload of this response as string.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.CoapResponse</class>
+  </method>
+  <method id="143">
+    <name>isSuccess</name>
+    <description>Checks if the response code is a successful code.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.CoapResponse</class>
+  </method>
+  <method id="144">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.eclipse.californium.core.CoapResponse</class>
+  </method>
+  <method id="145">
+    <name>add</name>
+    <description/>
+    <parameter id="0">
+      <name>statistic</name>
+      <type>org.eclipse.californium.elements.util.CounterStatisticManager</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="146">
+    <name>add</name>
+    <description>Add a resource to the server.</description>
+    <parameter id="0">
+      <name>resources</name>
+      <type>org.eclipse.californium.core.server.resources.Resource...</type>
+    </parameter>
+    <return>CoapServer</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="147">
+    <name>addDefaultEndpointObserver</name>
+    <description>Add endpoint observer to all endpoints.</description>
+    <parameter id="0">
+      <name>observer</name>
+      <type>org.eclipse.californium.core.network.EndpointObserver</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="148">
+    <name>addEndpoint</name>
+    <description>Adds an Endpoint to the server.</description>
+    <parameter id="0">
+      <name>endpoint</name>
+      <type>org.eclipse.californium.core.network.Endpoint</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="149">
+    <name>createRoot</name>
+    <description>Creates a root for this server.</description>
+    <return>Resource</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="150">
+    <name>destroy</name>
+    <description>Destroys the server.</description>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="151">
+    <name>dump</name>
+    <description/>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="152">
+    <name>getComponents</name>
+    <description/>
+    <return>Collection&lt;org.eclipse.californium.elements.PersistentComponent&gt;</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="153">
+    <name>getConfig</name>
+    <description>Get the configuration of this server.</description>
+    <return>org.eclipse.californium.elements.config.Configuration</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="154">
+    <name>getEndpoint</name>
+    <description>Returns the endpoint with a specific socket address.</description>
+    <parameter id="0">
+      <name>address</name>
+      <type>java.net.InetSocketAddress</type>
+    </parameter>
+    <return>Endpoint</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="155">
+    <name>getEndpoint</name>
+    <description>Returns the endpoint with a specific port.</description>
+    <parameter id="0">
+      <name>port</name>
+      <type>int</type>
+    </parameter>
+    <return>Endpoint</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="156">
+    <name>getEndpoint</name>
+    <description>Gets the endpoint bound to a particular URI.</description>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>Endpoint</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="157">
+    <name>getEndpoints</name>
+    <description>Gets the list of endpoints this server is connected to.</description>
+    <return>List&lt;Endpoint&gt;</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="158">
+    <name>getMessageDeliverer</name>
+    <description>Gets the message deliverer.</description>
+    <return>MessageDeliverer</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="159">
+    <name>getRoot</name>
+    <description>Gets the root of this server.</description>
+    <return>Resource</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="160">
+    <name>getTag</name>
+    <description>Get sever's tag.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="161">
+    <name>isRunning</name>
+    <description>Server is running.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="162">
+    <name>loadConnector</name>
+    <description>Read connections for the connector of the provided uri.</description>
+    <parameter id="0">
+      <name>identifier</name>
+      <type>org.eclipse.californium.core.CoapServer.ConnectorIdentifier</type>
+    </parameter>
+    <parameter id="1">
+      <name>in</name>
+      <type>java.io.InputStream</type>
+    </parameter>
+    <parameter id="2">
+      <name>delta</name>
+      <type>long</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="163">
+    <name>readConnectorIdentifier</name>
+    <description>Read connector identifier from provided input stream.</description>
+    <parameter id="0">
+      <name>in</name>
+      <type>java.io.InputStream</type>
+    </parameter>
+    <return>CoapServer.ConnectorIdentifier</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="164">
+    <name>remove</name>
+    <description/>
+    <parameter id="0">
+      <name>statistic</name>
+      <type>org.eclipse.californium.elements.util.CounterStatisticManager</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="165">
+    <name>remove</name>
+    <description>Removes a resource from the server.</description>
+    <parameter id="0">
+      <name>resource</name>
+      <type>org.eclipse.californium.core.server.resources.Resource</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="166">
+    <name>removeDefaultEndpointObserver</name>
+    <description>Remove endpoint observer from all endpoints.</description>
+    <parameter id="0">
+      <name>observer</name>
+      <type>org.eclipse.californium.core.network.EndpointObserver</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="167">
+    <name>saveAllConnectors</name>
+    <description>Save all connector's connections.</description>
+    <parameter id="0">
+      <name>out</name>
+      <type>java.io.OutputStream</type>
+    </parameter>
+    <parameter id="1">
+      <name>maxQuietPeriodInSeconds</name>
+      <type>long</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="168">
+    <name>setExecutors</name>
+    <description/>
+    <parameter id="0">
+      <name>mainExecutor</name>
+      <type>java.util.concurrent.ScheduledExecutorService</type>
+    </parameter>
+    <parameter id="1">
+      <name>secondaryExecutor</name>
+      <type>java.util.concurrent.ScheduledExecutorService</type>
+    </parameter>
+    <parameter id="2">
+      <name>detach</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="169">
+    <name>setMessageDeliverer</name>
+    <description>Sets the message deliverer.</description>
+    <parameter id="0">
+      <name>deliverer</name>
+      <type>org.eclipse.californium.core.server.MessageDeliverer</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="170">
+    <name>setObserveHealth</name>
+    <description>Set observe health status.</description>
+    <parameter id="0">
+      <name>observeHealth</name>
+      <type>org.eclipse.californium.core.observe.ObserveHealth</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="171">
+    <name>setTag</name>
+    <description>Set server's tag.</description>
+    <parameter id="0">
+      <name>tag</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="172">
+    <name>setVersion</name>
+    <description>Set version for root resource.</description>
+    <parameter id="0">
+      <name>version</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="173">
+    <name>start</name>
+    <description>Starts the server by starting all endpoints this server is assigned to.</description>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="174">
+    <name>stop</name>
+    <description>Stops the server.</description>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="175">
+    <name>org.eclipse.californium.core.CoapServer</name>
+    <description>Constructs a server with the default configuration Configuration.getStandard().</description>
+    <return>org.eclipse.californium.core.CoapServer</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="176">
+    <name>org.eclipse.californium.core.CoapServer</name>
+    <description>Constructs a server with the specified configuration that listens to the specified ports after method start() is called.</description>
+    <parameter id="0">
+      <name>config</name>
+      <type>org.eclipse.californium.elements.config.Configuration</type>
+    </parameter>
+    <parameter id="1">
+      <name>ports</name>
+      <type>int...</type>
+    </parameter>
+    <return>org.eclipse.californium.core.CoapServer</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="177">
+    <name>org.eclipse.californium.core.CoapServer</name>
+    <description>Constructs a server with the default configuration Configuration.getStandard() and listens to the specified port(s) after method start() is called.</description>
+    <parameter id="0">
+      <name>ports</name>
+      <type>int...</type>
+    </parameter>
+    <return>org.eclipse.californium.core.CoapServer</return>
+    <class>org.eclipse.californium.core.CoapServer</class>
+  </method>
+  <method id="178">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.eclipse.californium.core.CoapServer.ConnectorIdentifier</class>
+  </method>
+  <method id="179">
+    <name>prettyPrint</name>
+    <description>Formats a CoapResponse into a readable String representation.</description>
+    <parameter id="0">
+      <name>response</name>
+      <type>org.eclipse.californium.core.CoapResponse</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.Utils</class>
+  </method>
+  <method id="180">
+    <name>prettyPrint</name>
+    <description>Formats a EndpointContext into a readable String representation.</description>
+    <parameter id="0">
+      <name>endpointContext</name>
+      <type>org.eclipse.californium.elements.EndpointContext</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.Utils</class>
+  </method>
+  <method id="181">
+    <name>prettyPrint</name>
+    <description>Formats a Request into a readable String representation.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.eclipse.californium.core.coap.Request</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.Utils</class>
+  </method>
+  <method id="182">
+    <name>prettyPrint</name>
+    <description>Formats a Response into a readable String representation.</description>
+    <parameter id="0">
+      <name>response</name>
+      <type>org.eclipse.californium.core.coap.Response</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.Utils</class>
+  </method>
+  <method id="183">
+    <name>toHexString</name>
+    <description>Converts the specified byte array to a hexadecimal string.</description>
+    <parameter id="0">
+      <name>bytes</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.Utils</class>
+  </method>
+  <method id="184">
+    <name>compareTo</name>
+    <description/>
+    <parameter id="0">
+      <name>other</name>
+      <type>org.eclipse.californium.core.WebLink</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.core.WebLink</class>
+  </method>
+  <method id="185">
+    <name>findByUri</name>
+    <description>Find WebLink by URI.</description>
+    <parameter id="0">
+      <name>links</name>
+      <type>java.util.Collection</type>
+    </parameter>
+    <parameter id="1">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>WebLink</return>
+    <class>org.eclipse.californium.core.WebLink</class>
+  </method>
+  <method id="186">
+    <name>getAttributes</name>
+    <description/>
+    <return>ResourceAttributes</return>
+    <class>org.eclipse.californium.core.WebLink</class>
+  </method>
+  <method id="187">
+    <name>getURI</name>
+    <description/>
+    <return>String</return>
+    <class>org.eclipse.californium.core.WebLink</class>
+  </method>
+  <method id="188">
+    <name>toString</name>
+    <description>Renders the Web link information as a multi-line string, which can be displayed in console clients.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.WebLink</class>
+  </method>
+  <method id="189">
+    <name>org.eclipse.californium.core.WebLink</name>
+    <description/>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.eclipse.californium.core.WebLink</return>
+    <class>org.eclipse.californium.core.WebLink</class>
+  </method>
+</package>
