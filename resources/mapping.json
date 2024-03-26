@@ -76,7 +76,7 @@
       "description": ""
     }
   ],
-  "get": [
+  "receive": [
     {
       "identifier": "",
       "description": ""
@@ -114,7 +114,7 @@
       "description": ""
     }
   ],
-  "post": [
+  "send": [
     {
       "identifier": "",
       "description": ""
