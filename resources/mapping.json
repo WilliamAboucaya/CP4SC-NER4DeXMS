@@ -3,153 +3,189 @@
   "client": [
     {
       "identifier": "org.eclipse.californium.core.CoapClient",
-      "description": "The Class CoapClient."
+      "description": "The Class CoapClient.",
+      "description_ner": "The Class CLASS_1."
     },
     {
       "identifier": "org.eclipse.californium.core.CoapClient",
-      "description": "The Class CoapClient."
+      "description": "The Class CoapClient.",
+      "description_ner": "The Class CLASS_1."
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "org.eclipse.paho.client.mqttv3.MqttClient",
-      "description": "Lightweight client for talking to an MQTT server using methods that block until an operation completes."
+      "description": "Lightweight client for talking to an MQTT server using methods that block until an operation completes.",
+      "description_ner": "Lightweight client for talking to an PROTOCOL_1 server using methods that block until an operation completes."
     },
     {
       "identifier": "org.eclipse.paho.client.mqttv3.MqttClient",
-      "description": "Lightweight client for talking to an MQTT server using methods that block until an operation completes."
+      "description": "Lightweight client for talking to an MQTT server using methods that block until an operation completes.",
+      "description_ner": "Lightweight client for talking to an PROTOCOL_1 server using methods that block until an operation completes."
     },
     {
       "identifier": "org.restlet.Client",
-      "description": "Connector acting as a generic client. It internally uses one of the available connector helpers registered with the Restlet engine.\n\nConcurrency note: instances of this class or its subclasses can be invoked by several threads at the same time and therefore must be thread-safe. You should be especially careful when storing state in member variables.\n\nFor advanced cases, it is possible to obtained the wrapped RestletHelper instance that is used by this client to handle the calls via the \"org.restlet.engine.helper\" attribute stored in the Context object."
+      "description": "Connector acting as a generic client. It internally uses one of the available connector helpers registered with the Restlet engine.\n\nConcurrency note: instances of this class or its subclasses can be invoked by several threads at the same time and therefore must be thread-safe. You should be especially careful when storing state in member variables.\n\nFor advanced cases, it is possible to obtained the wrapped RestletHelper instance that is used by this client to handle the calls via the \"org.restlet.engine.helper\" attribute stored in the Context object.",
+      "description_ner": "Connector acting as a generic client. It internally uses one of the available connector helpers registered with the Restlet engine.\n\nConcurrency note: instances of this class or its subclasses can be invoked by several threads at the same time and therefore must be thread-safe. You should be especially careful when storing state in member variables.\n\nFor advanced cases, it is possible to obtained the wrapped CLASS_1 instance that is used by this client to handle the calls via the ATTRIBUTE_1 attribute stored in the CLASS_2 object."
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     }
   ],
   "server": [
     {
       "identifier": "org.eclipse.californium.core.CoapServer",
-      "description": "An execution environment for CoAP Resources."
+      "description": "An execution environment for CoAP Resources.",
+      "description_ner": "An execution environment for PROTOCOL_1 Resources."
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
+    },
+    {
+      "identifier": "org.eclipse.jetty.server.Server",
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
-    },
-    {
-      "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "org.restlet.Server",
-      "description": "Connector acting as a generic server. It internally uses one of the available connector helpers registered with the Restlet engine.\n\nConcurrency note: instances of this class or its subclasses can be invoked by several threads at the same time and therefore must be thread-safe. You should be especially careful when storing state in member variables.\n\nFor advanced cases, it is possible to obtained the wrapped RestletHelper instance that is used by this client to handle the calls via the \"org.restlet.engine.helper\" attribute stored in the Context object."
+      "description": "Connector acting as a generic server. It internally uses one of the available connector helpers registered with the Restlet engine.\n\nConcurrency note: instances of this class or its subclasses can be invoked by several threads at the same time and therefore must be thread-safe. You should be especially careful when storing state in member variables.\n\nFor advanced cases, it is possible to obtained the wrapped RestletHelper instance that is used by this client to handle the calls via the \"org.restlet.engine.helper\" attribute stored in the Context object.",
+      "description_ner": "Connector acting as a generic server. It internally uses one of the available connector helpers registered with the Restlet engine.\n\nConcurrency note: instances of this class or its subclasses can be invoked by several threads at the same time and therefore must be thread-safe. You should be especially careful when storing state in member variables.\n\nFor advanced cases, it is possible to obtained the wrapped CLASS_1 instance that is used by this client to handle the calls via the ATTRIBUTE_1 attribute stored in the CLASS_2 object."
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     }
   ],
   "receive": [
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     }
   ],
   "send": [
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
+    },
+    {
+      "identifier": "org.apache.http.client.methods.HttpPost",
+      "description": "HTTP POST method.",
+      "description_ner": "PROTOCOL_1 POST method."
+    },
+    {
+      "identifier": "org.eclipse.paho.client.mqttv3.MqttMessage",
+      "description": "An MQTT message holds the application payload and options specifying how the message is to be delivered The message includes a \"payload\" (the body of the message) represented as a byte[].",
+      "description_ner": "An PROTOCOL_1 message holds the application payload and options specifying how the message is to be delivered The message includes a \"payload\" (the body of the message) represented as a CLASS_1."
+    },
+    {
+      "identifier": "org.eclipse.paho.client.mqttv3.MqttMessage",
+      "description": "An MQTT message holds the application payload and options specifying how the message is to be delivered The message includes a \"payload\" (the body of the message) represented as a byte[].",
+      "description_ner": "An PROTOCOL_1 message holds the application payload and options specifying how the message is to be delivered The message includes a \"payload\" (the body of the message) represented as a CLASS_1."
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     },
     {
       "identifier": "",
-      "description": ""
-    },
-    {
-      "identifier": "",
-      "description": ""
-    },
-    {
-      "identifier": "",
-      "description": ""
-    },
-    {
-      "identifier": "",
-      "description": ""
+      "description": "",
+      "description_ner": ""
     }
   ]
 }
