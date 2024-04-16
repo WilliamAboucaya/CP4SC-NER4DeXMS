@@ -1,0 +1,907 @@
+<?xml version="1.0" ?>
+<package>
+  <name>javax.xml.soap</name>
+  <desc>Provides the API for creating and building SOAP messages.</desc>
+  <class id="0">
+    <name>javax.xml.soap.AttachmentPart</name>
+    <description>A single attachment to a SOAPMessage object.</description>
+  </class>
+  <class id="1">
+    <name>javax.xml.soap.MessageFactory</name>
+    <description>A factory for creating SOAPMessage objects.</description>
+  </class>
+  <class id="2">
+    <name>javax.xml.soap.MimeHeader</name>
+    <description>An object that stores a MIME header name and its value.</description>
+  </class>
+  <class id="3">
+    <name>javax.xml.soap.MimeHeaders</name>
+    <description>A container for MimeHeader objects, which represent the MIME headers present in a MIME part of a message.</description>
+  </class>
+  <class id="4">
+    <name>javax.xml.soap.SAAJMetaFactory</name>
+    <description>The access point for the implementation classes of the factories defined in the SAAJ API.</description>
+  </class>
+  <class id="5">
+    <name>javax.xml.soap.SAAJResult</name>
+    <description>Acts as a holder for the results of a JAXP transformation or a JAXB marshalling, in the form of a SAAJ tree.</description>
+  </class>
+  <class id="6">
+    <name>javax.xml.soap.SOAPConnection</name>
+    <description>A point-to-point connection that a client can use for sending messages directly to a remote party (represented by a URL, for instance).</description>
+  </class>
+  <class id="7">
+    <name>javax.xml.soap.SOAPConnectionFactory</name>
+    <description>A factory for creating SOAPConnection objects.</description>
+  </class>
+  <class id="8">
+    <name>javax.xml.soap.SOAPElementFactory</name>
+    <description>- Use javax.xml.soap.SOAPFactory for creating SOAPElements.</description>
+  </class>
+  <class id="9">
+    <name>javax.xml.soap.SOAPFactory</name>
+    <description>SOAPFactory is a factory for creating various objects that exist in the SOAP XML tree.</description>
+  </class>
+  <class id="10">
+    <name>javax.xml.soap.SOAPMessage</name>
+    <description>The root class for all SOAP messages.</description>
+  </class>
+  <class id="11">
+    <name>javax.xml.soap.SOAPPart</name>
+    <description>The container for the SOAP-specific portion of a SOAPMessage object.</description>
+  </class>
+  <method id="0">
+    <name>addMimeHeader</name>
+    <description>Adds a MIME header with the specified name and value to this AttachmentPart object.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String, java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="1">
+    <name>clearContent</name>
+    <description>Clears out the content of this AttachmentPart object.</description>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="2">
+    <name>getAllMimeHeaders</name>
+    <description>Retrieves all the headers for this AttachmentPart object as an iterator over the MimeHeader objects.</description>
+    <return>Iterator</return>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="3">
+    <name>getBase64Content</name>
+    <description>Returns an InputStream which can be used to obtain the content of AttachmentPart as Base64 encoded character data, this method would base64 encode the raw bytes of the attachment and return.</description>
+    <return>InputStream</return>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="4">
+    <name>getContent</name>
+    <description>Gets the content of this AttachmentPart object as a Java object.</description>
+    <return>Object</return>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="5">
+    <name>getContentId</name>
+    <description>Gets the value of the MIME header whose name is &quot;Content-ID&quot;.</description>
+    <return>String</return>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="6">
+    <name>getContentLocation</name>
+    <description>Gets the value of the MIME header whose name is &quot;Content-Location&quot;.</description>
+    <return>String</return>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="7">
+    <name>getContentType</name>
+    <description>Gets the value of the MIME header whose name is &quot;Content-Type&quot;.</description>
+    <return>String</return>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="8">
+    <name>getDataHandler</name>
+    <description>Gets the DataHandler object for this AttachmentPart object.</description>
+    <return>DataHandler</return>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="9">
+    <name>getMatchingMimeHeaders</name>
+    <description>Retrieves all MimeHeader objects that match a name in the given array.</description>
+    <parameter id="0">
+      <name>names</name>
+      <type>java.lang.String[]</type>
+    </parameter>
+    <return>Iterator</return>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="10">
+    <name>getMimeHeader</name>
+    <description>Gets all the values of the header identified by the given String.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>String[]</return>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="11">
+    <name>getNonMatchingMimeHeaders</name>
+    <description>Retrieves all MimeHeader objects whose name does not match a name in the given array.</description>
+    <parameter id="0">
+      <name>names</name>
+      <type>java.lang.String[]</type>
+    </parameter>
+    <return>Iterator</return>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="12">
+    <name>getRawContent</name>
+    <description>Gets the content of this AttachmentPart object as an InputStream as if a call had been made to getContent and no DataContentHandler had been registered for the content-type of this AttachmentPart.</description>
+    <return>InputStream</return>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="13">
+    <name>getRawContentBytes</name>
+    <description>Gets the content of this AttachmentPart object as a byte[] array as if a call had been made to getContent and no DataContentHandler had been registered for the content-type of this AttachmentPart.</description>
+    <return>byte[]</return>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="14">
+    <name>getSize</name>
+    <description>Returns the number of bytes in this AttachmentPart object.</description>
+    <return>int</return>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="15">
+    <name>removeAllMimeHeaders</name>
+    <description>Removes all the MIME header entries.</description>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="16">
+    <name>removeMimeHeader</name>
+    <description>Removes all MIME headers that match the given name.</description>
+    <parameter id="0">
+      <name>header</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="17">
+    <name>setBase64Content</name>
+    <description>Sets the content of this attachment part from the Base64 source InputStream and sets the value of the Content-Type header to the value contained in contentType, This method would first decode the base64 input and write the resulting raw bytes to the attachment.</description>
+    <parameter id="0">
+      <name>content</name>
+      <type>java.io.InputStream, java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="18">
+    <name>setContent</name>
+    <description>Sets the content of this attachment part to that of the given Object and sets the value of the Content-Type header to the given type.</description>
+    <parameter id="0">
+      <name>object</name>
+      <type>java.lang.Object, java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="19">
+    <name>setContentId</name>
+    <description>Sets the MIME header whose name is &quot;Content-ID&quot; with the given value.</description>
+    <parameter id="0">
+      <name>contentId</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="20">
+    <name>setContentLocation</name>
+    <description>Sets the MIME header whose name is &quot;Content-Location&quot; with the given value.</description>
+    <parameter id="0">
+      <name>contentLocation</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="21">
+    <name>setContentType</name>
+    <description>Sets the MIME header whose name is &quot;Content-Type&quot; with the given value.</description>
+    <parameter id="0">
+      <name>contentType</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="22">
+    <name>setDataHandler</name>
+    <description>Sets the given DataHandler object as the data handler for this AttachmentPart object.</description>
+    <parameter id="0">
+      <name>dataHandler</name>
+      <type>javax.activation.DataHandler</type>
+    </parameter>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="23">
+    <name>setMimeHeader</name>
+    <description>Changes the first header entry that matches the given name to the given value, adding a new header if no existing header matches.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String, java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="24">
+    <name>setRawContent</name>
+    <description>Sets the content of this attachment part to that contained by the InputStream content and sets the value of the Content-Type header to the value contained in contentType.</description>
+    <parameter id="0">
+      <name>content</name>
+      <type>java.io.InputStream, java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="25">
+    <name>setRawContentBytes</name>
+    <description>Sets the content of this attachment part to that contained by the byte[] array content and sets the value of the Content-Type header to the value contained in contentType.</description>
+    <parameter id="0">
+      <name>content</name>
+      <type>byte[], int, int, java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="26">
+    <name>javax.xml.soap.AttachmentPart</name>
+    <description/>
+    <return>javax.xml.soap.AttachmentPart</return>
+    <class>javax.xml.soap.AttachmentPart</class>
+  </method>
+  <method id="27">
+    <name>createMessage</name>
+    <description>Creates a new SOAPMessage object with the default SOAPPart, SOAPEnvelope, SOAPBody, and SOAPHeader objects.</description>
+    <return>SOAPMessage</return>
+    <class>javax.xml.soap.MessageFactory</class>
+  </method>
+  <method id="28">
+    <name>createMessage</name>
+    <description>Internalizes the contents of the given InputStream object into a new SOAPMessage object and returns the SOAPMessage object.</description>
+    <parameter id="0">
+      <name>headers</name>
+      <type>javax.xml.soap.MimeHeaders, java.io.InputStream</type>
+    </parameter>
+    <return>SOAPMessage</return>
+    <class>javax.xml.soap.MessageFactory</class>
+  </method>
+  <method id="29">
+    <name>newInstance</name>
+    <description>Creates a new MessageFactory object that is an instance of the default implementation (SOAP 1.1), This method uses the following ordered lookup procedure to determine the MessageFactory implementation class to load: Use the javax.xml.soap.MessageFactory system property.</description>
+    <return>MessageFactory</return>
+    <class>javax.xml.soap.MessageFactory</class>
+  </method>
+  <method id="30">
+    <name>newInstance</name>
+    <description>Creates a new MessageFactory object that is an instance of the specified implementation.</description>
+    <parameter id="0">
+      <name>protocol</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>MessageFactory</return>
+    <class>javax.xml.soap.MessageFactory</class>
+  </method>
+  <method id="31">
+    <name>javax.xml.soap.MessageFactory</name>
+    <description/>
+    <return>javax.xml.soap.MessageFactory</return>
+    <class>javax.xml.soap.MessageFactory</class>
+  </method>
+  <method id="32">
+    <name>getName</name>
+    <description>Returns the name of this MimeHeader object.</description>
+    <return>String</return>
+    <class>javax.xml.soap.MimeHeader</class>
+  </method>
+  <method id="33">
+    <name>getValue</name>
+    <description>Returns the value of this MimeHeader object.</description>
+    <return>String</return>
+    <class>javax.xml.soap.MimeHeader</class>
+  </method>
+  <method id="34">
+    <name>javax.xml.soap.MimeHeader</name>
+    <description>Constructs a MimeHeader object initialized with the given name and value.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String, java.lang.String</type>
+    </parameter>
+    <return>javax.xml.soap.MimeHeader</return>
+    <class>javax.xml.soap.MimeHeader</class>
+  </method>
+  <method id="35">
+    <name>addHeader</name>
+    <description>Adds a MimeHeader object with the specified name and value to this MimeHeaders object's list of headers.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String, java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.MimeHeaders</class>
+  </method>
+  <method id="36">
+    <name>getAllHeaders</name>
+    <description>Returns all the MimeHeaders in this MimeHeaders object.</description>
+    <return>Iterator</return>
+    <class>javax.xml.soap.MimeHeaders</class>
+  </method>
+  <method id="37">
+    <name>getHeader</name>
+    <description>Returns all of the values for the specified header as an array of String objects.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>String[]</return>
+    <class>javax.xml.soap.MimeHeaders</class>
+  </method>
+  <method id="38">
+    <name>getMatchingHeaders</name>
+    <description>Returns all the MimeHeader objects whose name matches a name in the given array of names.</description>
+    <parameter id="0">
+      <name>names</name>
+      <type>java.lang.String[]</type>
+    </parameter>
+    <return>Iterator</return>
+    <class>javax.xml.soap.MimeHeaders</class>
+  </method>
+  <method id="39">
+    <name>getNonMatchingHeaders</name>
+    <description>Returns all of the MimeHeader objects whose name does not match a name in the given array of names.</description>
+    <parameter id="0">
+      <name>names</name>
+      <type>java.lang.String[]</type>
+    </parameter>
+    <return>Iterator</return>
+    <class>javax.xml.soap.MimeHeaders</class>
+  </method>
+  <method id="40">
+    <name>removeAllHeaders</name>
+    <description>Removes all the header entries from this MimeHeaders object.</description>
+    <class>javax.xml.soap.MimeHeaders</class>
+  </method>
+  <method id="41">
+    <name>removeHeader</name>
+    <description>Remove all MimeHeader objects whose name matches the given name.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.MimeHeaders</class>
+  </method>
+  <method id="42">
+    <name>setHeader</name>
+    <description>Replaces the current value of the first header entry whose name matches the given name with the given value, adding a new header if no existing header name matches.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String, java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.MimeHeaders</class>
+  </method>
+  <method id="43">
+    <name>javax.xml.soap.MimeHeaders</name>
+    <description>Constructs a default MimeHeaders object initialized with an empty Vector object.</description>
+    <return>javax.xml.soap.MimeHeaders</return>
+    <class>javax.xml.soap.MimeHeaders</class>
+  </method>
+  <method id="44">
+    <name>newMessageFactory</name>
+    <description>Creates a MessageFactory object for the given String protocol.</description>
+    <parameter id="0">
+      <name>protocol</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>MessageFactory</return>
+    <class>javax.xml.soap.SAAJMetaFactory</class>
+  </method>
+  <method id="45">
+    <name>newSOAPFactory</name>
+    <description>Creates a SOAPFactory object for the given String protocol.</description>
+    <parameter id="0">
+      <name>protocol</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>SOAPFactory</return>
+    <class>javax.xml.soap.SAAJMetaFactory</class>
+  </method>
+  <method id="46">
+    <name>getResult</name>
+    <description/>
+    <return>Node</return>
+    <class>javax.xml.soap.SAAJResult</class>
+  </method>
+  <method id="47">
+    <name>javax.xml.soap.SAAJResult</name>
+    <description>Creates a SAAJResult that will present results in the form of a SAAJ tree that supports the default (SOAP 1.1) protocol.</description>
+    <return>javax.xml.soap.SAAJResult</return>
+    <class>javax.xml.soap.SAAJResult</class>
+  </method>
+  <method id="48">
+    <name>javax.xml.soap.SAAJResult</name>
+    <description>Creates a SAAJResult that will write the results as a child node of the SOAPElement specified.</description>
+    <parameter id="0">
+      <name>rootNode</name>
+      <type>javax.xml.soap.SOAPElement</type>
+    </parameter>
+    <return>javax.xml.soap.SAAJResult</return>
+    <class>javax.xml.soap.SAAJResult</class>
+  </method>
+  <method id="49">
+    <name>javax.xml.soap.SAAJResult</name>
+    <description>Creates a SAAJResult that will write the results into the SOAPPart of the supplied SOAPMessage.</description>
+    <parameter id="0">
+      <name>message</name>
+      <type>javax.xml.soap.SOAPMessage</type>
+    </parameter>
+    <return>javax.xml.soap.SAAJResult</return>
+    <class>javax.xml.soap.SAAJResult</class>
+  </method>
+  <method id="50">
+    <name>javax.xml.soap.SAAJResult</name>
+    <description>Creates a SAAJResult that will present results in the form of a SAAJ tree that supports the specified protocol.</description>
+    <parameter id="0">
+      <name>protocol</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>javax.xml.soap.SAAJResult</return>
+    <class>javax.xml.soap.SAAJResult</class>
+  </method>
+  <method id="51">
+    <name>call</name>
+    <description>Sends the given message to the specified endpoint and blocks until it has returned the response.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>javax.xml.soap.SOAPMessage, java.lang.Object</type>
+    </parameter>
+    <return>SOAPMessage</return>
+    <class>javax.xml.soap.SOAPConnection</class>
+  </method>
+  <method id="52">
+    <name>close</name>
+    <description>Closes this SOAPConnection object.</description>
+    <class>javax.xml.soap.SOAPConnection</class>
+  </method>
+  <method id="53">
+    <name>get</name>
+    <description>Gets a message from a specific endpoint and blocks until it receives,</description>
+    <parameter id="0">
+      <name>to</name>
+      <type>java.lang.Object</type>
+    </parameter>
+    <return>SOAPMessage</return>
+    <class>javax.xml.soap.SOAPConnection</class>
+  </method>
+  <method id="54">
+    <name>javax.xml.soap.SOAPConnection</name>
+    <description/>
+    <return>javax.xml.soap.SOAPConnection</return>
+    <class>javax.xml.soap.SOAPConnection</class>
+  </method>
+  <method id="55">
+    <name>createConnection</name>
+    <description>Create a new SOAPConnection.</description>
+    <return>SOAPConnection</return>
+    <class>javax.xml.soap.SOAPConnectionFactory</class>
+  </method>
+  <method id="56">
+    <name>newInstance</name>
+    <description>Creates an instance of the default SOAPConnectionFactory object.</description>
+    <return>SOAPConnectionFactory</return>
+    <class>javax.xml.soap.SOAPConnectionFactory</class>
+  </method>
+  <method id="57">
+    <name>javax.xml.soap.SOAPConnectionFactory</name>
+    <description/>
+    <return>javax.xml.soap.SOAPConnectionFactory</return>
+    <class>javax.xml.soap.SOAPConnectionFactory</class>
+  </method>
+  <method id="58">
+    <name>createDetail</name>
+    <description>Creates a new Detail object which serves as a container for DetailEntry objects.</description>
+    <return>Detail</return>
+    <class>javax.xml.soap.SOAPFactory</class>
+  </method>
+  <method id="59">
+    <name>createElement</name>
+    <description>Creates a SOAPElement object from an existing DOM Element.</description>
+    <parameter id="0">
+      <name>domElement</name>
+      <type>org.w3c.dom.Element</type>
+    </parameter>
+    <return>SOAPElement</return>
+    <class>javax.xml.soap.SOAPFactory</class>
+  </method>
+  <method id="60">
+    <name>createElement</name>
+    <description>Creates a SOAPElement object initialized with the given Name object.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>javax.xml.soap.Name</type>
+    </parameter>
+    <return>SOAPElement</return>
+    <class>javax.xml.soap.SOAPFactory</class>
+  </method>
+  <method id="61">
+    <name>createElement</name>
+    <description>Creates a SOAPElement object initialized with the given QName object.</description>
+    <parameter id="0">
+      <name>qname</name>
+      <type>javax.xml.namespace.QName</type>
+    </parameter>
+    <return>SOAPElement</return>
+    <class>javax.xml.soap.SOAPFactory</class>
+  </method>
+  <method id="62">
+    <name>createElement</name>
+    <description>Creates a SOAPElement object initialized with the given local name.</description>
+    <parameter id="0">
+      <name>localName</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>SOAPElement</return>
+    <class>javax.xml.soap.SOAPFactory</class>
+  </method>
+  <method id="63">
+    <name>createElement</name>
+    <description>Creates a new SOAPElement object with the given local name, prefix and uri.</description>
+    <parameter id="0">
+      <name>localName</name>
+      <type>java.lang.String, java.lang.String, java.lang.String</type>
+    </parameter>
+    <return>SOAPElement</return>
+    <class>javax.xml.soap.SOAPFactory</class>
+  </method>
+  <method id="64">
+    <name>createFault</name>
+    <description>Creates a new default SOAPFault object</description>
+    <return>SOAPFault</return>
+    <class>javax.xml.soap.SOAPFactory</class>
+  </method>
+  <method id="65">
+    <name>createFault</name>
+    <description>Creates a new SOAPFault object initialized with the given reasonText and faultCode</description>
+    <parameter id="0">
+      <name>reasonText</name>
+      <type>java.lang.String, javax.xml.namespace.QName</type>
+    </parameter>
+    <return>SOAPFault</return>
+    <class>javax.xml.soap.SOAPFactory</class>
+  </method>
+  <method id="66">
+    <name>createName</name>
+    <description>Creates a new Name object initialized with the given local name.</description>
+    <parameter id="0">
+      <name>localName</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>Name</return>
+    <class>javax.xml.soap.SOAPFactory</class>
+  </method>
+  <method id="67">
+    <name>createName</name>
+    <description>Creates a new Name object initialized with the given local name, namespace prefix, and namespace URI.</description>
+    <parameter id="0">
+      <name>localName</name>
+      <type>java.lang.String, java.lang.String, java.lang.String</type>
+    </parameter>
+    <return>Name</return>
+    <class>javax.xml.soap.SOAPFactory</class>
+  </method>
+  <method id="68">
+    <name>newInstance</name>
+    <description>Creates a new SOAPFactory object that is an instance of the default implementation (SOAP 1.1), This method uses the following ordered lookup procedure to determine the SOAPFactory implementation class to load: Use the javax.xml.soap.SOAPFactory system property.</description>
+    <return>SOAPFactory</return>
+    <class>javax.xml.soap.SOAPFactory</class>
+  </method>
+  <method id="69">
+    <name>newInstance</name>
+    <description>Creates a new SOAPFactory object that is an instance of the specified implementation, this method uses the SAAJMetaFactory to locate the implementation class and create the SOAPFactory instance.</description>
+    <parameter id="0">
+      <name>protocol</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>SOAPFactory</return>
+    <class>javax.xml.soap.SOAPFactory</class>
+  </method>
+  <method id="70">
+    <name>javax.xml.soap.SOAPFactory</name>
+    <description/>
+    <return>javax.xml.soap.SOAPFactory</return>
+    <class>javax.xml.soap.SOAPFactory</class>
+  </method>
+  <method id="71">
+    <name>addAttachmentPart</name>
+    <description>Adds the given AttachmentPart object to this SOAPMessage object.</description>
+    <parameter id="0">
+      <name>AttachmentPart</name>
+      <type>javax.xml.soap.AttachmentPart</type>
+    </parameter>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="72">
+    <name>countAttachments</name>
+    <description>Gets a count of the number of attachments in this message.</description>
+    <return>int</return>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="73">
+    <name>createAttachmentPart</name>
+    <description>Creates a new empty AttachmentPart object.</description>
+    <return>AttachmentPart</return>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="74">
+    <name>createAttachmentPart</name>
+    <description>Creates an AttachmentPart object and populates it using the given DataHandler object.</description>
+    <parameter id="0">
+      <name>dataHandler</name>
+      <type>javax.activation.DataHandler</type>
+    </parameter>
+    <return>AttachmentPart</return>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="75">
+    <name>createAttachmentPart</name>
+    <description>Creates an AttachmentPart object and populates it with the specified data of the specified content type.</description>
+    <parameter id="0">
+      <name>content</name>
+      <type>java.lang.Object, java.lang.String</type>
+    </parameter>
+    <return>AttachmentPart</return>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="76">
+    <name>getAttachment</name>
+    <description>Returns an AttachmentPart object that is associated with an attachment that is referenced by this SOAPElement or null if no such attachment exists.</description>
+    <parameter id="0">
+      <name>element</name>
+      <type>javax.xml.soap.SOAPElement</type>
+    </parameter>
+    <return>AttachmentPart</return>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="77">
+    <name>getAttachments</name>
+    <description>Retrieves all the AttachmentPart objects that are part of this SOAPMessage object.</description>
+    <return>Iterator</return>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="78">
+    <name>getAttachments</name>
+    <description>Retrieves all the AttachmentPart objects that have header entries that match the specified headers.</description>
+    <parameter id="0">
+      <name>headers</name>
+      <type>javax.xml.soap.MimeHeaders</type>
+    </parameter>
+    <return>Iterator</return>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="79">
+    <name>getContentDescription</name>
+    <description>Retrieves a description of this SOAPMessage object's content.</description>
+    <return>String</return>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="80">
+    <name>getMimeHeaders</name>
+    <description>Returns all the transport-specific MIME headers for this SOAPMessage object in a transport-independent fashion.</description>
+    <return>MimeHeaders</return>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="81">
+    <name>getProperty</name>
+    <description>Retrieves value of the specified property.</description>
+    <parameter id="0">
+      <name>property</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>Object</return>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="82">
+    <name>getSOAPBody</name>
+    <description>Gets the SOAP Body contained in this SOAPMessage object.</description>
+    <return>SOAPBody</return>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="83">
+    <name>getSOAPHeader</name>
+    <description>Gets the SOAP Header contained in this SOAPMessage object.</description>
+    <return>SOAPHeader</return>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="84">
+    <name>getSOAPPart</name>
+    <description>Gets the SOAP part of this SOAPMessage object.</description>
+    <return>SOAPPart</return>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="85">
+    <name>removeAllAttachments</name>
+    <description>Removes all AttachmentPart objects that have been added to this SOAPMessage object.</description>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="86">
+    <name>removeAttachments</name>
+    <description>Removes all the AttachmentPart objects that have header entries that match the specified headers.</description>
+    <parameter id="0">
+      <name>headers</name>
+      <type>javax.xml.soap.MimeHeaders</type>
+    </parameter>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="87">
+    <name>saveChanges</name>
+    <description>Updates this SOAPMessage object with all the changes that have been made to it.</description>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="88">
+    <name>saveRequired</name>
+    <description>Indicates whether this SOAPMessage object needs to have the method saveChanges called on it.</description>
+    <return>boolean</return>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="89">
+    <name>setContentDescription</name>
+    <description>Sets the description of this SOAPMessage object's content with the given description.</description>
+    <parameter id="0">
+      <name>description</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="90">
+    <name>setProperty</name>
+    <description>Associates the specified value with the specified property.</description>
+    <parameter id="0">
+      <name>property</name>
+      <type>java.lang.String, java.lang.Object</type>
+    </parameter>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="91">
+    <name>writeTo</name>
+    <description>Writes this SOAPMessage object to the given output stream.</description>
+    <parameter id="0">
+      <name>out</name>
+      <type>java.io.OutputStream</type>
+    </parameter>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="92">
+    <name>javax.xml.soap.SOAPMessage</name>
+    <description/>
+    <return>javax.xml.soap.SOAPMessage</return>
+    <class>javax.xml.soap.SOAPMessage</class>
+  </method>
+  <method id="93">
+    <name>addMimeHeader</name>
+    <description>Creates a MimeHeader object with the specified name and value and adds it to this SOAPPart object.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String, java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+  <method id="94">
+    <name>getAllMimeHeaders</name>
+    <description>Retrieves all the headers for this SOAPPart object as an iterator over the MimeHeader objects.</description>
+    <return>Iterator</return>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+  <method id="95">
+    <name>getContent</name>
+    <description>Returns the content of the SOAPEnvelope as a JAXP Source object.</description>
+    <return>Source</return>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+  <method id="96">
+    <name>getContentId</name>
+    <description>Retrieves the value of the MIME header whose name is &quot;Content-Id&quot;.</description>
+    <return>String</return>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+  <method id="97">
+    <name>getContentLocation</name>
+    <description>Retrieves the value of the MIME header whose name is &quot;Content-Location&quot;.</description>
+    <return>String</return>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+  <method id="98">
+    <name>getEnvelope</name>
+    <description>Gets the SOAPEnvelope object associated with this SOAPPart object.</description>
+    <return>SOAPEnvelope</return>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+  <method id="99">
+    <name>getMatchingMimeHeaders</name>
+    <description>Retrieves all MimeHeader objects that match a name in the given array.</description>
+    <parameter id="0">
+      <name>names</name>
+      <type>java.lang.String[]</type>
+    </parameter>
+    <return>Iterator</return>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+  <method id="100">
+    <name>getMimeHeader</name>
+    <description>Gets all the values of the MimeHeader object in this SOAPPart object that is identified by the given String.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>String[]</return>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+  <method id="101">
+    <name>getNonMatchingMimeHeaders</name>
+    <description>Retrieves all MimeHeader objects whose name does not match a name in the given array.</description>
+    <parameter id="0">
+      <name>names</name>
+      <type>java.lang.String[]</type>
+    </parameter>
+    <return>Iterator</return>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+  <method id="102">
+    <name>removeAllMimeHeaders</name>
+    <description>Removes all the MimeHeader objects for this SOAPEnvelope object.</description>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+  <method id="103">
+    <name>removeMimeHeader</name>
+    <description>Removes all MIME headers that match the given name.</description>
+    <parameter id="0">
+      <name>header</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+  <method id="104">
+    <name>setContent</name>
+    <description>Sets the content of the SOAPEnvelope object with the data from the given Source object.</description>
+    <parameter id="0">
+      <name>source</name>
+      <type>javax.xml.transform.Source</type>
+    </parameter>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+  <method id="105">
+    <name>setContentId</name>
+    <description>Sets the value of the MIME header named &quot;Content-Id&quot; to the given String.</description>
+    <parameter id="0">
+      <name>contentId</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+  <method id="106">
+    <name>setContentLocation</name>
+    <description>Sets the value of the MIME header &quot;Content-Location&quot; to the given String.</description>
+    <parameter id="0">
+      <name>contentLocation</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+  <method id="107">
+    <name>setMimeHeader</name>
+    <description>Changes the first header entry that matches the given header name so that its value is the given value, adding a new header with the given name and value if no existing header is a match.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String, java.lang.String</type>
+    </parameter>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+  <method id="108">
+    <name>javax.xml.soap.SOAPPart</name>
+    <description/>
+    <return>javax.xml.soap.SOAPPart</return>
+    <class>javax.xml.soap.SOAPPart</class>
+  </method>
+</package>

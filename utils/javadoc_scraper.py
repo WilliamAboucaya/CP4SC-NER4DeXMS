@@ -361,11 +361,14 @@ def write_xml(package_info):
 if __name__ == "__main__":
     packages = {
         "org.eclipse.californium.core": "https://javadoc.io/static/org.eclipse.californium/californium-core/3.10.0/org/eclipse/californium/core/package-summary.html",
+        "org.eclipse.californium.core.coap": "https://javadoc.io/static/org.eclipse.californium/californium-core/3.10.0/org/eclipse/californium/core/coap/package-summary.html",
         "org.eclipse.paho.client.mqttv3": "https://eclipse.dev/paho/files/javadoc/org/eclipse/paho/client/mqttv3/package-summary.html",
         "org.apache.http": "https://hc.apache.org/httpcomponents-core-4.4.x/current/httpcore/apidocs/org/apache/http/package-summary.html",
         "org.apache.http.client.methods": "https://javadoc.io/static/org.apache.httpcomponents/httpclient/4.5.3/org/apache/http/client/methods/package-summary.html",
         "org.apache.http.impl.client": "https://javadoc.io/static/org.apache.httpcomponents/httpclient/4.5.3/org/apache/http/impl/client/package-summary.html",
-        # "": "",
+        "javax.xml.soap": "https://javadoc.io/static/javax.xml.soap/javax.xml.soap-api/1.3.6/javax/xml/soap/package-summary.html",
+        "org.java_websocket.server": "https://www.javadoc.io/static/org.java-websocket/Java-WebSocket/1.3.0/org/java_websocket/server/package-summary.html",
+        "org.java_websocket.client": "https://www.javadoc.io/static/org.java-websocket/Java-WebSocket/1.3.0/org/java_websocket/client/package-summary.html"
     }
 
     futures = {}

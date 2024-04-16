@@ -1,0 +1,424 @@
+<?xml version="1.0" ?>
+<package>
+  <name>org.java_websocket.client</name>
+  <desc/>
+  <class id="0">
+    <name>org.java_websocket.client.AbstractClientProxyChannel</name>
+    <description/>
+  </class>
+  <class id="1">
+    <name>org.java_websocket.client.DefaultSSLWebSocketClientFactory</name>
+    <description/>
+  </class>
+  <class id="2">
+    <name>org.java_websocket.client.DefaultWebSocketClientFactory</name>
+    <description/>
+  </class>
+  <class id="3">
+    <name>org.java_websocket.client.WebSocketClient</name>
+    <description>The WebSocketClient is an abstract class that expects a valid &quot;ws://&quot; URI to connect to.</description>
+  </class>
+  <method id="0">
+    <name>buildHandShake</name>
+    <description/>
+    <return>String</return>
+    <class>org.java_websocket.client.AbstractClientProxyChannel</class>
+  </method>
+  <method id="1">
+    <name>write</name>
+    <description/>
+    <parameter id="0">
+      <name>src</name>
+      <type>java.nio.ByteBuffer</type>
+    </parameter>
+    <return>int</return>
+    <class>org.java_websocket.client.AbstractClientProxyChannel</class>
+  </method>
+  <method id="2">
+    <name>org.java_websocket.client.AbstractClientProxyChannel</name>
+    <description/>
+    <parameter id="0">
+      <name>towrap</name>
+      <type>java.nio.channels.ByteChannel</type>
+    </parameter>
+    <return>org.java_websocket.client.AbstractClientProxyChannel</return>
+    <class>org.java_websocket.client.AbstractClientProxyChannel</class>
+  </method>
+  <method id="3">
+    <name>createWebSocket</name>
+    <description/>
+    <parameter id="0">
+      <name>a</name>
+      <type>org.java_websocket.WebSocketAdapter, org.java_websocket.drafts.Draft, java.net.Socket</type>
+    </parameter>
+    <return>WebSocketImpl</return>
+    <class>org.java_websocket.client.DefaultSSLWebSocketClientFactory</class>
+  </method>
+  <method id="4">
+    <name>createWebSocket</name>
+    <description/>
+    <parameter id="0">
+      <name>a</name>
+      <type>org.java_websocket.WebSocketAdapter, java.util.List, java.net.Socket</type>
+    </parameter>
+    <return>WebSocketImpl</return>
+    <class>org.java_websocket.client.DefaultSSLWebSocketClientFactory</class>
+  </method>
+  <method id="5">
+    <name>wrapChannel</name>
+    <description/>
+    <parameter id="0">
+      <name>channel</name>
+      <type>java.nio.channels.SocketChannel, java.nio.channels.SelectionKey, java.lang.String, int</type>
+    </parameter>
+    <return>ByteChannel</return>
+    <class>org.java_websocket.client.DefaultSSLWebSocketClientFactory</class>
+  </method>
+  <method id="6">
+    <name>org.java_websocket.client.DefaultSSLWebSocketClientFactory</name>
+    <description/>
+    <parameter id="0">
+      <name>sslContext</name>
+      <type>javax.net.ssl.SSLContext</type>
+    </parameter>
+    <return>org.java_websocket.client.DefaultSSLWebSocketClientFactory</return>
+    <class>org.java_websocket.client.DefaultSSLWebSocketClientFactory</class>
+  </method>
+  <method id="7">
+    <name>org.java_websocket.client.DefaultSSLWebSocketClientFactory</name>
+    <description/>
+    <parameter id="0">
+      <name>sslContext</name>
+      <type>javax.net.ssl.SSLContext, java.util.concurrent.ExecutorService</type>
+    </parameter>
+    <return>org.java_websocket.client.DefaultSSLWebSocketClientFactory</return>
+    <class>org.java_websocket.client.DefaultSSLWebSocketClientFactory</class>
+  </method>
+  <method id="8">
+    <name>createWebSocket</name>
+    <description/>
+    <parameter id="0">
+      <name>a</name>
+      <type>org.java_websocket.WebSocketAdapter, org.java_websocket.drafts.Draft, java.net.Socket</type>
+    </parameter>
+    <return>WebSocket</return>
+    <class>org.java_websocket.client.DefaultWebSocketClientFactory</class>
+  </method>
+  <method id="9">
+    <name>createWebSocket</name>
+    <description/>
+    <parameter id="0">
+      <name>a</name>
+      <type>org.java_websocket.WebSocketAdapter, java.util.List, java.net.Socket</type>
+    </parameter>
+    <return>WebSocket</return>
+    <class>org.java_websocket.client.DefaultWebSocketClientFactory</class>
+  </method>
+  <method id="10">
+    <name>wrapChannel</name>
+    <description/>
+    <parameter id="0">
+      <name>channel</name>
+      <type>java.nio.channels.SocketChannel, java.nio.channels.SelectionKey, java.lang.String, int</type>
+    </parameter>
+    <return>ByteChannel</return>
+    <class>org.java_websocket.client.DefaultWebSocketClientFactory</class>
+  </method>
+  <method id="11">
+    <name>org.java_websocket.client.DefaultWebSocketClientFactory</name>
+    <description/>
+    <parameter id="0">
+      <name>webSocketClient</name>
+      <type>org.java_websocket.client.WebSocketClient</type>
+    </parameter>
+    <return>org.java_websocket.client.DefaultWebSocketClientFactory</return>
+    <class>org.java_websocket.client.DefaultWebSocketClientFactory</class>
+  </method>
+  <method id="12">
+    <name>close</name>
+    <description/>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="13">
+    <name>closeBlocking</name>
+    <description/>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="14">
+    <name>connect</name>
+    <description>Starts a background thread that attempts and maintains a WebSocket connection to the URI specified in the constructor or via setURI.</description>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="15">
+    <name>connectBlocking</name>
+    <description>Same as connect but blocks until the websocket connected or failed to do so. Returns whether it succeeded or not.</description>
+    <return>boolean</return>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="16">
+    <name>createProxyChannel</name>
+    <description/>
+    <parameter id="0">
+      <name>towrap</name>
+      <type>java.nio.channels.ByteChannel</type>
+    </parameter>
+    <return>ByteChannel</return>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="17">
+    <name>getConnection</name>
+    <description/>
+    <return>WebSocket</return>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="18">
+    <name>getDraft</name>
+    <description>Returns the protocol version this channel uses.</description>
+    <return>Draft</return>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="19">
+    <name>getLocalSocketAddress</name>
+    <description/>
+    <parameter id="0">
+      <name>conn</name>
+      <type>org.java_websocket.WebSocket</type>
+    </parameter>
+    <return>InetSocketAddress</return>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="20">
+    <name>getReadyState</name>
+    <description>This represents the state of the connection.</description>
+    <return>WebSocket.READYSTATE</return>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="21">
+    <name>getRemoteSocketAddress</name>
+    <description/>
+    <parameter id="0">
+      <name>conn</name>
+      <type>org.java_websocket.WebSocket</type>
+    </parameter>
+    <return>InetSocketAddress</return>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="22">
+    <name>getURI</name>
+    <description>Gets the URI that this WebSocketClient is connected to.</description>
+    <return>URI</return>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="23">
+    <name>getWebSocketFactory</name>
+    <description/>
+    <return>WebSocketFactory</return>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="24">
+    <name>onClose</name>
+    <description/>
+    <parameter id="0">
+      <name>code</name>
+      <type>int, java.lang.String, boolean</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="25">
+    <name>onCloseInitiated</name>
+    <description/>
+    <parameter id="0">
+      <name>code</name>
+      <type>int, java.lang.String</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="26">
+    <name>onClosing</name>
+    <description/>
+    <parameter id="0">
+      <name>code</name>
+      <type>int, java.lang.String, boolean</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="27">
+    <name>onError</name>
+    <description/>
+    <parameter id="0">
+      <name>ex</name>
+      <type>java.lang.Exception</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="28">
+    <name>onMessage</name>
+    <description/>
+    <parameter id="0">
+      <name>bytes</name>
+      <type>java.nio.ByteBuffer</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="29">
+    <name>onMessage</name>
+    <description/>
+    <parameter id="0">
+      <name>message</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="30">
+    <name>onOpen</name>
+    <description/>
+    <parameter id="0">
+      <name>handshakedata</name>
+      <type>org.java_websocket.handshake.ServerHandshake</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="31">
+    <name>onWebsocketClose</name>
+    <description>Calls subclass' implementation of onClose.</description>
+    <parameter id="0">
+      <name>conn</name>
+      <type>org.java_websocket.WebSocket, int, java.lang.String, boolean</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="32">
+    <name>onWebsocketCloseInitiated</name>
+    <description>send when this peer sends a close handshake</description>
+    <parameter id="0">
+      <name>conn</name>
+      <type>org.java_websocket.WebSocket, int, java.lang.String</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="33">
+    <name>onWebsocketClosing</name>
+    <description>called as soon as no further frames are accepted</description>
+    <parameter id="0">
+      <name>conn</name>
+      <type>org.java_websocket.WebSocket, int, java.lang.String, boolean</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="34">
+    <name>onWebsocketError</name>
+    <description>Calls subclass' implementation of onIOError.</description>
+    <parameter id="0">
+      <name>conn</name>
+      <type>org.java_websocket.WebSocket, java.lang.Exception</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="35">
+    <name>onWebsocketMessage</name>
+    <description>Called when an entire binary frame has been received.</description>
+    <parameter id="0">
+      <name>conn</name>
+      <type>org.java_websocket.WebSocket, java.nio.ByteBuffer</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="36">
+    <name>onWebsocketMessage</name>
+    <description>Calls subclass' implementation of onMessage.</description>
+    <parameter id="0">
+      <name>conn</name>
+      <type>org.java_websocket.WebSocket, java.lang.String</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="37">
+    <name>onWebsocketOpen</name>
+    <description>Calls subclass' implementation of onOpen.</description>
+    <parameter id="0">
+      <name>conn</name>
+      <type>org.java_websocket.WebSocket, org.java_websocket.handshake.Handshakedata</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="38">
+    <name>onWriteDemand</name>
+    <description>This method is used to inform the selector thread that there is data queued to be written to the socket.</description>
+    <parameter id="0">
+      <name>conn</name>
+      <type>org.java_websocket.WebSocket</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="39">
+    <name>run</name>
+    <description/>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="40">
+    <name>send</name>
+    <description>Sends data to the connected WebSocket server.</description>
+    <parameter id="0">
+      <name>data</name>
+      <type>byte[]</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="41">
+    <name>send</name>
+    <description>Sends text to the connected WebSocket server.</description>
+    <parameter id="0">
+      <name>text</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="42">
+    <name>setProxy</name>
+    <description/>
+    <parameter id="0">
+      <name>proxyaddress</name>
+      <type>java.net.InetSocketAddress</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="43">
+    <name>setWebSocketFactory</name>
+    <description/>
+    <parameter id="0">
+      <name>wsf</name>
+      <type>org.java_websocket.client.WebSocketClient.WebSocketClientFactory</type>
+    </parameter>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="44">
+    <name>org.java_websocket.client.WebSocketClient</name>
+    <description/>
+    <parameter id="0">
+      <name>serverURI</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>org.java_websocket.client.WebSocketClient</return>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="45">
+    <name>org.java_websocket.client.WebSocketClient</name>
+    <description>Constructs a WebSocketClient instance and sets it to the connect to the specified URI.</description>
+    <parameter id="0">
+      <name>serverUri</name>
+      <type>java.net.URI, org.java_websocket.drafts.Draft</type>
+    </parameter>
+    <return>org.java_websocket.client.WebSocketClient</return>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+  <method id="46">
+    <name>org.java_websocket.client.WebSocketClient</name>
+    <description/>
+    <parameter id="0">
+      <name>serverUri</name>
+      <type>java.net.URI, org.java_websocket.drafts.Draft, java.util.Map, int</type>
+    </parameter>
+    <return>org.java_websocket.client.WebSocketClient</return>
+    <class>org.java_websocket.client.WebSocketClient</class>
+  </method>
+</package>

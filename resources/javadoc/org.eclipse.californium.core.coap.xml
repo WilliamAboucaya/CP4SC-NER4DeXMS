@@ -1,0 +1,4004 @@
+<?xml version="1.0" ?>
+<package>
+  <name>org.eclipse.californium.core.coap</name>
+  <desc/>
+  <class id="0">
+    <name>org.eclipse.californium.core.coap.BlockOption</name>
+    <description>BlockOption represents a Block1 or Block2 option in a CoAP message.</description>
+  </class>
+  <class id="1">
+    <name>org.eclipse.californium.core.coap.ClientObserveRelation</name>
+    <description>A ClientObserveRelation is a client-side control handle.</description>
+  </class>
+  <class id="2">
+    <name>org.eclipse.californium.core.coap.CoAP</name>
+    <description>CoAP defines several constants.</description>
+  </class>
+  <class id="3">
+    <name>org.eclipse.californium.core.coap.EmptyMessage</name>
+    <description>EmptyMessage represents an empty CoAP message.</description>
+  </class>
+  <class id="4">
+    <name>org.eclipse.californium.core.coap.EndpointContextTracer</name>
+    <description>Endpoint Context tracer.</description>
+  </class>
+  <class id="5">
+    <name>org.eclipse.californium.core.coap.LinkFormat</name>
+    <description>Link format utility class.</description>
+  </class>
+  <class id="6">
+    <name>org.eclipse.californium.core.coap.MediaTypeRegistry</name>
+    <description>This class describes the CoAP Media Type Registry as defined in RFC 7252, Section 12.3.</description>
+  </class>
+  <class id="7">
+    <name>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</name>
+    <description>Media type definition.</description>
+  </class>
+  <class id="8">
+    <name>org.eclipse.californium.core.coap.Message</name>
+    <description>The class Message models the base class of all CoAP messages.</description>
+  </class>
+  <class id="9">
+    <name>org.eclipse.californium.core.coap.MessageObserverAdapter</name>
+    <description>An abstract adapter class for reacting to a message's lifecylce events.</description>
+  </class>
+  <class id="10">
+    <name>org.eclipse.californium.core.coap.NoResponseOption</name>
+    <description>NoResponseOption.</description>
+  </class>
+  <class id="11">
+    <name>org.eclipse.californium.core.coap.Option</name>
+    <description>Both requests and responses may include a list of one or more options.</description>
+  </class>
+  <class id="12">
+    <name>org.eclipse.californium.core.coap.OptionNumberRegistry</name>
+    <description>This class describes the CoAP Option Number Registry as defined in RFC 7252, Section 12.2 and other CoAP extensions.</description>
+  </class>
+  <class id="13">
+    <name>org.eclipse.californium.core.coap.OptionNumberRegistry.Defaults</name>
+    <description>Option default values.</description>
+  </class>
+  <class id="14">
+    <name>org.eclipse.californium.core.coap.OptionNumberRegistry.Names</name>
+    <description>Option names.</description>
+  </class>
+  <class id="15">
+    <name>org.eclipse.californium.core.coap.OptionSet</name>
+    <description>OptionSet is a collection of all options of a request or a response.</description>
+  </class>
+  <class id="16">
+    <name>org.eclipse.californium.core.coap.Request</name>
+    <description>Request represents a CoAP request and has either the CoAP.Type CON or NON and one of the CoAP.Codes GET, POST, PUT or DELETE.</description>
+  </class>
+  <class id="17">
+    <name>org.eclipse.californium.core.coap.Response</name>
+    <description>Response represents a CoAP response to a CoAP request.</description>
+  </class>
+  <class id="18">
+    <name>org.eclipse.californium.core.coap.ResponseTimeout</name>
+    <description>Message observer for response timeout.</description>
+  </class>
+  <class id="19">
+    <name>org.eclipse.californium.core.coap.Token</name>
+    <description>Implementation of CoAP token.</description>
+  </class>
+  <class id="20">
+    <name>org.eclipse.californium.core.coap.UriQueryParameter</name>
+    <description>Helper for processing URI-query parameters.</description>
+  </class>
+  <method id="0">
+    <name>assertPayloadSize</name>
+    <description>Assert, that the payload-size doesn't exceed blocksize.</description>
+    <parameter id="0">
+      <name>payloadSize</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.BlockOption</class>
+  </method>
+  <method id="1">
+    <name>equals</name>
+    <description/>
+    <parameter id="0">
+      <name>o</name>
+      <type>java.lang.Object</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.BlockOption</class>
+  </method>
+  <method id="2">
+    <name>getNum</name>
+    <description>Gets the num.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.BlockOption</class>
+  </method>
+  <method id="3">
+    <name>getOffset</name>
+    <description>Gets the offset into a body this block option represents.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.BlockOption</class>
+  </method>
+  <method id="4">
+    <name>getSize</name>
+    <description>Gets the size where size == 1 &lt;&lt; (4 + szx).</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.BlockOption</class>
+  </method>
+  <method id="5">
+    <name>getSzx</name>
+    <description>Gets the szx.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.BlockOption</class>
+  </method>
+  <method id="6">
+    <name>getValue</name>
+    <description>Gets the encoded block option as 0-3 byte array.</description>
+    <return>byte[]</return>
+    <class>org.eclipse.californium.core.coap.BlockOption</class>
+  </method>
+  <method id="7">
+    <name>hashCode</name>
+    <description/>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.BlockOption</class>
+  </method>
+  <method id="8">
+    <name>isBERT</name>
+    <description>Indicates, that BERT is used.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.BlockOption</class>
+  </method>
+  <method id="9">
+    <name>isM</name>
+    <description>Checks if is m.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.BlockOption</class>
+  </method>
+  <method id="10">
+    <name>size2Szx</name>
+    <description>Gets the 3-bit SZX code for a block size as specified by RFC 7959, Section 2.2:</description>
+    <parameter id="0">
+      <name>blockSize</name>
+      <type>int</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.BlockOption</class>
+  </method>
+  <method id="11">
+    <name>szx2Size</name>
+    <description>Gets the number of bytes corresponding to a szx code.</description>
+    <parameter id="0">
+      <name>szx</name>
+      <type>int</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.BlockOption</class>
+  </method>
+  <method id="12">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.BlockOption</class>
+  </method>
+  <method id="13">
+    <name>org.eclipse.californium.core.coap.BlockOption</name>
+    <description>Instantiates a new block option from the specified bytes (1-3 bytes).</description>
+    <parameter id="0">
+      <name>bytes</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.BlockOption</return>
+    <class>org.eclipse.californium.core.coap.BlockOption</class>
+  </method>
+  <method id="14">
+    <name>org.eclipse.californium.core.coap.BlockOption</name>
+    <description>Creates a new block option for given values.</description>
+    <parameter id="0">
+      <name>szx</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>m</name>
+      <type>boolean</type>
+    </parameter>
+    <parameter id="2">
+      <name>num</name>
+      <type>int</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.BlockOption</return>
+    <class>org.eclipse.californium.core.coap.BlockOption</class>
+  </method>
+  <method id="15">
+    <name>getCurrentResponse</name>
+    <description>Gets the current notification or null if none has arrived yet.</description>
+    <return>Response</return>
+    <class>org.eclipse.californium.core.coap.ClientObserveRelation</class>
+  </method>
+  <method id="16">
+    <name>isCanceled</name>
+    <description>Checks if the relation has been canceled.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.ClientObserveRelation</class>
+  </method>
+  <method id="17">
+    <name>isConfirmable</name>
+    <description>Checks if the relation is reregistered and cancelled confirmable or non-confirmable.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.ClientObserveRelation</class>
+  </method>
+  <method id="18">
+    <name>matchRequest</name>
+    <description>Check, if request matches observe relation.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.eclipse.californium.core.coap.Request</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.ClientObserveRelation</class>
+  </method>
+  <method id="19">
+    <name>onResponse</name>
+    <description>Sets the current response or notification.</description>
+    <parameter id="0">
+      <name>response</name>
+      <type>org.eclipse.californium.core.coap.Response</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.ClientObserveRelation</class>
+  </method>
+  <method id="20">
+    <name>proactiveCancel</name>
+    <description>Proactive Observe cancellation: Cancel the observe relation by sending a GET with Observe=1.</description>
+    <class>org.eclipse.californium.core.coap.ClientObserveRelation</class>
+  </method>
+  <method id="21">
+    <name>reactiveCancel</name>
+    <description>Reactive Observe cancellation: Cancel the observe relation by forgetting, which will trigger a RST.</description>
+    <class>org.eclipse.californium.core.coap.ClientObserveRelation</class>
+  </method>
+  <method id="22">
+    <name>reregister</name>
+    <description>Refreshes the Observe relationship with a new GET request with same token and options.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.ClientObserveRelation</class>
+  </method>
+  <method id="23">
+    <name>setCanceled</name>
+    <description>Marks this relation as canceled.</description>
+    <parameter id="0">
+      <name>canceled</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.ClientObserveRelation</class>
+  </method>
+  <method id="24">
+    <name>setConfirmable</name>
+    <description>Set the relation reregister and cancel message type.</description>
+    <parameter id="0">
+      <name>confirmable</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.ClientObserveRelation</class>
+  </method>
+  <method id="25">
+    <name>org.eclipse.californium.core.coap.ClientObserveRelation</name>
+    <description>Constructs a new ClientObserveRelation with the specified request.</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.eclipse.californium.core.coap.Request</type>
+    </parameter>
+    <parameter id="1">
+      <name>endpoint</name>
+      <type>org.eclipse.californium.core.network.Endpoint</type>
+    </parameter>
+    <parameter id="2">
+      <name>executor</name>
+      <type>java.util.concurrent.ScheduledThreadPoolExecutor</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.ClientObserveRelation</return>
+    <class>org.eclipse.californium.core.coap.ClientObserveRelation</class>
+  </method>
+  <method id="26">
+    <name>formatCode</name>
+    <description>Gets the string representation of a CoAP code.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>int</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="27">
+    <name>getCodeClass</name>
+    <description>Gets the code class of a given CoAP code.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>int</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="28">
+    <name>getCodeDetail</name>
+    <description>Gets the code detail of a given CoAP code.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>int</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="29">
+    <name>getDefaultPort</name>
+    <description>Get default port for provided uri scheme.</description>
+    <parameter id="0">
+      <name>uriScheme</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="30">
+    <name>getProtocolForScheme</name>
+    <description>Get protocol for scheme.</description>
+    <parameter id="0">
+      <name>scheme</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="31">
+    <name>getSchemeForProtocol</name>
+    <description>Get scheme for protocol.</description>
+    <parameter id="0">
+      <name>protocol</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="32">
+    <name>getSchemeFromUri</name>
+    <description>Get scheme from URI.</description>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="33">
+    <name>isEmptyMessage</name>
+    <description>Checks if a given CoAP code is the empty message code.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="34">
+    <name>isObservable</name>
+    <description>Checks if a given CoAP code is a observable method.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>org.eclipse.californium.core.coap.CoAP.Code</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="35">
+    <name>isRequest</name>
+    <description>Checks if a given CoAP code is a request code.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="36">
+    <name>isResponse</name>
+    <description>Checks if a given CoAP code is a response code.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="37">
+    <name>isSecureProtocol</name>
+    <description>Checks, if provided protocol is PROTOCOL_DTLS or PROTOCOL_TLS.</description>
+    <parameter id="0">
+      <name>protocol</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="38">
+    <name>isSecureScheme</name>
+    <description>Checks, if provided scheme is COAP_SECURE_URI_SCHEME or COAP_SECURE_TCP_URI_SCHEME.</description>
+    <parameter id="0">
+      <name>uriScheme</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="39">
+    <name>isSupportedScheme</name>
+    <description>Checks, if provided scheme is COAP_URI_SCHEME, COAP_SECURE_URI_SCHEME, COAP_TCP_URI_SCHEME or COAP_SECURE_TCP_URI_SCHEME.</description>
+    <parameter id="0">
+      <name>uriScheme</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="40">
+    <name>isTcpProtocol</name>
+    <description>Checks, if provided protocol is PROTOCOL_TCP or PROTOCOL_TLS.</description>
+    <parameter id="0">
+      <name>protocol</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="41">
+    <name>isTcpScheme</name>
+    <description>Checks, if provided scheme is COAP_TCP_URI_SCHEME or COAP_SECURE_TCP_URI_SCHEME.</description>
+    <parameter id="0">
+      <name>uriScheme</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="42">
+    <name>isUdpProtocol</name>
+    <description>Checks, if provided protocol is PROTOCOL_UDP or PROTOCOL_DTLS.</description>
+    <parameter id="0">
+      <name>protocol</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="43">
+    <name>isUdpScheme</name>
+    <description>Checks, if provided scheme is COAP_URI_SCHEME or COAP_SECURE_URI_SCHEME.</description>
+    <parameter id="0">
+      <name>uriScheme</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="44">
+    <name>toCodeString</name>
+    <description>Converts raw message code into display string.</description>
+    <parameter id="0">
+      <name>rawCode</name>
+      <type>int</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.CoAP</class>
+  </method>
+  <method id="45">
+    <name>assertPayloadMatchsBlocksize</name>
+    <description>Check, if the payload size matches the BlockOption.getSize().</description>
+    <class>org.eclipse.californium.core.coap.EmptyMessage</class>
+  </method>
+  <method id="46">
+    <name>getRawCode</name>
+    <description>Gets the raw integer value of this message's code.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.EmptyMessage</class>
+  </method>
+  <method id="47">
+    <name>hasBlock</name>
+    <description>Checks whether a given block offset falls into this message's payload.</description>
+    <parameter id="0">
+      <name>block</name>
+      <type>org.eclipse.californium.core.coap.BlockOption</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.EmptyMessage</class>
+  </method>
+  <method id="48">
+    <name>isIntendedPayload</name>
+    <description>Checks, if this message is intended to have payload.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.EmptyMessage</class>
+  </method>
+  <method id="49">
+    <name>newACK</name>
+    <description>Create a new acknowledgment for the specified message.</description>
+    <parameter id="0">
+      <name>message</name>
+      <type>org.eclipse.californium.core.coap.Message</type>
+    </parameter>
+    <return>EmptyMessage</return>
+    <class>org.eclipse.californium.core.coap.EmptyMessage</class>
+  </method>
+  <method id="50">
+    <name>newACK</name>
+    <description>Create a new acknowledgment for the specified message.</description>
+    <parameter id="0">
+      <name>message</name>
+      <type>org.eclipse.californium.core.coap.Message</type>
+    </parameter>
+    <parameter id="1">
+      <name>destination</name>
+      <type>org.eclipse.californium.elements.EndpointContext</type>
+    </parameter>
+    <return>EmptyMessage</return>
+    <class>org.eclipse.californium.core.coap.EmptyMessage</class>
+  </method>
+  <method id="51">
+    <name>newRST</name>
+    <description>Create a new reset message for the specified message.</description>
+    <parameter id="0">
+      <name>message</name>
+      <type>org.eclipse.californium.core.coap.Message</type>
+    </parameter>
+    <return>EmptyMessage</return>
+    <class>org.eclipse.californium.core.coap.EmptyMessage</class>
+  </method>
+  <method id="52">
+    <name>newRST</name>
+    <description>Create a new reset message for the specified message.</description>
+    <parameter id="0">
+      <name>message</name>
+      <type>org.eclipse.californium.core.coap.Message</type>
+    </parameter>
+    <parameter id="1">
+      <name>destination</name>
+      <type>org.eclipse.californium.elements.EndpointContext</type>
+    </parameter>
+    <return>EmptyMessage</return>
+    <class>org.eclipse.californium.core.coap.EmptyMessage</class>
+  </method>
+  <method id="53">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.EmptyMessage</class>
+  </method>
+  <method id="54">
+    <name>org.eclipse.californium.core.coap.EmptyMessage</name>
+    <description>Instantiates a new empty message.</description>
+    <parameter id="0">
+      <name>type</name>
+      <type>org.eclipse.californium.core.coap.CoAP.Type</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.EmptyMessage</return>
+    <class>org.eclipse.californium.core.coap.EmptyMessage</class>
+  </method>
+  <method id="55">
+    <name>getCurrentContext</name>
+    <description>Get current endpoint context.</description>
+    <return>org.eclipse.californium.elements.EndpointContext</return>
+    <class>org.eclipse.californium.core.coap.EndpointContextTracer</class>
+  </method>
+  <method id="56">
+    <name>onContextChanged</name>
+    <description>Invoked when the resulting endpoint context is changing.</description>
+    <parameter id="0">
+      <name>endpointContext</name>
+      <type>org.eclipse.californium.elements.EndpointContext</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.EndpointContextTracer</class>
+  </method>
+  <method id="57">
+    <name>onContextEstablished</name>
+    <description>Invoked when the resulting endpoint context is reported by the connector.</description>
+    <parameter id="0">
+      <name>endpointContext</name>
+      <type>org.eclipse.californium.elements.EndpointContext</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.EndpointContextTracer</class>
+  </method>
+  <method id="58">
+    <name>org.eclipse.californium.core.coap.EndpointContextTracer</name>
+    <description/>
+    <return>org.eclipse.californium.core.coap.EndpointContextTracer</return>
+    <class>org.eclipse.californium.core.coap.EndpointContextTracer</class>
+  </method>
+  <method id="59">
+    <name>addSubTree</name>
+    <description>Add sub tree as WebLink.</description>
+    <parameter id="0">
+      <name>resource</name>
+      <type>org.eclipse.californium.core.server.resources.Resource</type>
+    </parameter>
+    <parameter id="1">
+      <name>queries</name>
+      <type>java.util.List</type>
+    </parameter>
+    <parameter id="2">
+      <name>links</name>
+      <type>java.util.Set</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="60">
+    <name>addTree</name>
+    <description>Add tree as WebLink.</description>
+    <parameter id="0">
+      <name>resource</name>
+      <type>org.eclipse.californium.core.server.resources.Resource</type>
+    </parameter>
+    <parameter id="1">
+      <name>queries</name>
+      <type>java.util.List</type>
+    </parameter>
+    <parameter id="2">
+      <name>links</name>
+      <type>java.util.Set</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="61">
+    <name>createWebLink</name>
+    <description>Create web-link from resource.</description>
+    <parameter id="0">
+      <name>resource</name>
+      <type>org.eclipse.californium.core.server.resources.Resource</type>
+    </parameter>
+    <return>WebLink</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="62">
+    <name>getSubTree</name>
+    <description>Get sub tree as WebLink.</description>
+    <parameter id="0">
+      <name>resource</name>
+      <type>org.eclipse.californium.core.server.resources.Resource</type>
+    </parameter>
+    <return>Set&lt;WebLink&gt;</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="63">
+    <name>getSubTree</name>
+    <description>Get sub tree as WebLink.</description>
+    <parameter id="0">
+      <name>resource</name>
+      <type>org.eclipse.californium.core.server.resources.Resource</type>
+    </parameter>
+    <parameter id="1">
+      <name>queries</name>
+      <type>java.util.List</type>
+    </parameter>
+    <return>Set&lt;WebLink&gt;</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="64">
+    <name>getTree</name>
+    <description>Get tree as WebLink.</description>
+    <parameter id="0">
+      <name>resource</name>
+      <type>org.eclipse.californium.core.server.resources.Resource</type>
+    </parameter>
+    <return>Set&lt;WebLink&gt;</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="65">
+    <name>getTree</name>
+    <description>Get tree as WebLink.</description>
+    <parameter id="0">
+      <name>resource</name>
+      <type>org.eclipse.californium.core.server.resources.Resource</type>
+    </parameter>
+    <parameter id="1">
+      <name>queries</name>
+      <type>java.util.List</type>
+    </parameter>
+    <return>Set&lt;WebLink&gt;</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="66">
+    <name>matches</name>
+    <description>Check whether the given web-link matches the given list of queries.</description>
+    <parameter id="0">
+      <name>link</name>
+      <type>org.eclipse.californium.core.WebLink</type>
+    </parameter>
+    <parameter id="1">
+      <name>queries</name>
+      <type>java.util.List</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="67">
+    <name>parse</name>
+    <description>Parse formated links.</description>
+    <parameter id="0">
+      <name>linkFormat</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>Set&lt;WebLink&gt;</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="68">
+    <name>serialize</name>
+    <description>Serialize set of web-links.</description>
+    <parameter id="0">
+      <name>links</name>
+      <type>java.util.Set</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="69">
+    <name>serialize</name>
+    <description>Serialize set of web-links.</description>
+    <parameter id="0">
+      <name>links</name>
+      <type>java.util.Set</type>
+    </parameter>
+    <parameter id="1">
+      <name>builder</name>
+      <type>java.lang.StringBuilder</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="70">
+    <name>serialize</name>
+    <description>Serialize web-link.</description>
+    <parameter id="0">
+      <name>link</name>
+      <type>org.eclipse.californium.core.WebLink</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="71">
+    <name>serialize</name>
+    <description>Serialize web-link.</description>
+    <parameter id="0">
+      <name>link</name>
+      <type>org.eclipse.californium.core.WebLink</type>
+    </parameter>
+    <parameter id="1">
+      <name>builder</name>
+      <type>java.lang.StringBuilder</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="72">
+    <name>serializeAttribute</name>
+    <description>Serialize attribute.</description>
+    <parameter id="0">
+      <name>key</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>values</name>
+      <type>java.util.List</type>
+    </parameter>
+    <return>StringBuilder</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="73">
+    <name>serializeAttribute</name>
+    <description>Serialize attribute.</description>
+    <parameter id="0">
+      <name>key</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>values</name>
+      <type>java.util.List</type>
+    </parameter>
+    <parameter id="2">
+      <name>linkFormat</name>
+      <type>java.lang.StringBuilder</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="74">
+    <name>serializeAttributes</name>
+    <description>Serialize attributes.</description>
+    <parameter id="0">
+      <name>attributes</name>
+      <type>org.eclipse.californium.core.server.resources.ResourceAttributes</type>
+    </parameter>
+    <return>StringBuilder</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="75">
+    <name>serializeAttributes</name>
+    <description>Serialize attributes.</description>
+    <parameter id="0">
+      <name>attributes</name>
+      <type>org.eclipse.californium.core.server.resources.ResourceAttributes</type>
+    </parameter>
+    <parameter id="1">
+      <name>builder</name>
+      <type>java.lang.StringBuilder</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="76">
+    <name>serializePath</name>
+    <description>Serialize resource path into provided builder.</description>
+    <parameter id="0">
+      <name>resource</name>
+      <type>org.eclipse.californium.core.server.resources.Resource</type>
+    </parameter>
+    <return>StringBuilder</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="77">
+    <name>serializePathName</name>
+    <description>Serialize name in path.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="78">
+    <name>serializeTree</name>
+    <description>Serialize sub-tree of provided resource.</description>
+    <parameter id="0">
+      <name>resource</name>
+      <type>org.eclipse.californium.core.server.resources.Resource</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="79">
+    <name>serializeTree</name>
+    <description>Serialize sub-tree of provided resource.</description>
+    <parameter id="0">
+      <name>resource</name>
+      <type>org.eclipse.californium.core.server.resources.Resource</type>
+    </parameter>
+    <parameter id="1">
+      <name>queries</name>
+      <type>java.util.List</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="80">
+    <name>sort</name>
+    <description>Sort collection of resources by name.</description>
+    <parameter id="0">
+      <name>resources</name>
+      <type>java.util.Collection</type>
+    </parameter>
+    <return>List&lt;Resource&gt;</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="81">
+    <name>org.eclipse.californium.core.coap.LinkFormat</name>
+    <description/>
+    <return>org.eclipse.californium.core.coap.LinkFormat</return>
+    <class>org.eclipse.californium.core.coap.LinkFormat</class>
+  </method>
+  <method id="82">
+    <name>add</name>
+    <description>Add a media-type-definition.</description>
+    <parameter id="0">
+      <name>definition</name>
+      <type>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry</class>
+  </method>
+  <method id="83">
+    <name>getAllMediaTypes</name>
+    <description>Get all registered media-types.</description>
+    <return>Set&lt;Integer&gt;</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry</class>
+  </method>
+  <method id="84">
+    <name>getDefinition</name>
+    <description>Get media-type-definition.</description>
+    <parameter id="0">
+      <name>mediaType</name>
+      <type>int</type>
+    </parameter>
+    <return>MediaTypeRegistry.MediaTypeDefintion</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry</class>
+  </method>
+  <method id="85">
+    <name>isCharsetConvertible</name>
+    <description>Check, if media type uses a convertible charset.</description>
+    <parameter id="0">
+      <name>mediaType</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry</class>
+  </method>
+  <method id="86">
+    <name>isKnown</name>
+    <description>Check, if media type is known.</description>
+    <parameter id="0">
+      <name>mediaType</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry</class>
+  </method>
+  <method id="87">
+    <name>isPrintable</name>
+    <description>Check, if media type is printable.</description>
+    <parameter id="0">
+      <name>mediaType</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry</class>
+  </method>
+  <method id="88">
+    <name>parse</name>
+    <description>Parse the media type string.</description>
+    <parameter id="0">
+      <name>type</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry</class>
+  </method>
+  <method id="89">
+    <name>parseMime</name>
+    <description>Parse mime content type.</description>
+    <parameter id="0">
+      <name>mime</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>String[]</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry</class>
+  </method>
+  <method id="90">
+    <name>parseWildcard</name>
+    <description>Parse the media type string supporting wildcards.</description>
+    <parameter id="0">
+      <name>wildcard</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>int[]</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry</class>
+  </method>
+  <method id="91">
+    <name>parseWithParameter</name>
+    <description>Parse the media type string with mime parameter.</description>
+    <parameter id="0">
+      <name>mime</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>int[]</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry</class>
+  </method>
+  <method id="92">
+    <name>toFileExtension</name>
+    <description>Get file extension for media type.</description>
+    <parameter id="0">
+      <name>mediaType</name>
+      <type>int</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry</class>
+  </method>
+  <method id="93">
+    <name>toString</name>
+    <description>Get mime for media type.</description>
+    <parameter id="0">
+      <name>mediaType</name>
+      <type>int</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry</class>
+  </method>
+  <method id="94">
+    <name>org.eclipse.californium.core.coap.MediaTypeRegistry</name>
+    <description/>
+    <return>org.eclipse.californium.core.coap.MediaTypeRegistry</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry</class>
+  </method>
+  <method id="95">
+    <name>getFileExtension</name>
+    <description>Get file extension.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</class>
+  </method>
+  <method id="96">
+    <name>getMime</name>
+    <description>GET MIME.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</class>
+  </method>
+  <method id="97">
+    <name>getType</name>
+    <description>Get CoAP media type according IANA</description>
+    <return>Integer</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</class>
+  </method>
+  <method id="98">
+    <name>isCharsetConvertible</name>
+    <description>Check, if charset is convertible.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</class>
+  </method>
+  <method id="99">
+    <name>isPrintable</name>
+    <description>Check, if media-type is printable.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</class>
+  </method>
+  <method id="100">
+    <name>match</name>
+    <description>Match the mime type.</description>
+    <parameter id="0">
+      <name>mimePattern</name>
+      <type>java.util.regex.Pattern</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</class>
+  </method>
+  <method id="101">
+    <name>match</name>
+    <description>Match the mime type.</description>
+    <parameter id="0">
+      <name>mime</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</class>
+  </method>
+  <method id="102">
+    <name>match</name>
+    <description>Match the mime type.</description>
+    <parameter id="0">
+      <name>mimeType</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>mimeParameter</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</class>
+  </method>
+  <method id="103">
+    <name>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</name>
+    <description>Create none-printable media-type-definition.</description>
+    <parameter id="0">
+      <name>type</name>
+      <type>java.lang.Integer</type>
+    </parameter>
+    <parameter id="1">
+      <name>mime</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>fileExtension</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</class>
+  </method>
+  <method id="104">
+    <name>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</name>
+    <description>Create none-printable media-type-definition.</description>
+    <parameter id="0">
+      <name>type</name>
+      <type>java.lang.Integer</type>
+    </parameter>
+    <parameter id="1">
+      <name>mime</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="2">
+      <name>fileExtension</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="3">
+      <name>isCharsetConvertible</name>
+      <type>boolean</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</return>
+    <class>org.eclipse.californium.core.coap.MediaTypeRegistry.MediaTypeDefintion</class>
+  </method>
+  <method id="105">
+    <name>acknowledge</name>
+    <description>Acknowledge a unacknowledged confirmable message.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="106">
+    <name>addMessageObserver</name>
+    <description>Adds the specified message observer.</description>
+    <parameter id="0">
+      <name>index</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>observer</name>
+      <type>org.eclipse.californium.core.coap.MessageObserver</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="107">
+    <name>addMessageObserver</name>
+    <description>Adds the specified message observer.</description>
+    <parameter id="0">
+      <name>observer</name>
+      <type>org.eclipse.californium.core.coap.MessageObserver</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="108">
+    <name>addMessageObservers</name>
+    <description>Appends a list of observers to this message's existing observers.</description>
+    <parameter id="0">
+      <name>observers</name>
+      <type>java.util.List</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="109">
+    <name>addMessageSize</name>
+    <description>Add bytes to message size.</description>
+    <parameter id="0">
+      <name>bytes</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="110">
+    <name>assertPayloadMatchsBlocksize</name>
+    <description>Check, if the payload size matches the BlockOption.getSize().</description>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="111">
+    <name>cancel</name>
+    <description>Cancels this message.</description>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="112">
+    <name>getBytes</name>
+    <description>Gets the serialized message as byte array or null, if not serialized yet.</description>
+    <return>byte[]</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="113">
+    <name>getDestinationContext</name>
+    <description>Get destination endpoint context.</description>
+    <return>org.eclipse.californium.elements.EndpointContext</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="114">
+    <name>getEffectiveDestinationContext</name>
+    <description>Get the effective destination context.</description>
+    <return>org.eclipse.californium.elements.EndpointContext</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="115">
+    <name>getLocalAddress</name>
+    <description>Gets the local address of the receiving endpoint.</description>
+    <return>InetSocketAddress</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="116">
+    <name>getMaxResourceBodySize</name>
+    <description>Get the maximum resource body size.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="117">
+    <name>getMessageObserver</name>
+    <description>Returns the observer of the provided type registered for this message.</description>
+    <parameter id="0">
+      <name>type</name>
+      <type>java.lang.Class</type>
+    </parameter>
+    <return>T</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="118">
+    <name>getMessageObservers</name>
+    <description>Returns the observers registered for this message.</description>
+    <return>List&lt;MessageObserver&gt;</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="119">
+    <name>getMessageSize</name>
+    <description>Get message size.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="120">
+    <name>getMID</name>
+    <description>Gets the 16-bit message identification.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="121">
+    <name>getNanoTimestamp</name>
+    <description>Gets the nano timestamp, when this message has been received, sent, or 0, if neither has happened yet.</description>
+    <return>long</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="122">
+    <name>getOffloadMode</name>
+    <description>Gets the offload mode.</description>
+    <return>Message.OffloadMode</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="123">
+    <name>getOptions</name>
+    <description>Gets the set of options.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="124">
+    <name>getPayload</name>
+    <description>Gets the raw payload.</description>
+    <return>byte[]</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="125">
+    <name>getPayloadSize</name>
+    <description>Gets the size (amount of bytes) of the payload.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="126">
+    <name>getPayloadString</name>
+    <description>Gets the payload in the form of a string.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="127">
+    <name>getPayloadTracingString</name>
+    <description/>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="128">
+    <name>getRawCode</name>
+    <description>Gets the raw integer value of this message's code.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="129">
+    <name>getReliabilityLayerParameters</name>
+    <description>Get message specific reliability layer parameters.</description>
+    <return>ReliabilityLayerParameters</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="130">
+    <name>getSendError</name>
+    <description>Checks if this message has been sent.</description>
+    <return>Throwable</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="131">
+    <name>getSourceContext</name>
+    <description>Get source endpoint context.</description>
+    <return>org.eclipse.californium.elements.EndpointContext</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="132">
+    <name>getStatusTracingString</name>
+    <description/>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="133">
+    <name>getToken</name>
+    <description>Gets this message's token.</description>
+    <return>Token</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="134">
+    <name>getTokenBytes</name>
+    <description>Gets this message's 0- -8 byte token.</description>
+    <return>byte[]</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="135">
+    <name>getTokenString</name>
+    <description>Gets the 0--8 byte token as string representation.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="136">
+    <name>getType</name>
+    <description>Gets the message type (CoAP.Type.CON, CoAP.Type.NON, CoAP.Type.ACK or CoAP.Type.RST).</description>
+    <return>CoAP.Type</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="137">
+    <name>hasBlock</name>
+    <description>Checks whether a given block offset falls into this message's payload.</description>
+    <parameter id="0">
+      <name>block</name>
+      <type>org.eclipse.californium.core.coap.BlockOption</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="138">
+    <name>hasBlock</name>
+    <description>Checks whether a given block offset falls into this message's payload.</description>
+    <parameter id="0">
+      <name>block</name>
+      <type>org.eclipse.californium.core.coap.BlockOption</type>
+    </parameter>
+    <parameter id="1">
+      <name>messageOffset</name>
+      <type>org.eclipse.californium.core.coap.BlockOption</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="139">
+    <name>hasEmptyToken</name>
+    <description>Checks whether this message has a non-zero length token.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="140">
+    <name>hasMID</name>
+    <description>Checks whether this message has a valid ID.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="141">
+    <name>isAcknowledged</name>
+    <description>Checks if is this message has been acknowledged.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="142">
+    <name>isCanceled</name>
+    <description>Checks if this message has been canceled.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="143">
+    <name>isConfirmable</name>
+    <description>Checks if this message is confirmable.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="144">
+    <name>isDuplicate</name>
+    <description>Checks if this message is a duplicate.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="145">
+    <name>isIntendedPayload</name>
+    <description>Checks, if this message is intended to have payload.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="146">
+    <name>isRejected</name>
+    <description>Checks if this message has been rejected.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="147">
+    <name>isSent</name>
+    <description>Checks if this message has been sent.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="148">
+    <name>isTimedOut</name>
+    <description>Checks if this message has timed out.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="149">
+    <name>isUnintendedPayload</name>
+    <description>Checks, if message is marked to have unintended payload.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="150">
+    <name>offload</name>
+    <description>Offload message.</description>
+    <parameter id="0">
+      <name>mode</name>
+      <type>org.eclipse.californium.core.coap.Message.OffloadMode</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="151">
+    <name>onConnecting</name>
+    <description>Indicate, that this message triggered the connector to establish a connection.</description>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="152">
+    <name>onContextEstablished</name>
+    <description>Report resulting endpoint context.</description>
+    <parameter id="0">
+      <name>endpointContext</name>
+      <type>org.eclipse.californium.elements.EndpointContext</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="153">
+    <name>onDtlsRetransmission</name>
+    <description>Indicate, that this message triggered the connector to establish a connection and a dtls handshake flight was retransmitted.</description>
+    <parameter id="0">
+      <name>flight</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="154">
+    <name>onTransferComplete</name>
+    <description>Report completion of message-transfer.</description>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="155">
+    <name>removeMessageObserver</name>
+    <description>Removes the specified message observer.</description>
+    <parameter id="0">
+      <name>observer</name>
+      <type>org.eclipse.californium.core.coap.MessageObserver</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="156">
+    <name>removeMID</name>
+    <description>Clears this message's MID.</description>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="157">
+    <name>retransmitting</name>
+    <description>Notifies all registered MessageObservers that this message is about to be re-transmitted.</description>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="158">
+    <name>setAcknowledged</name>
+    <description>Marks this message as acknowledged.</description>
+    <parameter id="0">
+      <name>acknowledged</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="159">
+    <name>setBytes</name>
+    <description>Sets the bytes of the serialized message.</description>
+    <parameter id="0">
+      <name>bytes</name>
+      <type>byte[]</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="160">
+    <name>setCanceled</name>
+    <description>Marks this message as canceled.</description>
+    <parameter id="0">
+      <name>canceled</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="161">
+    <name>setConfirmable</name>
+    <description>Chooses between confirmable and non-confirmable message.</description>
+    <parameter id="0">
+      <name>con</name>
+      <type>boolean</type>
+    </parameter>
+    <return>Message</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="162">
+    <name>setDestinationContext</name>
+    <description>Set destination endpoint context.</description>
+    <parameter id="0">
+      <name>peerContext</name>
+      <type>org.eclipse.californium.elements.EndpointContext</type>
+    </parameter>
+    <return>Message</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="163">
+    <name>setDuplicate</name>
+    <description>Marks this message as a duplicate.</description>
+    <parameter id="0">
+      <name>duplicate</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="164">
+    <name>setEffectiveDestinationContext</name>
+    <description>Set the effective destination context.</description>
+    <parameter id="0">
+      <name>peerContext</name>
+      <type>org.eclipse.californium.elements.EndpointContext</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="165">
+    <name>setLocalAddress</name>
+    <description>Set address of the receiving local endpoint.</description>
+    <parameter id="0">
+      <name>local</name>
+      <type>java.net.InetSocketAddress</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="166">
+    <name>setMaxResourceBodySize</name>
+    <description>Set the maximum resource body size.</description>
+    <parameter id="0">
+      <name>maxResourceBodySize</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="167">
+    <name>setMID</name>
+    <description>Sets the 16-bit message identification.</description>
+    <parameter id="0">
+      <name>mid</name>
+      <type>int</type>
+    </parameter>
+    <return>Message</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="168">
+    <name>setNanoTimestamp</name>
+    <description>Sets the nano timestamp when this message has been received, sent, or 0 if neither has happened yet.</description>
+    <parameter id="0">
+      <name>timestamp</name>
+      <type>long</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="169">
+    <name>setOptions</name>
+    <description>Sets the set of options.</description>
+    <parameter id="0">
+      <name>options</name>
+      <type>org.eclipse.californium.core.coap.OptionSet</type>
+    </parameter>
+    <return>Message</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="170">
+    <name>setPayload</name>
+    <description>Sets the payload.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>Message</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="171">
+    <name>setPayload</name>
+    <description>Sets the UTF-8 bytes from the specified string as payload.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>Message</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="172">
+    <name>setProtectFromOffload</name>
+    <description>Protect message from being offloaded.</description>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="173">
+    <name>setReadyToSend</name>
+    <description>Indicate, that this message is ready to be send.</description>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="174">
+    <name>setRejected</name>
+    <description>Marks this message as rejected.</description>
+    <parameter id="0">
+      <name>rejected</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="175">
+    <name>setReliabilityLayerParameters</name>
+    <description>Set message specific reliability layer parameters.</description>
+    <parameter id="0">
+      <name>parameter</name>
+      <type>org.eclipse.californium.core.network.stack.ReliabilityLayerParameters</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="176">
+    <name>setRequestDestinationContext</name>
+    <description>Set destination endpoint context for requests.</description>
+    <parameter id="0">
+      <name>peerContext</name>
+      <type>org.eclipse.californium.elements.EndpointContext</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="177">
+    <name>setSendError</name>
+    <description>Marks this message with send error.</description>
+    <parameter id="0">
+      <name>sendError</name>
+      <type>java.lang.Throwable</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="178">
+    <name>setSent</name>
+    <description>Marks this message as sent.</description>
+    <parameter id="0">
+      <name>sent</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="179">
+    <name>setSourceContext</name>
+    <description>Set source endpoint context.</description>
+    <parameter id="0">
+      <name>peerContext</name>
+      <type>org.eclipse.californium.elements.EndpointContext</type>
+    </parameter>
+    <return>Message</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="180">
+    <name>setTimedOut</name>
+    <description>Marks this message as timed out.</description>
+    <parameter id="0">
+      <name>timedOut</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="181">
+    <name>setToken</name>
+    <description>Sets the token bytes, which can be 0--8 bytes.</description>
+    <parameter id="0">
+      <name>tokenBytes</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>Message</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="182">
+    <name>setToken</name>
+    <description>Sets the token.</description>
+    <parameter id="0">
+      <name>token</name>
+      <type>org.eclipse.californium.core.coap.Token</type>
+    </parameter>
+    <return>Message</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="183">
+    <name>setType</name>
+    <description>Sets the CoAP message type.</description>
+    <parameter id="0">
+      <name>type</name>
+      <type>org.eclipse.californium.core.coap.CoAP.Type</type>
+    </parameter>
+    <return>Message</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="184">
+    <name>setUnintendedPayload</name>
+    <description>Set marker for unintended payload.</description>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="185">
+    <name>toTracingString</name>
+    <description>Get tracing string for message.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="186">
+    <name>waitForSent</name>
+    <description>Waits for the message to be sent.</description>
+    <parameter id="0">
+      <name>timeout</name>
+      <type>long</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="187">
+    <name>org.eclipse.californium.core.coap.Message</name>
+    <description>Creates a new message of a given type.</description>
+    <parameter id="0">
+      <name>type</name>
+      <type>org.eclipse.californium.core.coap.CoAP.Type</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.Message</return>
+    <class>org.eclipse.californium.core.coap.Message</class>
+  </method>
+  <method id="188">
+    <name>failed</name>
+    <description>Common method to be overwritten to catch failed messages.</description>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="189">
+    <name>isInternal</name>
+    <description>Check, if observer is internal and is not intended to be cloned.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="190">
+    <name>onAcknowledgement</name>
+    <description>Invoked when the message has been acknowledged by the remote endpoint.</description>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="191">
+    <name>onCancel</name>
+    <description>Invoked when the message has been canceled.</description>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="192">
+    <name>onConnecting</name>
+    <description>Invoked, when connector requires to establish a connection before sending the message.</description>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="193">
+    <name>onContextEstablished</name>
+    <description>Invoked when the resulting endpoint context is reported by the connector.</description>
+    <parameter id="0">
+      <name>endpointContext</name>
+      <type>org.eclipse.californium.elements.EndpointContext</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="194">
+    <name>onDtlsRetransmission</name>
+    <description>Indicate, that this message triggered the connector to establish a connection and a dtls handshake flight was retransmitted.</description>
+    <parameter id="0">
+      <name>flight</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="195">
+    <name>onReadyToSend</name>
+    <description>Invoked when the message was built and is ready to be sent.</description>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="196">
+    <name>onReject</name>
+    <description>Invoked when the message has been rejected by the remote endpoint.</description>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="197">
+    <name>onResponse</name>
+    <description>Invoked when a response arrives.</description>
+    <parameter id="0">
+      <name>response</name>
+      <type>org.eclipse.californium.core.coap.Response</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="198">
+    <name>onResponseHandlingError</name>
+    <description>Invoked when an error happens during response handling.</description>
+    <parameter id="0">
+      <name>error</name>
+      <type>java.lang.Throwable</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="199">
+    <name>onRetransmission</name>
+    <description>Invoked when a message is about to be re-transmitted.</description>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="200">
+    <name>onSendError</name>
+    <description>Invoked when sending the message caused an error.</description>
+    <parameter id="0">
+      <name>error</name>
+      <type>java.lang.Throwable</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="201">
+    <name>onSent</name>
+    <description>Invoked right after the message has been sent.</description>
+    <parameter id="0">
+      <name>retransmission</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="202">
+    <name>onTimeout</name>
+    <description>Invoked when the client stops retransmitting the message and still has not received anything from the remote endpoint.</description>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="203">
+    <name>onTransferComplete</name>
+    <description>Invoked, when transfer is successfully complete.</description>
+    <class>org.eclipse.californium.core.coap.MessageObserverAdapter</class>
+  </method>
+  <method id="204">
+    <name>equals</name>
+    <description/>
+    <parameter id="0">
+      <name>o</name>
+      <type>java.lang.Object</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.NoResponseOption</class>
+  </method>
+  <method id="205">
+    <name>getMask</name>
+    <description>Gets the bit mask of suppress response code classes.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.NoResponseOption</class>
+  </method>
+  <method id="206">
+    <name>getValue</name>
+    <description>Get encoded option value.</description>
+    <return>byte[]</return>
+    <class>org.eclipse.californium.core.coap.NoResponseOption</class>
+  </method>
+  <method id="207">
+    <name>hashCode</name>
+    <description/>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.NoResponseOption</class>
+  </method>
+  <method id="208">
+    <name>suppress</name>
+    <description>Check, if response with the code must be suppressed.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>org.eclipse.californium.core.coap.CoAP.ResponseCode</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.NoResponseOption</class>
+  </method>
+  <method id="209">
+    <name>suppress</name>
+    <description>Check, if response with the code must be suppressed.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.NoResponseOption</class>
+  </method>
+  <method id="210">
+    <name>toOption</name>
+    <description>Convert to generic Option.</description>
+    <return>Option</return>
+    <class>org.eclipse.californium.core.coap.NoResponseOption</class>
+  </method>
+  <method id="211">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.NoResponseOption</class>
+  </method>
+  <method id="212">
+    <name>org.eclipse.californium.core.coap.NoResponseOption</name>
+    <description>Create no-response option.</description>
+    <parameter id="0">
+      <name>mask</name>
+      <type>int</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.NoResponseOption</return>
+    <class>org.eclipse.californium.core.coap.NoResponseOption</class>
+  </method>
+  <method id="213">
+    <name>compareTo</name>
+    <description/>
+    <parameter id="0">
+      <name>o</name>
+      <type>org.eclipse.californium.core.coap.Option</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="214">
+    <name>equals</name>
+    <description/>
+    <parameter id="0">
+      <name>o</name>
+      <type>java.lang.Object</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="215">
+    <name>getDefinition</name>
+    <description>Gets the option definition.</description>
+    <return>OptionDefinition</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="216">
+    <name>getIntegerValue</name>
+    <description>Gets the option value as integer.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="217">
+    <name>getLength</name>
+    <description>Gets the length of the option value.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="218">
+    <name>getLongValue</name>
+    <description>Gets the option value as long.</description>
+    <return>long</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="219">
+    <name>getNumber</name>
+    <description>Gets the option number.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="220">
+    <name>getStringValue</name>
+    <description>Gets the option value as string.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="221">
+    <name>getValue</name>
+    <description>Gets the option value.</description>
+    <return>byte[]</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="222">
+    <name>hashCode</name>
+    <description/>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="223">
+    <name>isCritical</name>
+    <description>Checks if is this option is critical.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="224">
+    <name>isNoCacheKey</name>
+    <description>Checks if this option is a NoCacheKey.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="225">
+    <name>isUnSafe</name>
+    <description>Checks if is this option is unsafe.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="226">
+    <name>setIntegerValue</name>
+    <description>Sets the option value from an integer.</description>
+    <parameter id="0">
+      <name>val</name>
+      <type>int</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="227">
+    <name>setLongValue</name>
+    <description>Sets the option value from a long.</description>
+    <parameter id="0">
+      <name>val</name>
+      <type>long</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="228">
+    <name>setStringValue</name>
+    <description>Sets the option value from a string.</description>
+    <parameter id="0">
+      <name>str</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="229">
+    <name>setValue</name>
+    <description>Sets the option value.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>byte[]</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="230">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="231">
+    <name>toValueString</name>
+    <description>Renders the option value as string.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="232">
+    <name>org.eclipse.californium.core.coap.Option</name>
+    <description>Instantiates a new empty option.</description>
+    <return>org.eclipse.californium.core.coap.Option</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="233">
+    <name>org.eclipse.californium.core.coap.Option</name>
+    <description>Instantiates a new empty option with the specified empty option definition.</description>
+    <parameter id="0">
+      <name>definition</name>
+      <type>org.eclipse.californium.core.coap.option.EmptyOptionDefinition</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.Option</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="234">
+    <name>org.eclipse.californium.core.coap.Option</name>
+    <description>Instantiates a new option with the specified option definition and encodes the specified integer as option value.</description>
+    <parameter id="0">
+      <name>definition</name>
+      <type>org.eclipse.californium.core.coap.option.IntegerOptionDefinition</type>
+    </parameter>
+    <parameter id="1">
+      <name>value</name>
+      <type>int</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.Option</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="235">
+    <name>org.eclipse.californium.core.coap.Option</name>
+    <description>Instantiates a new option with the specified option definition and encodes the specified long as option value.</description>
+    <parameter id="0">
+      <name>definition</name>
+      <type>org.eclipse.californium.core.coap.option.IntegerOptionDefinition</type>
+    </parameter>
+    <parameter id="1">
+      <name>value</name>
+      <type>long</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.Option</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="236">
+    <name>org.eclipse.californium.core.coap.Option</name>
+    <description>Instantiates a new option with the specified option number.</description>
+    <parameter id="0">
+      <name>definition</name>
+      <type>org.eclipse.californium.core.coap.option.OptionDefinition</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.Option</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="237">
+    <name>org.eclipse.californium.core.coap.Option</name>
+    <description>Instantiates a new option with the specified option definition and with an arbitrary byte array as value.</description>
+    <parameter id="0">
+      <name>definition</name>
+      <type>org.eclipse.californium.core.coap.option.OptionDefinition</type>
+    </parameter>
+    <parameter id="1">
+      <name>value</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.Option</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="238">
+    <name>org.eclipse.californium.core.coap.Option</name>
+    <description>Instantiates a new option with the specified option definition and encodes the specified string as option value.</description>
+    <parameter id="0">
+      <name>definition</name>
+      <type>org.eclipse.californium.core.coap.option.StringOptionDefinition</type>
+    </parameter>
+    <parameter id="1">
+      <name>value</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.Option</return>
+    <class>org.eclipse.californium.core.coap.Option</class>
+  </method>
+  <method id="239">
+    <name>isCacheKey</name>
+    <description>Checks whether an option is a cache-key.</description>
+    <parameter id="0">
+      <name>optionNumber</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionNumberRegistry</class>
+  </method>
+  <method id="240">
+    <name>isCritical</name>
+    <description>Checks whether an option is critical.</description>
+    <parameter id="0">
+      <name>optionNumber</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionNumberRegistry</class>
+  </method>
+  <method id="241">
+    <name>isElective</name>
+    <description>Checks whether an option is elective.</description>
+    <parameter id="0">
+      <name>optionNumber</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionNumberRegistry</class>
+  </method>
+  <method id="242">
+    <name>isNoCacheKey</name>
+    <description>Checks whether an option is not a cache-key.</description>
+    <parameter id="0">
+      <name>optionNumber</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionNumberRegistry</class>
+  </method>
+  <method id="243">
+    <name>isSafe</name>
+    <description>Checks whether an option is safe.</description>
+    <parameter id="0">
+      <name>optionNumber</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionNumberRegistry</class>
+  </method>
+  <method id="244">
+    <name>isUnsafe</name>
+    <description>Checks whether an option is unsafe.</description>
+    <parameter id="0">
+      <name>optionNumber</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionNumberRegistry</class>
+  </method>
+  <method id="245">
+    <name>isUriOption</name>
+    <description>Checks if is uri option.</description>
+    <parameter id="0">
+      <name>optionNumber</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionNumberRegistry</class>
+  </method>
+  <method id="246">
+    <name>org.eclipse.californium.core.coap.OptionNumberRegistry.Defaults</name>
+    <description/>
+    <return>org.eclipse.californium.core.coap.OptionNumberRegistry.Defaults</return>
+    <class>org.eclipse.californium.core.coap.OptionNumberRegistry.Defaults</class>
+  </method>
+  <method id="247">
+    <name>org.eclipse.californium.core.coap.OptionNumberRegistry.Names</name>
+    <description/>
+    <return>org.eclipse.californium.core.coap.OptionNumberRegistry.Names</return>
+    <class>org.eclipse.californium.core.coap.OptionNumberRegistry.Names</class>
+  </method>
+  <method id="248">
+    <name>addETag</name>
+    <description>Adds an ETag to the ETag options.</description>
+    <parameter id="0">
+      <name>etag</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="249">
+    <name>addIfMatch</name>
+    <description>Adds an ETag to the If-Match options.</description>
+    <parameter id="0">
+      <name>etag</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="250">
+    <name>addLocationPath</name>
+    <description>Adds a path segment to the Location-Path options.</description>
+    <parameter id="0">
+      <name>segment</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="251">
+    <name>addLocationQuery</name>
+    <description>Adds an argument to the Location-Query options.</description>
+    <parameter id="0">
+      <name>argument</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="252">
+    <name>addOption</name>
+    <description>Adds an arbitrary option.</description>
+    <parameter id="0">
+      <name>option</name>
+      <type>org.eclipse.californium.core.coap.Option</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="253">
+    <name>addOptions</name>
+    <description>Add options.</description>
+    <parameter id="0">
+      <name>options</name>
+      <type>java.util.List</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="254">
+    <name>addOptions</name>
+    <description>Add options.</description>
+    <parameter id="0">
+      <name>options</name>
+      <type>org.eclipse.californium.core.coap.Option...</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="255">
+    <name>addOtherOption</name>
+    <description>Add other option bypassing the validation check.</description>
+    <parameter id="0">
+      <name>option</name>
+      <type>org.eclipse.californium.core.coap.Option</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="256">
+    <name>addUriPath</name>
+    <description>Adds a path segment to the Uri-Path options.</description>
+    <parameter id="0">
+      <name>segment</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="257">
+    <name>addUriQuery</name>
+    <description>Adds an argument to the Uri-Query options.</description>
+    <parameter id="0">
+      <name>argument</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="258">
+    <name>asSortedList</name>
+    <description>Gets all options in a list sorted according to their option number.</description>
+    <return>List&lt;Option&gt;</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="259">
+    <name>clear</name>
+    <description>Clears all options.</description>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="260">
+    <name>clearETags</name>
+    <description>Removes all ETag options.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="261">
+    <name>clearIfMatchs</name>
+    <description>Removes all If-Match options.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="262">
+    <name>clearLocationPath</name>
+    <description>Removes all Location-Path options.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="263">
+    <name>clearLocationQuery</name>
+    <description>Gets all Location-Query options.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="264">
+    <name>clearOtherOption</name>
+    <description>Clear other option by value.</description>
+    <parameter id="0">
+      <name>option</name>
+      <type>org.eclipse.californium.core.coap.Option</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="265">
+    <name>clearOtherOption</name>
+    <description>Clear other option by number.</description>
+    <parameter id="0">
+      <name>definition</name>
+      <type>org.eclipse.californium.core.coap.option.OptionDefinition</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="266">
+    <name>clearUriPath</name>
+    <description>Removes all Uri-Path options.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="267">
+    <name>clearUriQuery</name>
+    <description>Removes all Uri-Query options.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="268">
+    <name>containsETag</name>
+    <description>Checks if the ETag options contain the passed ETag.</description>
+    <parameter id="0">
+      <name>check</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="269">
+    <name>getAccept</name>
+    <description>Gets the Content-Format Identifier of the Accept option (see IANA Registry).</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="270">
+    <name>getBlock1</name>
+    <description>Gets the Block1 option.</description>
+    <return>BlockOption</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="271">
+    <name>getBlock2</name>
+    <description>Gets the Block2 option.</description>
+    <return>BlockOption</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="272">
+    <name>getContentFormat</name>
+    <description>Gets the Content-Format Identifier of the Content-Format option (see IANA Registry).</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="273">
+    <name>getETagCount</name>
+    <description>Gets the number of ETag options.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="274">
+    <name>getETags</name>
+    <description>Gets the list of ETags.</description>
+    <return>List&lt;byte[]&gt;</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="275">
+    <name>getIfMatch</name>
+    <description>Gets the list of If-Match ETags.</description>
+    <return>List&lt;byte[]&gt;</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="276">
+    <name>getIfMatchCount</name>
+    <description>Gets the number of If-Match options.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="277">
+    <name>getLocationPath</name>
+    <description>Gets the list of Location-Path segment strings.</description>
+    <return>List&lt;String&gt;</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="278">
+    <name>getLocationPathCount</name>
+    <description>Gets the number of Location-Path options (i.e., path segments).</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="279">
+    <name>getLocationPathString</name>
+    <description>Gets the Location-Path options as relative URI string.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="280">
+    <name>getLocationQuery</name>
+    <description>Gets the list of Location-Query arguments.</description>
+    <return>List&lt;String&gt;</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="281">
+    <name>getLocationQueryCount</name>
+    <description>Gets the number of Location-Query options (i.e., arguments).</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="282">
+    <name>getLocationQueryString</name>
+    <description>Gets the Location-Query options as &amp;-separated list string.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="283">
+    <name>getLocationString</name>
+    <description>Gets the Location-Path and Location-Query options as relative URI string.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="284">
+    <name>getMaxAge</name>
+    <description>Gets the value of the Max-Age option in seconds.</description>
+    <return>Long</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="285">
+    <name>getNoResponse</name>
+    <description>Gets the NoResponse option.</description>
+    <return>NoResponseOption</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="286">
+    <name>getObserve</name>
+    <description>Gets the uint value of the Observe option.</description>
+    <return>Integer</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="287">
+    <name>getOscore</name>
+    <description>Gets the byte array value of the OSCore option.</description>
+    <return>byte[]</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="288">
+    <name>getOtherOption</name>
+    <description>Gets other option.</description>
+    <parameter id="0">
+      <name>definition</name>
+      <type>org.eclipse.californium.core.coap.option.OptionDefinition</type>
+    </parameter>
+    <return>Option</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="289">
+    <name>getOthers</name>
+    <description>Gets list of other options.</description>
+    <return>List&lt;Option&gt;</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="290">
+    <name>getOthers</name>
+    <description>Gets list of other options.</description>
+    <parameter id="0">
+      <name>definition</name>
+      <type>org.eclipse.californium.core.coap.option.OptionDefinition</type>
+    </parameter>
+    <return>List&lt;Option&gt;</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="291">
+    <name>getProxyScheme</name>
+    <description>Gets the string value of the Proxy-Scheme option.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="292">
+    <name>getProxyUri</name>
+    <description>Gets the string value of the Proxy-Uri option.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="293">
+    <name>getSize1</name>
+    <description>Gets the uint value of the Size1 option.</description>
+    <return>Integer</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="294">
+    <name>getSize2</name>
+    <description>Gets the uint value of the Size2 option.</description>
+    <return>Integer</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="295">
+    <name>getUriHost</name>
+    <description>Gets the string value of the Uri-Host option.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="296">
+    <name>getUriPath</name>
+    <description>Gets the list of Uri-Path segment strings.</description>
+    <return>List&lt;String&gt;</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="297">
+    <name>getURIPathCount</name>
+    <description>Returns the number of Uri-Path options (i.e., path segments).</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="298">
+    <name>getUriPathString</name>
+    <description>Gets the Uri-Path options as relative URI string.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="299">
+    <name>getUriPort</name>
+    <description>Gets the uint value of the Uri-Port option.</description>
+    <return>Integer</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="300">
+    <name>getUriQuery</name>
+    <description>Gets the list of Uri-Query arguments.</description>
+    <return>List&lt;String&gt;</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="301">
+    <name>getURIQueryCount</name>
+    <description>Gets the number of Uri-Query options (i.e., arguments).</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="302">
+    <name>getUriQueryParameter</name>
+    <description>Gets the Uri-Query parameter.</description>
+    <return>UriQueryParameter</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="303">
+    <name>getUriQueryParameter</name>
+    <description>Gets the Uri-Query parameter.</description>
+    <parameter id="0">
+      <name>supportedParameterNames</name>
+      <type>java.util.List</type>
+    </parameter>
+    <return>UriQueryParameter</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="304">
+    <name>getUriQueryParameter</name>
+    <description>Gets the Uri-Query parameter.</description>
+    <parameter id="0">
+      <name>supportedParameterNames</name>
+      <type>java.util.List</type>
+    </parameter>
+    <parameter id="1">
+      <name>unsupportedParameter</name>
+      <type>java.util.List</type>
+    </parameter>
+    <return>UriQueryParameter</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="305">
+    <name>getUriQueryString</name>
+    <description>Gets the Uri-Query options as &amp;-separated query string.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="306">
+    <name>getUriString</name>
+    <description>Gets the URI-Path and URI-Query options as relative URI string.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="307">
+    <name>hasAccept</name>
+    <description>Checks if the Accept option is present.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="308">
+    <name>hasBlock1</name>
+    <description>Checks if the Block1 option is present.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="309">
+    <name>hasBlock2</name>
+    <description>Checks if the Block2 option is present.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="310">
+    <name>hasContentFormat</name>
+    <description>Checks if the Content-Format option is present.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="311">
+    <name>hasIfNoneMatch</name>
+    <description>Checks if the If-None-Match option is present.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="312">
+    <name>hasMaxAge</name>
+    <description>Checks if the Max-Age option is present.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="313">
+    <name>hasNoResponse</name>
+    <description>Checks, if the NoResponse option is present.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="314">
+    <name>hasObserve</name>
+    <description>Checks if the Observe option is present.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="315">
+    <name>hasOption</name>
+    <description>Checks, if an arbitrary option is present.</description>
+    <parameter id="0">
+      <name>definition</name>
+      <type>org.eclipse.californium.core.coap.option.OptionDefinition</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="316">
+    <name>hasOscore</name>
+    <description>Checks if the OSCore option is present.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="317">
+    <name>hasProxyScheme</name>
+    <description>Checks if the Proxy-Scheme option is present.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="318">
+    <name>hasProxyUri</name>
+    <description>Checks if the Proxy-Uri option is present.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="319">
+    <name>hasSize1</name>
+    <description>Checks if the Size1 option is present.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="320">
+    <name>hasSize2</name>
+    <description>Checks if the Size2 option is present.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="321">
+    <name>hasUriHost</name>
+    <description>Checks if the Uri-Host option is present.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="322">
+    <name>hasUriPort</name>
+    <description>Checks if the Uri-Port option is present.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="323">
+    <name>isAccept</name>
+    <description>Compares the Accept option value to a given format.</description>
+    <parameter id="0">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="324">
+    <name>isContentFormat</name>
+    <description>Compares the Content-Format option value to a given format.</description>
+    <parameter id="0">
+      <name>format</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="325">
+    <name>isIfMatch</name>
+    <description>Checks if the If-Match options contain the given ETag.</description>
+    <parameter id="0">
+      <name>check</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="326">
+    <name>isValidObserveOption</name>
+    <description>Checks if a given number is a valid value for the Observe option.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>int</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="327">
+    <name>removeAccept</name>
+    <description>Removes the Accept option.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="328">
+    <name>removeBlock1</name>
+    <description>Removes the Block1 option.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="329">
+    <name>removeBlock2</name>
+    <description>Removes the Block2 option.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="330">
+    <name>removeContentFormat</name>
+    <description>Removes the Content-Format option.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="331">
+    <name>removeETag</name>
+    <description>Removes a specific ETag from the ETag options.</description>
+    <parameter id="0">
+      <name>etag</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="332">
+    <name>removeIfMatch</name>
+    <description>Removes a specific ETag from the If-Match options.</description>
+    <parameter id="0">
+      <name>etag</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="333">
+    <name>removeLocationQuery</name>
+    <description>Removes a specific argument from the Location-Query options.</description>
+    <parameter id="0">
+      <name>argument</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="334">
+    <name>removeMaxAge</name>
+    <description>Removes the Max-Age option.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="335">
+    <name>removeNoResponse</name>
+    <description>Removes the NoResponse option.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="336">
+    <name>removeObserve</name>
+    <description>Removes the Observe option.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="337">
+    <name>removeOscore</name>
+    <description>Removes the OSCore options.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="338">
+    <name>removeProxyScheme</name>
+    <description>Removes the Proxy-Scheme option.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="339">
+    <name>removeProxyUri</name>
+    <description>Removes the Proxy-Uri option.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="340">
+    <name>removeSize1</name>
+    <description>Removes the Size1 option.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="341">
+    <name>removeSize2</name>
+    <description>Removes the Size2 option.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="342">
+    <name>removeUriHost</name>
+    <description>Removes the Uri-Host option.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="343">
+    <name>removeUriPort</name>
+    <description>Removes the Uri-Port option.</description>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="344">
+    <name>removeUriQuery</name>
+    <description>Removes a specific argument from the Uri-Query options.</description>
+    <parameter id="0">
+      <name>argument</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="345">
+    <name>setAccept</name>
+    <description>Sets the Content-Format ID of the Accept option (see IANA Registry).</description>
+    <parameter id="0">
+      <name>IANA</name>
+      <type>int</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="346">
+    <name>setBlock1</name>
+    <description>Sets the Block1 option.</description>
+    <parameter id="0">
+      <name>block</name>
+      <type>org.eclipse.californium.core.coap.BlockOption</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="347">
+    <name>setBlock1</name>
+    <description>Sets the Block1 option.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="348">
+    <name>setBlock1</name>
+    <description>Sets the Block1 option.</description>
+    <parameter id="0">
+      <name>szx</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>m</name>
+      <type>boolean</type>
+    </parameter>
+    <parameter id="2">
+      <name>num</name>
+      <type>int</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="349">
+    <name>setBlock2</name>
+    <description>Sets the Block2 option.</description>
+    <parameter id="0">
+      <name>block</name>
+      <type>org.eclipse.californium.core.coap.BlockOption</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="350">
+    <name>setBlock2</name>
+    <description>Sets the Block2 option.</description>
+    <parameter id="0">
+      <name>value</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="351">
+    <name>setBlock2</name>
+    <description>Sets the Block2 option.</description>
+    <parameter id="0">
+      <name>szx</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="1">
+      <name>m</name>
+      <type>boolean</type>
+    </parameter>
+    <parameter id="2">
+      <name>num</name>
+      <type>int</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="352">
+    <name>setContentFormat</name>
+    <description>Sets the Content-Format ID of the Content-Format option (see IANA Registry).</description>
+    <parameter id="0">
+      <name>IANA</name>
+      <type>int</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="353">
+    <name>setIfNoneMatch</name>
+    <description>Sets or unsets the If-None-Match option.</description>
+    <parameter id="0">
+      <name>present</name>
+      <type>boolean</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="354">
+    <name>setLocationPath</name>
+    <description>Sets the complete relative Location-Path.</description>
+    <parameter id="0">
+      <name>path</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="355">
+    <name>setLocationQuery</name>
+    <description>Sets the complete Location-Query through a &amp;-separated list of arguments.</description>
+    <parameter id="0">
+      <name>query</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="356">
+    <name>setMaxAge</name>
+    <description>Sets the Max-Age option.</description>
+    <parameter id="0">
+      <name>age</name>
+      <type>long</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="357">
+    <name>setNoResponse</name>
+    <description>Sets the NoResponse option value.</description>
+    <parameter id="0">
+      <name>noResponse</name>
+      <type>int</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="358">
+    <name>setNoResponse</name>
+    <description>Sets the NoResponse option value.</description>
+    <parameter id="0">
+      <name>noResponse</name>
+      <type>org.eclipse.californium.core.coap.NoResponseOption</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="359">
+    <name>setObserve</name>
+    <description>Sets the Observe option value.</description>
+    <parameter id="0">
+      <name>seqnum</name>
+      <type>int</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="360">
+    <name>setOscore</name>
+    <description>Replaces the Oscore option with oscore.</description>
+    <parameter id="0">
+      <name>oscore</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="361">
+    <name>setProxyScheme</name>
+    <description>Sets the Proxy-Scheme option.</description>
+    <parameter id="0">
+      <name>scheme</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="362">
+    <name>setProxyUri</name>
+    <description>Sets the Proxy-Uri option.</description>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="363">
+    <name>setSize1</name>
+    <description>Sets the Size1 option value.</description>
+    <parameter id="0">
+      <name>size</name>
+      <type>int</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="364">
+    <name>setSize2</name>
+    <description>Sets the Size2 option value.</description>
+    <parameter id="0">
+      <name>size</name>
+      <type>int</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="365">
+    <name>setUriHost</name>
+    <description>Sets the Uri-Host option.</description>
+    <parameter id="0">
+      <name>host</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="366">
+    <name>setUriPath</name>
+    <description>Sets the complete relative Uri-Path.</description>
+    <parameter id="0">
+      <name>path</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="367">
+    <name>setUriPort</name>
+    <description>Sets the Uri-Port option.</description>
+    <parameter id="0">
+      <name>port</name>
+      <type>int</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="368">
+    <name>setUriQuery</name>
+    <description>Sets the complete Uri-Query through a &amp;-separated list of arguments.</description>
+    <parameter id="0">
+      <name>query</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="369">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="370">
+    <name>org.eclipse.californium.core.coap.OptionSet</name>
+    <description>Creates an empty set of options.</description>
+    <return>org.eclipse.californium.core.coap.OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="371">
+    <name>org.eclipse.californium.core.coap.OptionSet</name>
+    <description>Creates a deep copy of existing options.</description>
+    <parameter id="0">
+      <name>origin</name>
+      <type>org.eclipse.californium.core.coap.OptionSet</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.OptionSet</return>
+    <class>org.eclipse.californium.core.coap.OptionSet</class>
+  </method>
+  <method id="372">
+    <name>assertPayloadMatchsBlocksize</name>
+    <description>Check, if the payload size matches the BlockOption.getSize().</description>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="373">
+    <name>getCode</name>
+    <description>Gets the request code.</description>
+    <return>CoAP.Code</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="374">
+    <name>getOnResponseError</name>
+    <description>Return the error which happened on response handling.</description>
+    <return>Throwable</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="375">
+    <name>getRawCode</name>
+    <description>Gets the raw integer value of this message's code.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="376">
+    <name>getResponse</name>
+    <description>Gets the response or null if none has arrived yet.</description>
+    <return>Response</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="377">
+    <name>getScheme</name>
+    <description>Gets the scheme.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="378">
+    <name>getURI</name>
+    <description>Gets a URI derived from this request's options and properties as defined by RFC 7252, Section 6.5.</description>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="379">
+    <name>getUserContext</name>
+    <description/>
+    <return>Map&lt;String,String&gt;</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="380">
+    <name>hasBlock</name>
+    <description>Checks whether a given block offset falls into this message's payload.</description>
+    <parameter id="0">
+      <name>block</name>
+      <type>org.eclipse.californium.core.coap.BlockOption</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="381">
+    <name>hasProxyURI</name>
+    <description>Returns true if the Proxy URI was set via setProxyUri(String).</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="382">
+    <name>hasURI</name>
+    <description>Returns true if the CoAP URI was set via setURI(String), setURI(URI), or setOptions(URI).</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="383">
+    <name>isIntendedPayload</name>
+    <description>Checks, if this message is intended to have payload.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="384">
+    <name>isMulticast</name>
+    <description>Tests if this request is a multicast request</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="385">
+    <name>isObserve</name>
+    <description>Checks if this request is used to establish an observe relation.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="386">
+    <name>isObserveCancel</name>
+    <description>Checks if this request is used to cancel an observe relation.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="387">
+    <name>newDelete</name>
+    <description>Convenience factory method to construct a DELETE request and equivalent to new Request(Code.DELETE);</description>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="388">
+    <name>newFetch</name>
+    <description>Convenience factory method to construct a FETCH request and equivalent to new Request(Code.FETCH);</description>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="389">
+    <name>newGet</name>
+    <description>Convenience factory method to construct a GET request and equivalent to new Request(Code.GET);</description>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="390">
+    <name>newIPatch</name>
+    <description>Convenience factory method to construct a IPATCH request and equivalent to new Request(Code.IPATCH);</description>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="391">
+    <name>newPatch</name>
+    <description>Convenience factory method to construct a PATCH request and equivalent to new Request(Code.PATCH);</description>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="392">
+    <name>newPing</name>
+    <description>Convenience factory method to construct a PING (pseudo) request and equivalent to new Request(null);</description>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="393">
+    <name>newPost</name>
+    <description>Convenience factory method to construct a POST request and equivalent to new Request(Code.POST);</description>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="394">
+    <name>newPut</name>
+    <description>Convenience factory method to construct a PUT request and equivalent to new Request(Code.PUT);</description>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="395">
+    <name>send</name>
+    <description>Sends the request over the default endpoint to its destination and expects a response back.</description>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="396">
+    <name>send</name>
+    <description>Sends this request over the specified endpoint to its destination and expects a response back.</description>
+    <parameter id="0">
+      <name>endpoint</name>
+      <type>org.eclipse.californium.core.network.Endpoint</type>
+    </parameter>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="397">
+    <name>setCanceled</name>
+    <description>Marks this message as canceled.</description>
+    <parameter id="0">
+      <name>canceled</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="398">
+    <name>setDestinationContext</name>
+    <description>Set destination endpoint context.</description>
+    <parameter id="0">
+      <name>peerContext</name>
+      <type>org.eclipse.californium.elements.EndpointContext</type>
+    </parameter>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="399">
+    <name>setLocalAddress</name>
+    <description>Set address of the receiving local endpoint.</description>
+    <parameter id="0">
+      <name>local</name>
+      <type>java.net.InetSocketAddress</type>
+    </parameter>
+    <parameter id="1">
+      <name>multicast</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="400">
+    <name>setObserve</name>
+    <description>Sets CoAP's observe option.</description>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="401">
+    <name>setObserveCancel</name>
+    <description>Sets CoAP's observe option to the value of 1 to proactively cancel.</description>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="402">
+    <name>setOnResponseError</name>
+    <description>Mark this request as failing to handle the response.</description>
+    <parameter id="0">
+      <name>cause</name>
+      <type>java.lang.Throwable</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="403">
+    <name>setOptions</name>
+    <description>Sets this request's options from a given URI as defined in RFC 7252, Section 6.4.</description>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="404">
+    <name>setPayload</name>
+    <description>Sets the payload.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="405">
+    <name>setPayload</name>
+    <description>Sets the UTF-8 bytes from the specified string as payload.</description>
+    <parameter id="0">
+      <name>payload</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="406">
+    <name>setProxyScheme</name>
+    <description>Set proxy scheme.</description>
+    <parameter id="0">
+      <name>proxyScheme</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="407">
+    <name>setProxyUri</name>
+    <description>Sets this request's proxy URI.</description>
+    <parameter id="0">
+      <name>proxyUri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="408">
+    <name>setRejected</name>
+    <description>Marks this message as rejected.</description>
+    <parameter id="0">
+      <name>rejected</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="409">
+    <name>setResponse</name>
+    <description>Sets the response.</description>
+    <parameter id="0">
+      <name>response</name>
+      <type>org.eclipse.californium.core.coap.Response</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="410">
+    <name>setScheme</name>
+    <description>Sets the scheme.</description>
+    <parameter id="0">
+      <name>scheme</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="411">
+    <name>setSendError</name>
+    <description>Marks this message with send error.</description>
+    <parameter id="0">
+      <name>sendError</name>
+      <type>java.lang.Throwable</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="412">
+    <name>setTimedOut</name>
+    <description>Marks this message as timed out.</description>
+    <parameter id="0">
+      <name>timedOut</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="413">
+    <name>setURI</name>
+    <description>Sets this request's CoAP URI.</description>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="414">
+    <name>setURI</name>
+    <description>Sets the destination address and port and options from a given URI.</description>
+    <parameter id="0">
+      <name>uri</name>
+      <type>java.net.URI</type>
+    </parameter>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="415">
+    <name>setUriIsApplied</name>
+    <description>Set URI is applied.</description>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="416">
+    <name>setUserContext</name>
+    <description>Set contextual information about this request.</description>
+    <parameter id="0">
+      <name>userContext</name>
+      <type>java.util.Map</type>
+    </parameter>
+    <return>Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="417">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="418">
+    <name>waitForResponse</name>
+    <description>Wait for the response.</description>
+    <return>Response</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="419">
+    <name>waitForResponse</name>
+    <description>Waits for the arrival of the response to this request.</description>
+    <parameter id="0">
+      <name>timeout</name>
+      <type>long</type>
+    </parameter>
+    <return>Response</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="420">
+    <name>org.eclipse.californium.core.coap.Request</name>
+    <description>Creates a request of type CON for a CoAP code.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>org.eclipse.californium.core.coap.CoAP.Code</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="421">
+    <name>org.eclipse.californium.core.coap.Request</name>
+    <description>Creates a request for a CoAP code and message type.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>org.eclipse.californium.core.coap.CoAP.Code</type>
+    </parameter>
+    <parameter id="1">
+      <name>type</name>
+      <type>org.eclipse.californium.core.coap.CoAP.Type</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.Request</return>
+    <class>org.eclipse.californium.core.coap.Request</class>
+  </method>
+  <method id="422">
+    <name>assertPayloadMatchsBlocksize</name>
+    <description>Check, if the payload size matches the BlockOption.getSize().</description>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="423">
+    <name>createResponse</name>
+    <description>Creates a response to the provided received request with the specified response code.</description>
+    <parameter id="0">
+      <name>receivedRequest</name>
+      <type>org.eclipse.californium.core.coap.Request</type>
+    </parameter>
+    <parameter id="1">
+      <name>code</name>
+      <type>org.eclipse.californium.core.coap.CoAP.ResponseCode</type>
+    </parameter>
+    <return>Response</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="424">
+    <name>ensureToken</name>
+    <description>Ensure, that the response uses the provided token.</description>
+    <parameter id="0">
+      <name>token</name>
+      <type>org.eclipse.californium.core.coap.Token</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="425">
+    <name>getApplicationRttNanos</name>
+    <description>Return application RTT (round trip time).</description>
+    <return>Long</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="426">
+    <name>getCode</name>
+    <description>Gets the response code.</description>
+    <return>CoAP.ResponseCode</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="427">
+    <name>getRawCode</name>
+    <description>Gets the raw integer value of this message's code.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="428">
+    <name>getTransmissionRttNanos</name>
+    <description>Return transmission RTT (round trip time).</description>
+    <return>Long</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="429">
+    <name>hasBlock</name>
+    <description>Checks whether a given block offset falls into this message's payload.</description>
+    <parameter id="0">
+      <name>block</name>
+      <type>org.eclipse.californium.core.coap.BlockOption</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="430">
+    <name>hasBlockOption</name>
+    <description>Checks whether this response has either a block1 or block2 option.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="431">
+    <name>isClientError</name>
+    <description>Checks whether this response's code indicates a client error.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="432">
+    <name>isError</name>
+    <description>Checks whether this response's code indicates an error.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="433">
+    <name>isInternal</name>
+    <description>Checks, if this response is internally created.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="434">
+    <name>isNotification</name>
+    <description>Checks whether this response is a notification for an observed resource.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="435">
+    <name>isServerError</name>
+    <description>Checks whether this response's code indicates a server error.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="436">
+    <name>isSuccess</name>
+    <description>Checks whether this response's code indicates an success.</description>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="437">
+    <name>setApplicationRttNanos</name>
+    <description>Set application RTT (round trip time) .</description>
+    <parameter id="0">
+      <name>trip</name>
+      <type>long</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="438">
+    <name>setTransmissionRttNanos</name>
+    <description>Set transmission RTT (round trip time).</description>
+    <parameter id="0">
+      <name>trip</name>
+      <type>long</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="439">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="440">
+    <name>org.eclipse.californium.core.coap.Response</name>
+    <description>Instantiates a new response with the specified response code.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>org.eclipse.californium.core.coap.CoAP.ResponseCode</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.Response</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="441">
+    <name>org.eclipse.californium.core.coap.Response</name>
+    <description>Instantiates a new response with the specified response code.</description>
+    <parameter id="0">
+      <name>code</name>
+      <type>org.eclipse.californium.core.coap.CoAP.ResponseCode</type>
+    </parameter>
+    <parameter id="1">
+      <name>internal</name>
+      <type>boolean</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.Response</return>
+    <class>org.eclipse.californium.core.coap.Response</class>
+  </method>
+  <method id="442">
+    <name>failed</name>
+    <description>Common method to be overwritten to catch failed messages.</description>
+    <class>org.eclipse.californium.core.coap.ResponseTimeout</class>
+  </method>
+  <method id="443">
+    <name>onAcknowledgement</name>
+    <description>Invoked when the message has been acknowledged by the remote endpoint.</description>
+    <class>org.eclipse.californium.core.coap.ResponseTimeout</class>
+  </method>
+  <method id="444">
+    <name>onResponse</name>
+    <description>Invoked when a response arrives.</description>
+    <parameter id="0">
+      <name>response</name>
+      <type>org.eclipse.californium.core.coap.Response</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.ResponseTimeout</class>
+  </method>
+  <method id="445">
+    <name>onSent</name>
+    <description>Invoked right after the message has been sent.</description>
+    <parameter id="0">
+      <name>retransmission</name>
+      <type>boolean</type>
+    </parameter>
+    <class>org.eclipse.californium.core.coap.ResponseTimeout</class>
+  </method>
+  <method id="446">
+    <name>run</name>
+    <description>Mark request as timed out.</description>
+    <class>org.eclipse.californium.core.coap.ResponseTimeout</class>
+  </method>
+  <method id="447">
+    <name>org.eclipse.californium.core.coap.ResponseTimeout</name>
+    <description>Create response timeout</description>
+    <parameter id="0">
+      <name>request</name>
+      <type>org.eclipse.californium.core.coap.Request</type>
+    </parameter>
+    <parameter id="1">
+      <name>timeout</name>
+      <type>long</type>
+    </parameter>
+    <parameter id="2">
+      <name>executor</name>
+      <type>java.util.concurrent.ScheduledExecutorService</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.ResponseTimeout</return>
+    <class>org.eclipse.californium.core.coap.ResponseTimeout</class>
+  </method>
+  <method id="448">
+    <name>fromProvider</name>
+    <description>Create token from provider token.</description>
+    <parameter id="0">
+      <name>token</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>Token</return>
+    <class>org.eclipse.californium.core.coap.Token</class>
+  </method>
+  <method id="449">
+    <name>toString</name>
+    <description/>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.Token</class>
+  </method>
+  <method id="450">
+    <name>org.eclipse.californium.core.coap.Token</name>
+    <description>Create token from bytes.</description>
+    <parameter id="0">
+      <name>token</name>
+      <type>byte[]</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.Token</return>
+    <class>org.eclipse.californium.core.coap.Token</class>
+  </method>
+  <method id="451">
+    <name>getArgument</name>
+    <description>Get parameter argument for provided parameter name.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.UriQueryParameter</class>
+  </method>
+  <method id="452">
+    <name>getArgument</name>
+    <description>Get parameter argument for provided parameter name with default.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>def</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>String</return>
+    <class>org.eclipse.californium.core.coap.UriQueryParameter</class>
+  </method>
+  <method id="453">
+    <name>getArgumentAsInteger</name>
+    <description>Get parameter argument as integer for provided parameter name.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.UriQueryParameter</class>
+  </method>
+  <method id="454">
+    <name>getArgumentAsInteger</name>
+    <description>Get parameter argument as integer for provided parameter name with default.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>def</name>
+      <type>int</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.UriQueryParameter</class>
+  </method>
+  <method id="455">
+    <name>getArgumentAsInteger</name>
+    <description>Get parameter argument as integer for provided parameter name with default and minimum value.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>def</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="2">
+      <name>min</name>
+      <type>int</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.UriQueryParameter</class>
+  </method>
+  <method id="456">
+    <name>getArgumentAsInteger</name>
+    <description>Get parameter argument as integer for provided parameter name with default, minimum value and maximum value.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>def</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="2">
+      <name>min</name>
+      <type>int</type>
+    </parameter>
+    <parameter id="3">
+      <name>max</name>
+      <type>int</type>
+    </parameter>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.UriQueryParameter</class>
+  </method>
+  <method id="457">
+    <name>getArgumentAsLong</name>
+    <description>Get parameter argument as long integer for provided parameter name.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>long</return>
+    <class>org.eclipse.californium.core.coap.UriQueryParameter</class>
+  </method>
+  <method id="458">
+    <name>getArgumentAsLong</name>
+    <description>Get parameter argument as long integer for provided parameter name with default.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>def</name>
+      <type>long</type>
+    </parameter>
+    <return>long</return>
+    <class>org.eclipse.californium.core.coap.UriQueryParameter</class>
+  </method>
+  <method id="459">
+    <name>getArgumentAsLong</name>
+    <description>Get parameter argument as long integer for provided parameter name with default and minimum value.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>def</name>
+      <type>long</type>
+    </parameter>
+    <parameter id="2">
+      <name>min</name>
+      <type>long</type>
+    </parameter>
+    <return>long</return>
+    <class>org.eclipse.californium.core.coap.UriQueryParameter</class>
+  </method>
+  <method id="460">
+    <name>getArgumentAsLong</name>
+    <description>Get parameter argument as long integer for provided parameter name with default, minimum value and maximum value.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <parameter id="1">
+      <name>def</name>
+      <type>long</type>
+    </parameter>
+    <parameter id="2">
+      <name>min</name>
+      <type>long</type>
+    </parameter>
+    <parameter id="3">
+      <name>max</name>
+      <type>long</type>
+    </parameter>
+    <return>long</return>
+    <class>org.eclipse.californium.core.coap.UriQueryParameter</class>
+  </method>
+  <method id="461">
+    <name>hasParameter</name>
+    <description>Check, if query parameter with provided name is available.</description>
+    <parameter id="0">
+      <name>name</name>
+      <type>java.lang.String</type>
+    </parameter>
+    <return>boolean</return>
+    <class>org.eclipse.californium.core.coap.UriQueryParameter</class>
+  </method>
+  <method id="462">
+    <name>size</name>
+    <description>Number of query parameter.</description>
+    <return>int</return>
+    <class>org.eclipse.californium.core.coap.UriQueryParameter</class>
+  </method>
+  <method id="463">
+    <name>org.eclipse.californium.core.coap.UriQueryParameter</name>
+    <description>Create query parameter using all provided query parameter.</description>
+    <parameter id="0">
+      <name>queryOptions</name>
+      <type>java.util.List</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.UriQueryParameter</return>
+    <class>org.eclipse.californium.core.coap.UriQueryParameter</class>
+  </method>
+  <method id="464">
+    <name>org.eclipse.californium.core.coap.UriQueryParameter</name>
+    <description>Create query parameter using all provided query parameter and verify the parameter with the list of supported parameters.</description>
+    <parameter id="0">
+      <name>queryParameter</name>
+      <type>java.util.List</type>
+    </parameter>
+    <parameter id="1">
+      <name>supportedParameterNames</name>
+      <type>java.util.List</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.UriQueryParameter</return>
+    <class>org.eclipse.californium.core.coap.UriQueryParameter</class>
+  </method>
+  <method id="465">
+    <name>org.eclipse.californium.core.coap.UriQueryParameter</name>
+    <description>Create query parameter using all provided and verified query parameter.</description>
+    <parameter id="0">
+      <name>queryParameter</name>
+      <type>java.util.List</type>
+    </parameter>
+    <parameter id="1">
+      <name>supportedParameterNames</name>
+      <type>java.util.List</type>
+    </parameter>
+    <parameter id="2">
+      <name>unsupportedParameter</name>
+      <type>java.util.List</type>
+    </parameter>
+    <return>org.eclipse.californium.core.coap.UriQueryParameter</return>
+    <class>org.eclipse.californium.core.coap.UriQueryParameter</class>
+  </method>
+</package>
