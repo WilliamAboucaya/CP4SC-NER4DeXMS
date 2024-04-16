@@ -42,9 +42,9 @@
       "description_ner": ""
     },
     {
-      "identifier": "",
-      "description": "",
-      "description_ner": ""
+      "identifier": "org.java_websocket.client.WebSocketClient",
+      "description": "The WebSocketClient is an abstract class that expects a valid \"ws://\" URI to connect to.",
+      "description_ner": "The CLASS_1 is an abstract class that expects a valid \"ws://\" URI to connect to."
     }
   ],
   "server": [
@@ -54,9 +54,9 @@
       "description_ner": "An execution environment for PROTOCOL_1 Resources."
     },
     {
-      "identifier": "",
-      "description": "",
-      "description_ner": ""
+      "identifier": "org.eclipse.californium.core.CoapServer",
+      "description": "An execution environment for CoAP Resources.",
+      "description_ner": "An execution environment for PROTOCOL_1 Resources."
     },
     {
       "identifier": "",
@@ -89,68 +89,21 @@
       "description_ner": ""
     },
     {
-      "identifier": "",
-      "description": "",
-      "description_ner": ""
-    }
-  ],
-  "receive": [
-    {
-      "identifier": "",
-      "description": "",
-      "description_ner": ""
-    },
-    {
-      "identifier": "",
-      "description": "",
-      "description_ner": ""
-    },
-    {
-      "identifier": "",
-      "description": "",
-      "description_ner": ""
-    },
-    {
-      "identifier": "",
-      "description": "",
-      "description_ner": ""
-    },
-    {
-      "identifier": "",
-      "description": "",
-      "description_ner": ""
-    },
-    {
-      "identifier": "",
-      "description": "",
-      "description_ner": ""
-    },
-    {
-      "identifier": "",
-      "description": "",
-      "description_ner": ""
-    },
-    {
-      "identifier": "",
-      "description": "",
-      "description_ner": ""
-    },
-    {
-      "identifier": "",
-      "description": "",
-      "description_ner": ""
+      "identifier": "org.java_websocket.server.WebSocketServer",
+      "description": "WebSocketServer is an abstract class that only takes care of the HTTP handshake portion of WebSockets.",
+      "description_ner": "CLASS_1 is an abstract class that only takes care of the PROTOCOL_1 handshake portion of PROTOCOL_2."
     }
   ],
   "send": [
     {
-      "identifier": "",
-      "description": "",
-      "description_ner": ""
+      "identifier": "org.eclipse.californium.core.coap.Request",
+      "description": "Request represents a CoAP request and has either the CoAP.Type CON or NON and one of the CoAP.Codes GET, POST, PUT or DELETE.",
+      "description_ner": "Request represents a PROTOCOL_1 request and has either the CLASS_1 CON or NON and one of the CLASS_2 GET, POST, PUT or DELETE."
     },
     {
-      "identifier": "",
-      "description": "",
-      "description_ner": ""
+      "identifier": "org.eclipse.californium.core.coap.Request",
+      "description": "Request represents a CoAP request and has either the CoAP.Type CON or NON and one of the CoAP.Codes GET, POST, PUT or DELETE.",
+      "description_ner": "Request represents a PROTOCOL_1 request and has either the CLASS_1 CON or NON and one of the CLASS_2 GET, POST, PUT or DELETE."
     },
     {
       "identifier": "",
@@ -178,9 +131,9 @@
       "description_ner": ""
     },
     {
-      "identifier": "",
-      "description": "",
-      "description_ner": ""
+      "identifier": "javax.xml.soap.SOAPMessage",
+      "description": "The root class for all SOAP messages. As transmitted on the \"wire\", a SOAP message is an XML document or a MIME message whose first body part is an XML/SOAP document.",
+      "description_ner": "The root class for all PROTOCOL_1 messages. As transmitted on the \"wire\", a PROTOCOL_1 message is an XML document or a MIME message whose first body part is an XML/PROTOCOL_1 document."
     },
     {
       "identifier": "",
