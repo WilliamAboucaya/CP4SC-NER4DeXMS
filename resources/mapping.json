@@ -33,8 +33,8 @@
     },
     {
       "identifier": "org.restlet.Client",
-      "description": "Connector acting as a generic client. It internally uses one of the available connector helpers registered with the Restlet engine.\n\nConcurrency note: instances of this class or its subclasses can be invoked by several threads at the same time and therefore must be thread-safe. You should be especially careful when storing state in member variables.\n\nFor advanced cases, it is possible to obtained the wrapped RestletHelper instance that is used by this client to handle the calls via the \"org.restlet.engine.helper\" attribute stored in the Context object.",
-      "description_ner": "Connector acting as a generic client. It internally uses one of the available connector helpers registered with the Restlet engine.\n\nConcurrency note: instances of this class or its subclasses can be invoked by several threads at the same time and therefore must be thread-safe. You should be especially careful when storing state in member variables.\n\nFor advanced cases, it is possible to obtained the wrapped CLASS_1 instance that is used by this client to handle the calls via the ATTRIBUTE_1 attribute stored in the CLASS_2 object."
+      "description": "Connector acting as a generic client. It internally uses one of the available connector helpers registered with the Restlet engine.",
+      "description_ner": "Connector acting as a generic client. It internally uses one of the available connector helpers registered with the Restlet engine."
     },
     {
       "identifier": "",
@@ -80,8 +80,8 @@
     },
     {
       "identifier": "org.restlet.Server",
-      "description": "Connector acting as a generic server. It internally uses one of the available connector helpers registered with the Restlet engine.\n\nConcurrency note: instances of this class or its subclasses can be invoked by several threads at the same time and therefore must be thread-safe. You should be especially careful when storing state in member variables.\n\nFor advanced cases, it is possible to obtained the wrapped RestletHelper instance that is used by this client to handle the calls via the \"org.restlet.engine.helper\" attribute stored in the Context object.",
-      "description_ner": "Connector acting as a generic server. It internally uses one of the available connector helpers registered with the Restlet engine.\n\nConcurrency note: instances of this class or its subclasses can be invoked by several threads at the same time and therefore must be thread-safe. You should be especially careful when storing state in member variables.\n\nFor advanced cases, it is possible to obtained the wrapped CLASS_1 instance that is used by this client to handle the calls via the ATTRIBUTE_1 attribute stored in the CLASS_2 object."
+      "description": "Connector acting as a generic server. It internally uses one of the available connector helpers registered with the Restlet engine.",
+      "description_ner": "Connector acting as a generic server. It internally uses one of the available connector helpers registered with the Restlet engine."
     },
     {
       "identifier": "",
